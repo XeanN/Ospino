@@ -27,7 +27,7 @@
             <Link to="/novedades" style={{color:'white', textDecoration:'none', display:'flex', alignItems:'center', gap:'10px', justifyContent:'center', marginBottom:'10px'}}>
                 <FaArrowLeft /> Volver a Novedades
             </Link>
-            <h1>Actualidad Delycorp</h1>
+            <h1>Actualidad Ospino</h1>
             </div>
         </div>
 

@@ -13,7 +13,7 @@
             <span className="subtitle">SOSTENIBILIDAD Y COMPROMISO</span>
             <h2>Generamos valor para el Perú</h2>
             <p>
-                Nuestro compromiso en Delycorp trasciende lo comercial: promovemos el desarrollo sostenible,
+                Nuestro compromiso en Ospino trasciende lo comercial: promovemos el desarrollo sostenible,
                 apoyamos activamente a nuestras comunidades y garantizamos la excelencia en cada paso de nuestra
                 cadena de valor, contribuyendo a un país más próspero y responsable
             </p>
@@ -39,7 +39,7 @@
             {/* Imagen de ejemplo: almacén o equipo trabajando */}
             <img    
                 src={getAssetUrl('sostenibilidad.jpg')} 
-                alt="Delycorp Equipo" 
+                alt="Ospino Equipo" 
             />
             {/* Elemento decorativo (cuadro rojo) */}
             <div className="deco-box"></div>

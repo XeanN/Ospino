@@ -30,7 +30,7 @@
             <div className="intro-image-container">
             <img 
                 src="https://images.unsplash.com/photo-1606857500127-14227918a56c?q=80&w=1000&auto=format&fit=crop" // Placeholder logístico/equipo
-                alt="Delycorp Equipo" 
+                alt="Ospino Equipo" 
             />
             </div>
         </section>

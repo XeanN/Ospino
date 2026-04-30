@@ -32,7 +32,7 @@
             <div className="sust-intro-text">
             <h2>Nuestra Visión Verde</h2>
             <p>
-                En Delycorp, entendemos que ser líderes en distribución conlleva una gran responsabilidad. 
+                En Ospino, entendemos que ser líderes en distribución conlleva una gran responsabilidad. 
                 No solo transportamos productos; transportamos confianza. Por eso, hemos implementado 
                 un sistema de <strong>Gestión Ambiental</strong> enfocado en la economía circular y la reducción 
                 de nuestra huella de carbono.
@@ -127,7 +127,7 @@
             <p>Estamos abiertos a colaborar con proveedores y socios que compartan nuestro respeto por el medio ambiente.</p>
             
             <a 
-                href="https://wa.me/51999022179?text=Hola%20Delycorp,%20me%20gustar%C3%ADa%20presentar%20una%20iniciativa%20de%20sostenibilidad." 
+                href="https://wa.me/51988477170?text=Hola%20Ospino,%20me%20gustar%C3%ADa%20presentar%20una%20iniciativa%20de%20sostenibilidad." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-sust-contact"

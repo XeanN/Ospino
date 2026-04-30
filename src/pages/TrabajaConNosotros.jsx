@@ -71,7 +71,7 @@
 
                     {/* Botón WhatsApp */}
                     <a 
-                    href="https://wa.me/51999022179?text=Hola%20Delycorp,%20deseo%20postular%20y%20adjunto%20mi%20CV."
+                    href="https://wa.me/51988477170?text=Hola%20Ospino,%20deseo%20postular%20y%20adjunto%20mi%20CV."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-whatsapp-cv"

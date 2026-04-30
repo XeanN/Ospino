@@ -92,7 +92,7 @@ const Header = () => {
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} ref={menuRef}>
         <div className="container header-grid">
             <div className="header-logo">
-            <Link to="/"><img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Delycorp" /></Link>
+            <Link to="/"><img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Ospino" /></Link>
             </div>
 
             <div className="header-content">
@@ -104,9 +104,9 @@ const Header = () => {
                 </form>
                 <div className="secondary-links">
                 {/*<Link to="/inversionistas">Inversionistas</Link>*/}<Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
-                <a href="http://38.187.16.97:9090/Delycorp" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
-        Facturación Electrónica
-    </a>
+                {/*<a href="http://38.187.16.97:9090/Delycorp" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
+                    Facturación Electrónica
+                </a>*/}
                 </div>
             </div>
 
@@ -142,7 +142,7 @@ const Header = () => {
                             ))}
                             <div className="mega-banners">
                             <div className="menu-banner cyan"><span>Conoce todas las</span><h3>Promociones</h3><button>Ver promociones</button></div>
-                            <div className="menu-banner yellow"><span>Conoce los Productos</span><h3>Delycorp</h3><button>Ver productos</button></div>
+                            <div className="menu-banner yellow"><span>Conoce los Productos</span><h3>Ospino</h3><button>Ver productos</button></div>
                             </div>
                         </div>
                         </div>
@@ -187,7 +187,7 @@ const Header = () => {
         <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
             <div className="drawer-header">
             <div className="close-btn" onClick={() => setIsMobileMenuOpen(false)}><FaTimes /></div>
-            <img src="/logo.png" alt="Delycorp" className="drawer-logo" />
+            <img src="/logo.png" alt="Ospino" className="drawer-logo" />
             <div className="drawer-options-icon"><span>&#8942;</span></div>
             </div>
             <form className="drawer-search" onSubmit={handleSearch}>
@@ -248,9 +248,9 @@ const Header = () => {
                 <li><Link to="/inversionistas" onClick={() => setIsMobileMenuOpen(false)}>Inversionistas</Link></li>
                 <li><Link to="/proveedores" onClick={() => setIsMobileMenuOpen(false)}>Proveedores</Link></li>
                 <li><Link to="/clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link></li>
-                <a href="http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
+                {/*<a href="http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
                 Facturación Electrónica
-                </a>
+                </a>*/}
             </ul>
             </div>
         </div>

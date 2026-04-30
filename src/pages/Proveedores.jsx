@@ -116,7 +116,7 @@
 
                 {/* Botón 4: WHATSAPP (NUEVO) */}
                 <a 
-                href="https://wa.me/51999022179?text=Hola%20Delycorp,%20estoy%20interesado%20en%20ser%20proveedor." 
+                href="https://wa.me/51988477170?text=Hola%20Ospino,%20estoy%20interesado%20en%20ser%20proveedor." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="action-btn-pill contact"

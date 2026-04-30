@@ -49,7 +49,7 @@
                         <FaEnvelope className="info-icon" />
                         <div className="info-text">
                             <h4>Correo Electrónico</h4>
-                            <p>comercialretail@delycorp.pe </p>
+                            <p>comercialretail@ospino.pe </p>
                         </div>
                     </div>
 
@@ -57,13 +57,13 @@
                     <div className="social-section">
                         <h3>Síguenos en nuestras redes:</h3>
                         <div className="social-buttons">
-                            <a href="https://www.facebook.com/delycorpdeyelli#" target="_blank" rel="noreferrer" className="btn-social btn-facebook">
+                            <a href="https://web.facebook.com/profile.php?id=61573849888646" target="_blank" rel="noreferrer" className="btn-social btn-facebook">
                                 <FaFacebookF /> Facebook
                             </a>
                             {/*<a href="https://www.instagram.com/deyelli.pe/" target="_blank" rel="noreferrer" className="btn-social btn-instagram">
                                 <FaInstagram /> Instagram
                             </a>*/}
-                            <a href="https://www.tiktok.com/@deyelli.pe" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
+                            <a href="https://www.tiktok.com/@0ospino" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
                                 <FaTiktok /> TikTok
                             </a>
                             <a href="https://api.whatsapp.com/send?phone=51988477170&text=%C2%A1Hola!%F0%9F%98%8A%20Quiero%20hacer%20un(os)%20pedido(s)%0A" target="_blank" rel="noreferrer" className="btn-social btn-whatsapp">
@@ -85,7 +85,7 @@
                         style={{border:0}} 
                         allowFullScreen="" 
                         loading="lazy"
-                        title="Mapa de Ubicación Delycorp"
+                        title="Mapa de Ubicación Ospino"
                     ></iframe>
                 </div>
 

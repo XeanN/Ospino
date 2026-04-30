@@ -27,7 +27,7 @@
             <section className="investor-intro">
             <h2>Un Aliado Estratégico Rentable</h2>
             <p>
-                En Delycorp, nos enfocamos en generar valor a largo plazo. Nuestro modelo de negocio se basa en ofrecer un portafolio de productos de alta rotación ("Best Sellers") que garantizan la rentabilidad de nuestros socios comerciales.
+                En Ospino, nos enfocamos en generar valor a largo plazo. Nuestro modelo de negocio se basa en ofrecer un portafolio de productos de alta rotación ("Best Sellers") que garantizan la rentabilidad de nuestros socios comerciales.
                 <br /><br />
                 Nuestra trayectoria de crecimiento sostenido y nuestra sólida infraestructura logística nos posicionan como una oportunidad de inversión segura y confiable en el sector de alimentos importados.
             </p>

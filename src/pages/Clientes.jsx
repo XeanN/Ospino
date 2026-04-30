@@ -35,7 +35,7 @@
             <h2>¿Cómo trabajamos?</h2>
             <div className="intro-box">
                 <p>
-                En Delycorp no somos solo proveedores, somos un <strong>aliado estratégico</strong>. 
+                En Ospino no somos solo proveedores, somos un <strong>aliado estratégico</strong>. 
                 Nuestro principal objetivo es que tu cliente final busque la recompra en tu negocio. 
                 Para lograrlo, te brindamos un portafolio variado con nuestras líneas <em>Best Seller</em> 
                 de golosinas Deyelli, bebidas D'Loe y bombones Monfer.

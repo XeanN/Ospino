@@ -26,9 +26,9 @@ const ProductDetail = () => {
         }
     }, [product]);
 
-    const phoneNumber = "51999022179"; 
+    const phoneNumber = "51988477170"; 
     const handleWhatsApp = () => {
-        const message = `Hola Delycorp, estoy interesado en el producto: *${product.name}* (Código: ${product.code}). Quisiera saber stock y precios.`;
+        const message = `Hola Ospino, estoy interesado en el producto: *${product.name}* (Código: ${product.code}). Quisiera saber stock y precios.`;
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
     };
@@ -86,7 +86,7 @@ const ProductDetail = () => {
                             <h3>Detalles de Presentación</h3>
                             <p><strong>Presentación:</strong> {product.presentation}</p>
                             <p><strong>Peso Unitario:</strong> {product.unit_weight}</p>
-                            <p><strong>Código Delycorp:</strong> {product.code}</p>
+                            <p><strong>Código Ospino:</strong> {product.code}</p>
                         </div>
 
                         <p className="product-description">

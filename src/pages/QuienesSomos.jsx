@@ -33,7 +33,7 @@ const QuienesSomos = () => {
                     <div className="quienes-somos-content">
                         
                         <div className="content-left-text">
-                            <p className="sub-title">DELYCORP</p>
+                            <p className="sub-title">OSPINO</p>
                             <h1 className="page-main-title">Quiénes Somos</h1>
                             
                             <p className="intro-paragraph">
@@ -58,7 +58,7 @@ const QuienesSomos = () => {
                         <div className="content-right-image">
                             <img 
                                 src={getAssetUrl('quienes somos.jpg')}
-                                alt="Equipo Delycorp" 
+                                alt="Equipo Ospino" 
                             />
                         </div>
                     </div>

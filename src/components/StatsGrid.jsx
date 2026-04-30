@@ -3,7 +3,7 @@ import { FaStore, FaGlobe, FaChartLine, FaTruckMoving, FaBuilding, FaClock } fro
 import './StatsGrid.css';
 
 const StatsGrid = () => {
-    // Datos de Delycorp extraídos del PDF
+    // Datos de Ospino extraídos del PDF
     const stats = [
         { 
             icon: FaClock, 
@@ -48,7 +48,7 @@ const StatsGrid = () => {
             <div className="container">
                 {/* --- NUEVA INTRODUCCIÓN (Estilo Colombina) --- */}
                 <header className="stats-header-intro">
-                    {/*<h2 className="stats-intro-title">Una empresa con la solidez de Delycorp</h2>
+                    {/*<h2 className="stats-intro-title">Una empresa con la solidez de Ospino</h2>
                     <p className="stats-intro-text">
                         Contamos con más de 8 años de experiencia en el rubro de consumo masivo, 
                         siendo un aliado estratégico que busca la recompra en tu negocio, 

@@ -1,0 +1,136 @@
+    .corporate-section {
+    /* CAMBIO: Fondo Blanco */
+    background-color: #fff; 
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    }
+
+    .corporate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Texto izquierda, Imagen derecha */
+    gap: 80px;
+    align-items: center;
+    }
+
+    /* --- TEXTOS --- */
+    .corporate-content .subtitle {
+    color: var(--color-primary); /* ROJO (Sostenibilidad y Compromiso) */
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+    }
+
+    .corporate-content h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 800;
+    /* CAMBIO: Título en Azul Corporativo */
+    color: var(--color-corporate-blue); 
+    }
+
+    .corporate-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    /* CAMBIO: Texto gris oscuro para leer sobre blanco */
+    color: var(--color-text-light); 
+    margin-bottom: 40px;
+    max-width: 500px;
+    }
+
+    /* Estadísticas */
+    .stats-row {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 40px;
+    border-top: 1px solid #eee; /* Línea divisoria sutil */
+    padding-top: 30px;
+    }
+
+    .stat-item {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .stat-item .number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    /* CAMBIO: Números en Azul */
+    color: var(--color-corporate-blue); 
+    }
+
+    .stat-item .label {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    }
+
+    /* Botón (Ahora visible sobre blanco) */
+    .corporate-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 2px solid var(--color-corporate-blue); /* Borde Azul */
+    color: var(--color-corporate-blue); /* Texto Azul */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    }
+
+    .corporate-btn:hover {
+    background-color: var(--color-corporate-blue);
+    color: #fff; /* Texto blanco al pasar el mouse */
+    }
+
+    /* --- IMAGEN --- */
+    .corporate-image {
+    position: relative;
+    padding: 20px; /* Espacio para que se vea el marco rojo */
+    }
+
+    .corporate-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    /* Sombra suave */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    }
+
+    /* Marco decorativo ROJO */
+    .deco-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%; /* Ajustado para que se vea desplazado */
+    height: 90%;
+    border: 2px solid var(--color-primary); /* Línea Roja fina */
+    z-index: 1;
+    border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+    .corporate-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .corporate-content p, .stats-row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stats-row {
+        justify-content: center;
+    }
+    
+    .corporate-image {
+        padding: 10px;
+    }
+    }

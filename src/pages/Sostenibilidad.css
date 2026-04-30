@@ -1,0 +1,300 @@
+    /* =========================================
+    CONFIGURACIÓN BASE
+    ========================================= */
+    .sostenibilidad-page {
+        padding-top: 80px;
+        background-color: #fff;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* =========================================
+    1. HERO BANNER
+    ========================================= */
+    .sust-hero {
+        height: 400px;
+        /* Imagen de fondo: Naturaleza / Hojas / Verde */
+        background-image: url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=1200&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .sust-hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Degradado del Azul Delycorp al Verde */
+        background: linear-gradient(90deg, rgba(0, 59, 113, 0.9) 0%, rgba(33, 115, 70, 0.8) 100%);
+    }
+
+    .sust-hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        max-width: 800px;
+    }
+
+    .sust-tag {
+        background-color: #4CAF50; /* Verde brillante */
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    .sust-hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        line-height: 1.1;
+    }
+
+    .sust-hero-content p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+        line-height: 1.6;
+    }
+
+    /* =========================================
+    2. INTRODUCCIÓN
+    ========================================= */
+    .sust-intro {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .sust-intro-text {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .sust-intro h2 {
+        color: var(--color-corporate-blue);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .sust-intro p {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    /* =========================================
+    3. SECCIÓN RECICLAJE (CORE)
+    ========================================= */
+    .recycling-section {
+        background-color: #f0fdf4; /* Fondo verde muy muy claro */
+        padding: 40px 0;
+        overflow: hidden; /* Para contener la imagen */
+    }
+
+    .recycling-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    /* Imagen */
+    .recycling-image {
+        position: relative;
+    }
+
+    .recycling-image img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .floating-badge {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        background-color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        color: #2E8B57; /* Verde Bosque */
+    }
+
+    /* Texto */
+    .recycling-content .section-label {
+        color: #2E8B57;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .recycling-content h2 {
+        font-size: 2.2rem;
+        color: #222;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .recycling-content p {
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    /* Lista de Puntos */
+    .recycling-points {
+        list-style: none;
+        padding: 0;
+    }
+
+    .recycling-points li {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+    }
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        background-color: #dcfce7; /* Verde suave */
+        color: #166534; /* Verde oscuro */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+
+    .recycling-points h4 {
+        margin: 0 0 5px 0;
+        color: #333;
+        font-size: 1.1rem;
+    }
+
+    .recycling-points p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* =========================================
+    4. PILARES
+    ========================================= */
+    .sust-pillars {
+        padding: 40px 0;
+        background-color: #fff;
+    }
+
+    .pillars-title {
+        text-align: center;
+        color: var(--color-corporate-blue);
+        font-size: 2.2rem;
+        margin-bottom: 50px;
+    }
+
+    .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .pillar-card {
+        text-align: center;
+        padding: 40px 30px;
+        border: 1px solid #eee;
+        border-radius: 12px;
+        transition: transform 0.3s;
+    }
+
+    .pillar-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        border-color: #2E8B57;
+    }
+
+    .pillar-icon {
+        font-size: 3rem;
+        color: #2E8B57;
+        margin-bottom: 20px;
+    }
+
+    .pillar-card h3 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .pillar-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* =========================================
+    5. CTA
+    ========================================= */
+    .sust-cta {
+        background-color: #003B71; /* Azul Delycorp */
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .sust-cta h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .sust-cta p {
+        max-width: 600px;
+        margin: 0 auto 40px;
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+
+    .btn-sust-contact {
+        background-color: #4CAF50; /* Botón Verde sobre fondo Azul */
+        color: white;
+        padding: 15px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+    }
+
+    .btn-sust-contact:hover {
+        background-color: #3e8e41;
+        transform: scale(1.05);
+    }
+
+    /* =========================================
+    RESPONSIVE
+    ========================================= */
+    @media (max-width: 992px) {
+        .recycling-grid {
+            grid-template-columns: 1fr;
+        }
+        .recycling-image {
+            order: -1; /* Imagen arriba en móvil */
+            margin-bottom: 30px;
+        }
+        .floating-badge {
+            right: 0;
+            bottom: -15px;
+        }
+        .pillars-grid {
+            grid-template-columns: 1fr;
+        }
+        .sust-hero-content h1 {
+            font-size: 2.5rem;
+        }
+    }

@@ -1,0 +1,70 @@
+  /* --- RESET UNIVERSAL (CRUCIAL PARA QUE NO SE ROMPA) --- */
+  *, *::before, *::after {
+    box-sizing: border-box; /* Esto evita que el padding rompa el ancho */
+  }
+
+  :root {
+    /* COLORES OFICIALES DELYCORP */
+    --color-primary: #E31C23; 
+    --color-secondary: #333333;
+    --color-corporate-blue: #1215af;
+    
+    /* Colores neutros */
+    --color-text-main: #212121;
+    --color-text-light: #757575;
+    --color-background: #FFFFFF;
+    --color-light-gray: #F5F5F5;
+
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light;
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura ancho total */
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Evita scroll horizontal fantasma */
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* --- CLASE CONTAINER RESPONSIVE --- */
+  .container {
+    width: 100%; 
+    max-width: 1280px; /* Ancho máximo en pantallas gigantes */
+    margin: 0 auto; /* CENTRADO AUTOMÁTICO: Clave para que no se vaya a la derecha */
+    
+    /* Padding inteligente: 
+      En escritorio damos 1rem.
+      En celular damos espacio para que no toque los bordes. */
+    padding: 0 20px; 
+  }
+
+  /* Ajuste extra para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .container {
+      padding: 0 16px; /* Un poco menos de margen en móviles pequeños */
+    }
+  }

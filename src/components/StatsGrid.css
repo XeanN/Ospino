@@ -1,0 +1,78 @@
+.key-metrics-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.metrics-grid {
+    display: grid;
+    /* 3 columnas para dispositivos grandes, similar a la referencia */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.metric-item {
+    padding: 20px 10px;
+    border-right: 1px solid #f0f0f0; /* Línea divisoria vertical sutil */
+}
+
+.metric-item:last-child {
+    border-right: none;
+}
+
+.metric-icon {
+    font-size: 3rem;
+    color: var(--color-corporate-blue); /* Íconos Azules */
+    margin-bottom: 10px;
+}
+
+.metric-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-primary); /* Valor destacado en Rojo */
+    margin: 5px 0;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-corporate-blue);
+    margin-bottom: 5px;
+}
+
+.metric-detail {
+    font-size: 0.85rem;
+    color: #777;
+    min-height: 40px; /* Asegura altura consistente */
+}
+
+/* --- NUEVOS ESTILOS PARA LA INTRODUCCIÓN --- */
+.stats-header-intro {
+    text-align: left;
+    max-width: 900px;
+    margin-bottom: 50px ; /* Centrado y 50px de separación de la cuadrícula */
+}
+
+.stats-intro-title {
+    font-size: 2.5rem; /* Título grande */
+    font-weight: 800;
+    color: var(--color-corporate-blue);
+    margin-bottom: 15px;
+}
+
+.stats-intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    .metric-item {
+        border-right: none;
+        border-bottom: 1px solid #f0f0f0;
+    }
+}

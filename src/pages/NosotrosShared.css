@@ -1,0 +1,222 @@
+/* --- Estilos Generales Compartidos para QuienesSomos, Historia, Equipo --- */
+
+.nosotros-subpage {
+    padding-top: 130px; /* Espacio para el header sticky */
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* Contenedor Principal de Contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Layout Principal (Sidebar + Content) */
+.subpage-content-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar fijo, Contenido flexible */
+    gap: 40px;
+    padding-bottom: 40px ;
+}
+
+/* --- Menú Sidebar Interno (Índice) --- */
+.internal-menu {
+    height: fit-content;
+    background: #fff;
+    /* Estilo limpio, sin bordes para que parezca flotante */
+}
+
+.internal-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.internal-menu a {
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    color: var(--color-text-main);
+    font-weight: 500;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+/* Estilo Activo (similar al de la referencia) */
+.internal-menu a.active {
+    color: var(--color-corporate-blue); /* Azul fuerte para el link activo */
+    font-weight: 700;
+    border-left-color: var(--color-corporate-blue);
+    padding-left: 10px;
+}
+
+.internal-menu a:not(.active):hover {
+    color: var(--color-primary); /* Rojo al pasar el mouse */
+    padding-left: 10px;
+}
+
+/* Contenido General */
+.main-page-content {
+    /* Aquí se definen los estilos del grid de contenido para cada página */
+    padding-top: 20px;
+}
+
+/* ESTILO ESPECÍFICO DE QUIENES SOMOS (REFERENCIA 4c7f40.png) */
+
+.quienes-somos-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Texto más ancho que la imagen */
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.content-left-text {
+    padding-top: 20px;
+}
+
+.sub-title {
+    color: var(--color-corporate-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.page-main-title {
+    color: var(--color-corporate-blue);
+    font-size: 3.5rem; /* Título grande */
+    font-weight: 800;
+    margin: 5px 0 20px 0;
+}
+
+.intro-paragraph {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.title-divider {
+    border: none;
+    border-top: 1px solid #ddd; 
+    width: 100%;
+    margin: 20px 0;
+}
+
+.secondary-info {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.content-right-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.internal-links-footer {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.internal-link-anchor {
+    color: var(--color-corporate-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.internal-link-anchor:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .subpage-content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .quienes-somos-content {
+        grid-template-columns: 1fr;
+    }
+    .content-right-image { order: -1; }
+    .internal-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .internal-menu a {
+        border-left: none;
+        border-bottom: 2px solid transparent;
+        padding: 5px 10px;
+    }
+    .internal-menu a.active {
+        border-left: none;
+        border-bottom-color: var(--color-corporate-blue);
+        padding: 5px 10px;
+    }
+}
+
+/* --- NUEVOS: ESTILOS BREADCRUMB (Inicio > Quiénes Somos) --- */
+
+.breadcrumb-bar {
+    padding: 10px 0;
+    margin-bottom: 20px; /* Separación del contenido */
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.breadcrumb-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+}
+.breadcrumb-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.breadcrumb-arrow {
+    font-size: 0.7rem;
+    margin: 0 5px;
+    color: #999;
+}
+
+.breadcrumb-current {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* --- CORRECCIÓN DE LAYOUT (ELIMINACIÓN DE SIDEBAR) --- */
+
+/* Cuando la clase 'single-column' está activa (para Quiénes Somos) */
+.subpage-content-grid.single-column {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    padding-top: 0;
+}
+
+/* --- Estilo adicional para inversión de columnas --- */
+
+@media (min-width: 993px) {
+    /* Define cómo debe ser la cuadrícula cuando se le aplica 'reverse-on-desktop' */
+    .quienes-somos-content.reverse-on-desktop {
+        grid-template-columns: 2fr 3fr; /* Invertimos las proporciones */
+        grid-template-areas: "image text";
+    }
+
+    .quienes-somos-content.reverse-on-desktop .content-left-text {
+        grid-area: text;
+    }
+
+    .quienes-somos-content.reverse-on-desktop .content-right-image {
+        grid-area: image;
+    }
+}

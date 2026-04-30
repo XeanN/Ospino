@@ -1,0 +1,232 @@
+    /* =========================================
+    1. CONFIGURACIÓN BASE Y ESCRITORIO
+    ========================================= */
+    .header {
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05); 
+    }
+
+    .header.scrolled {
+    padding: 8px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .header-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    }
+
+    .header-logo img { height: 75px; width: auto; display: block; transition: height 0.3s ease; }
+    .header.scrolled .header-logo img { height: 60px; }
+
+    .header-content { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; align-items: flex-end; }
+
+    .header-top-row { display: flex; justify-content: flex-end; align-items: center; gap: 30px; }
+
+    .search-bar { display: flex; align-items: center; background-color: #fff; border: 1px solid #eee; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-radius: 50px; padding: 8px 20px; width: 300px; height: 40px; }
+    .search-bar input { border: none; background: transparent; outline: none; width: 100%; font-size: 0.9rem; color: var(--color-corporate-blue); }
+    .search-bar button { background: none; border: none; color: var(--color-corporate-blue); font-size: 1.1rem; cursor: pointer; }
+
+    .secondary-links { display: flex; align-items: center; gap: 25px; font-size: 0.85rem; font-weight: 600; color: #000; }
+    .secondary-links a:hover { color: var(--color-corporate-blue); }
+    .region-selector { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .icon-xs { font-size: 0.7rem; }
+    .user-profile-btn { width: 35px; height: 35px; border: 1px solid #4a8eff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #4a8eff; cursor: pointer; transition: all 0.2s; }
+    .user-profile-btn:hover { background-color: #f0f6ff; }
+
+    /* --- MENÚ PRINCIPAL (DESKTOP) --- */
+    .main-menu { display: flex; gap: 30px; align-items: center; }
+
+    /* Estilo para los enlaces padres */
+    .main-menu a { 
+    font-size: 1rem; font-weight: 600; color: var(--color-corporate-blue); 
+    display: flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none;
+    }
+    .main-menu a:hover, .active-link { color: var(--color-primary) !important; }
+    .menu-arrow { font-size: 0.7rem; margin-top: 2px; }
+    .contact-link { color: var(--color-corporate-blue) !important; }
+
+    /* --- SISTEMA DE POSICIONAMIENTO DROPDOWN --- */
+
+    /* 1. Padres Relativos (Menús pequeños como Nosotros) */
+    .relative-parent { position: relative; display: flex; align-items: center; height: 100%; }
+
+    /* 2. Padre Estático (Para el MEGA MENÚ de Productos) 
+    Esto hace que el dropdown se posicione respecto a todo el Header, no al botón */
+    .static-parent { position: static !important; display: flex; align-items: center; height: 100%; }
+
+    /* Dropdown Genérico */
+    .desktop-dropdown {
+    position: absolute;
+    top: 100%; /* Debajo del header */
+    background-color: #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-top: 4px solid var(--color-primary);
+    z-index: 1100;
+    padding: 40px 0; /* Relleno vertical */
+    /*animation: fadeIn 0.2s ease-out;*/
+    left: 0; /* Ocupa todo el ancho */
+    width: 100%;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* --- MEGA MENÚ (PRODUCTOS) --- 
+    .mega-menu {*/
+    /* Ya configurado con width: 100% y left: 0 en .desktop-dropdown 
+    }*/
+
+    /* El grid interno del Mega Menú */
+    .mega-menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr; /* 3 Columnas: Categorías, Marcas, Banners */
+    gap: 50px;
+    /* Centrar el contenido del mega menú */
+    max-width: var(--max-width, 1200px); /* Usa una variable CSS o un valor fijo */
+    margin: 0 auto;
+    padding: 0 20px; /* Pequeño padding lateral para que no toque los bordes */
+    }
+
+    .mega-col h4.mega-title {
+    color: var(--color-corporate-blue); 
+    font-size: 1.3rem; 
+    font-weight: 800; 
+    margin-bottom: 20px; 
+    /* --- LÍNEA AZUL A LA IZQUIERDA --- */
+    border-left: 4px solid var(--color-corporate-blue); 
+    padding-left: 15px; /* Separación del texto a la línea */
+    }
+
+    .mega-col ul { 
+    list-style: none; 
+    padding: 10px; 
+    columns: 1;
+    border-left: 4px solid var(--color-primary);  /* Por defecto 1 columna para Categorías */
+    }
+
+    /* Fuerza a 1 columna para la primera columna (Categorías) */
+    .mega-col:first-child ul {
+    columns: 1; 
+    }
+
+    /* Permite a la segunda columna (Marcas) usar 2 columnas si es necesario */
+    .mega-col:nth-child(2) ul {
+    columns: 2; /* Puedes cambiar a 1 si prefieres */
+    }
+
+    .mega-col li { margin-bottom: 8px; }
+    .mega-col a { 
+    color: #444; 
+    font-size: 0.9rem; 
+    text-decoration: none; 
+    transition: color 0.2s, padding-left 0.2s; /* Transición para padding-left */
+    }
+    .mega-col a:hover { 
+    color: var(--color-primary); 
+    padding-left: 5px; /* Mueve un poco el texto al pasar el mouse */
+    }
+
+    /* Banners del Mega Menú */
+    .mega-banners { display: flex; flex-direction: column; gap: 20px; }
+    .menu-banner { padding: 20px; border-radius: 12px; color: #fff; position: relative; display: flex; flex-direction: column; justify-content: center; min-height: 120px; }
+    .menu-banner.cyan { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+    .menu-banner.yellow { background: linear-gradient(135deg, #fce38a, #f38181); }
+    .menu-banner h3 { font-size: 1.5rem; font-weight: 800; margin: 5px 0 15px; }
+    .menu-banner button { background: var(--color-corporate-blue); color: #fff; border: none; padding: 8px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; width: fit-content; }
+
+    /* --- MENÚ SIMPLE (NOSOTROS/SOSTENIBILIDAD) --- */
+    .simple-menu {
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrado respecto al botón */
+    padding: 20px; /* Ajuste el padding para estos menús */
+    }
+    .simple-menu ul { list-style: none; padding: 0; margin: 0; }
+    .simple-menu a { display: block; padding: 12px 0; color: var(--color-corporate-blue); font-size: 1rem; font-weight: 500; border-bottom: 1px solid #f0f0f0; text-decoration: none; transition: color 0.2s, padding-left 0.2s; }
+    .simple-menu li:last-child a { border-bottom: none; }
+    .simple-menu a:hover { color: var(--color-primary); padding-left: 5px; }
+
+
+    /* --- MÓVIL TOGGLE Y ESTILOS DRAWER (IGUAL QUE ANTES) --- */
+    .mobile-toggle { display: none; font-size: 1.8rem; color: var(--color-corporate-blue); cursor: pointer; }
+    .mobile-drawer-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1001; opacity: 0; visibility: hidden; transition: all 0.3s; }
+    .mobile-drawer-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-drawer { position: fixed; top: 0; left: -320px; width: 300px; height: 100vh; background-color: #fff; z-index: 1002; transition: left 0.3s ease-in-out; box-shadow: 2px 0 10px rgba(0,0,0,0.1); display: flex; flex-direction: column; }
+    .mobile-drawer.open { left: 0; }
+    .drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid #f0f0f0; }
+    .close-btn { font-size: 1.5rem; color: var(--color-corporate-blue); cursor: pointer; width: 30px; }
+    .drawer-logo { height: 35px; }
+    .drawer-options-icon { font-size: 1.5rem; color: var(--color-primary); width: 30px; text-align: right; }
+    .drawer-search { margin: 15px 20px; background-color: #f5f5f5; border-radius: 50px; padding: 10px 20px; display: flex; align-items: center; }
+    .drawer-search input { border: none; background: transparent; width: 100%; outline: none; color: #333; font-size: 0.95rem; }
+    .search-icon { color: var(--color-corporate-blue); }
+    .drawer-content { flex: 1; overflow-y: auto; padding-bottom: 30px; }
+    .drawer-menu { list-style: none; padding: 0; margin: 0; }
+    .bold-label { display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; font-size: 1.05rem; font-weight: 700; color: var(--color-corporate-blue); cursor: pointer; border-bottom: 1px solid #f9f9f9; }
+    .menu-link-normal { display: block; padding: 15px 25px; font-size: 1rem; font-weight: 600; color: var(--color-corporate-blue); text-decoration: none; border-bottom: 1px solid #f9f9f9; }
+    .submenu-container { overflow: hidden; transition: max-height 0.3s ease-out; background-color: #fff; }
+    .submenu-container ul { list-style: none; padding-left: 0 !important; margin-left: 37px; border-left: 4px solid var(--color-primary); }
+    .submenu-container ul li {text-align: left !important; margin-left: 0;padding-left: 10px; }
+    .submenu-container ul li a {text-align: left !important;padding-left: 0 !important;}
+    .nested-group { border-bottom: 1px solid #f0f0f0; }
+    .nested-label { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px 12px 40px; font-size: 0.95rem; font-weight: 600; color: #444; cursor: pointer; background-color: #fff; }
+    .nested-label:hover { background-color: #f9f9f9; color: var(--color-primary); }
+    .nested-label.single-link { padding: 0 !important; display: block; border-bottom: 1px solid #f0f0f0; }
+    .single-link a { display: block; padding: 12px 20px 12px 40px; font-size: 0.95rem; font-weight: 600; color: #444; text-decoration: none; width: 100%; }
+    .single-link a:hover { background-color: #f9f9f9; color: var(--color-primary); }
+    .icon-sm { font-size: 0.8rem; opacity: 0.6; }
+    .simple-link { display: block; padding: 12px 20px 12px 40px; font-size: 0.95rem; color: #555; text-decoration: none; }
+    .nested-list { overflow: hidden; transition: max-height 0.3s ease-out; background-color: #f8f8f8; }
+    .nested-list a { display: block; padding: 10px 20px 10px 60px; font-size: 0.9rem; color: #666; text-decoration: none; }
+    .nested-list a:hover { color: var(--color-primary); background-color: #eee; }
+    .drawer-divider { height: 1px; background-color: #eee; margin: 10px 20px; }
+    .drawer-secondary-menu { list-style: none; padding: 0; margin: 0; }
+    .drawer-secondary-menu a { display: block; padding: 12px 25px; font-size: 0.95rem; color: var(--color-corporate-blue); text-decoration: none; font-weight: 500; }
+
+        
+        /* --- MEDIA QUERIES --- */
+        @media (max-width: 1024px) {
+        .desktop-only { display: none !important; }
+        .mobile-toggle { display: block; }
+        .header-logo img { height: 45px; }
+        .header-grid { gap: 15px; }
+        }
+
+        /* Estilo para el botón de Facturación Electrónica */
+    .btn-facturacion {
+    border: 2px solid var(--color-corporate-blue); /* Color morado */
+    color: #0a0a0a !important; /* Fuerza el color del texto */
+    background-color: transparent;
+    padding: 6px 16px;
+    border-radius: 20px; /* Borde redondeado tipo píldora */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+    font-size: 0.9rem;
+    margin-left: 15px; /* Un poco de separación de los otros links */
+    }
+
+    .btn-facturacion:hover {
+    background-color:  var(--color-corporate-blue);
+    color: white !important;
+    }
+
+    /* Ajuste para pantallas medianas si es necesario */
+    @media (max-width: 1100px) {
+        .btn-facturacion {
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            margin-right: 15px;
+        }
+
+
+    }

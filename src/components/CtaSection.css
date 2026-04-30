@@ -1,0 +1,135 @@
+    .cta-section {
+    /* SOLUCIÓN: Ponemos los colores directos para asegurar que se vea */
+    background: linear-gradient(90deg, #E31C23 0%, #003B71 100%);
+    
+    padding: 30px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0px;
+    }
+
+    .cta-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; 
+    gap: 30px;
+    align-items: center;
+    }
+
+    /* --- TEXTOS --- */
+    .cta-content h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    color: #fff; /* Forzamos blanco */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .cta-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    max-width: 600px;
+    opacity: 0.95;
+    color: #fff; /* Forzamos blanco */
+    }
+
+    /* BOTÓN BLANCO */
+    .cta-button {
+    display: inline-block;
+    background-color: #fff; 
+    color: #003B71; /* Letras azules */
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .cta-button:hover {
+    background-color: #222; 
+    color: #fff;
+    transform: translateY(-2px);
+    }
+
+    /* --- IMAGEN --- */
+    .cta-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .cta-image img {
+    max-height: 180px; 
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+    }
+
+    /* --- RESPONSIVE: TABLET Y MÓVIL --- */
+
+/* 1. TABLET (Menos de 992px) */
+@media (max-width: 992px) {
+    
+    .cta-section {
+        padding: 40px 0; /* Un poco más de aire arriba y abajo */
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr; /* Una sola columna (apilado) */
+        text-align: center; /* Todo centrado */
+        gap: 30px; /* Espacio entre el texto y la imagen */
+        
+        /* Aseguramos que no pegue a los bordes laterales */
+        padding: 0 20px; 
+    }
+
+    .cta-content {
+        /* Centramos el contenido flex para asegurar alineación */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem; /* Título equilibrado */
+        margin-bottom: 15px;
+    }
+
+    .cta-content p {
+        margin-bottom: 25px;
+        /* Importante: evita que el texto sea muy ancho y difícil de leer */
+        max-width: 500px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-image img {
+        max-height: 140px; /* Tamaño controlado en tablet */
+        margin-top: 0; /* El gap del grid ya se encarga del espacio */
+    }
+}
+
+/* 2. MÓVIL (Menos de 600px) */
+@media (max-width: 600px) {
+    
+    .cta-content h2 {
+        font-size: 1.5rem; /* Título un poco más pequeño en celular */
+    }
+
+    .cta-button {
+        width: 100%; /* Botón ancho completo */
+        max-width: 280px; /* Pero con un límite para que no se vea gigante */
+        padding: 12px 0; /* Más alto para facilitar el toque */
+        font-size: 1rem;
+    }
+
+    .cta-image img {
+        /* Hacemos la imagen más pequeña para que no robe protagonismo al botón */
+        max-height: 100px; 
+        margin-top: 10px;
+    }
+}

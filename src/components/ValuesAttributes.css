@@ -1,0 +1,58 @@
+.values-attributes-section {
+    background-color: #001f3f; /* Azul muy oscuro - Fondo Full Width */
+    padding: 80px 0;
+    text-align: center;
+    width: 100% ; /* Aseguramos que ocupe todo el ancho disponible */
+}
+
+/* --- CLASE PARA CENTRAR EL CONTENIDO --- */
+.content-centered-wrapper {
+    /* Estas propiedades imitan al div.container (centrado y ancho limitado) */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.section-title-white {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.values-grid-corporate-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.value-item-corporate-page {
+    padding: 20px;
+}
+
+.value-icon {
+    font-size: 4rem;
+    color: var(--color-primary); 
+    margin-bottom: 15px;
+}
+
+.value-item-corporate-page h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.value-item-corporate-page p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .values-grid-corporate-page {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,92 @@
+/* --- CONFIGURACIÓN DE LA SECCIÓN --- */
+.retail-carousel-section {
+    padding: 60px 0 80px;
+    background-color: #f9f9f9; /* Un fondo gris claro para diferenciarlo */
+    overflow: hidden; /* Ocultar scrollbars */
+}
+
+.retail-title {
+    text-align: center;
+    color: var(--color-corporate-blue, #003B71);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.retail-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* --- CONTENEDOR DEL CARRUSEL --- */
+.retail-carousel-wrapper {
+    width: 100%;
+    overflow-x: hidden; /* Oculta la barra de scroll nativa */
+    white-space: nowrap; /* Fuerza a los elementos a estar en una línea */
+    cursor: grab; /* Manito para agarrar */
+    padding: 20px 0; /* Espacio para la sombra de las tarjetas */
+    -webkit-overflow-scrolling: touch;
+}
+
+.retail-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+/* --- PISTA DE MOVIMIENTO --- */
+.retail-track {
+    display: inline-flex;
+    gap: 30px; /* Espacio entre logos */
+    padding-left: 30px; /* Margen inicial */
+}
+
+/* --- TARJETA DE LOGO INDIVIDUAL --- */
+.retail-item {
+    display: inline-block;
+    flex-shrink: 0; /* Evita que se aplasten */
+}
+
+.retail-card {
+    width: 180px;  /* Ancho rectangular */
+    height: 100px; /* Altura controlada */
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.retail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: var(--color-corporate-blue, #003B71);
+}
+
+.retail-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que el logo se vea entero sin cortarse */
+    
+    transition: all 0.3s ease;
+}
+
+.retail-card:hover img {
+    filter: grayscale(0%); /* A color al pasar el mouse */
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .retail-card {
+        width: 140px;
+        height: 80px;
+    }
+    .retail-title {
+        font-size: 1.8rem;
+    }
+}

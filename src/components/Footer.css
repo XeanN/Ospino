@@ -1,0 +1,211 @@
+/* --- FOOTER GENERAL (Base) --- */
+.footer {
+    background-color: #fff;
+    padding: 80px 0 30px;
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer-grid {
+    display: grid;
+    /* ESCRITORIO: Forzamos 4 columnas iguales (25% cada una) para simetría perfecta */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+    margin-bottom: 50px;
+    align-items: start; /* Alinea todo al tope */
+}
+
+/* --- COLUMNA DE MARCA (Brand) --- */
+.footer-brand-col {
+    padding-right: 20px; 
+}
+
+.footer-logo {
+    height: 55px; 
+    margin-bottom: 35px;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555; 
+    margin-bottom: 30px;
+    max-width: 320px;
+    text-align: left; 
+}
+
+/* REDES SOCIALES (Modernas) */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; 
+}
+
+.footer-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5; 
+    color: var(--color-primary); /* Icono rojo */
+    border-radius: 12px; 
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none; /* Quitar subrayado del link */
+}
+
+.footer-social-icons a:hover {
+    background-color: var(--color-primary); 
+    color: #fff; 
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(227, 28, 35, 0.3); 
+}
+
+/* --- COLUMNAS DE ENLACES (Títulos y Links) --- */
+.footer-link-col h4 {
+    color: var(--color-secondary); /* Negro/Gris oscuro */
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-link-col ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-link-col li {
+    margin-bottom: 14px;
+}
+
+.footer-link-col a {
+    color: #666;
+    font-size: 0.95rem;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover minimalista */
+.footer-link-col a:hover {
+    color: var(--color-corporate-blue);
+}
+
+.footer-link-col a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-corporate-blue);
+    transition: width 0.3s ease;
+}
+
+.footer-link-col a:hover::after {
+    width: 100%;
+}
+
+/* --- COPYRIGHT / BOTTOM --- */
+.footer-bottom {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 30px;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright-text {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.copyright-text a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.copyright-text a:hover {
+    color: var(--color-corporate-blue);
+}
+
+/* =========================================
+   RESPONSIVE (TABLET Y MÓVIL)
+   ========================================= */
+
+/* --- TABLET (Entre 600px y 1024px) --- */
+@media (max-width: 1024px) {
+    .footer-grid {
+        /* CAMBIO CLAVE: Grid de 2x2 */
+        /* Como tenemos 4 elementos (Marca, Nosotros, Enlaces, Contacto) */
+        /* Esto crea un cuadrado perfecto */
+        grid-template-columns: 1fr 1fr; 
+        gap: 50px;
+    }
+
+    .footer-brand-col {
+        padding-right: 0;
+        /* En tablet ya no ocupa todo el ancho, comparte fila con 'Nosotros' */
+        /* Esto evita que quede un hueco vacío abajo */
+    }
+
+    .footer-desc {
+        max-width: 100%; /* Aprovecha el espacio de su columna */
+    }
+}
+
+/* --- MÓVIL (Menos de 600px) --- */
+@media (max-width: 600px) {
+    .footer {
+        padding: 50px 0 30px;
+        text-align: left; 
+    }
+
+    .footer-grid {
+        /* En móvil mantenemos 2 columnas para los enlaces para ahorrar altura */
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px 20px;
+    }
+
+    /* La marca va arriba ocupando TODO el ancho */
+    .footer-brand-col {
+        grid-column: 1 / -1; /* Ocupa las 2 columnas */
+        border-bottom: 1px solid #f0f0f0; 
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .footer-desc {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .footer-social-icons {
+        justify-content: flex-start; 
+    }
+
+    .footer-social-icons a {
+        width: 45px; 
+        height: 45px;
+    }
+
+    .footer-link-col h4 {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-link-col a {
+        font-size: 0.9rem; 
+        display: block; 
+        padding: 5px 0; 
+    }
+}

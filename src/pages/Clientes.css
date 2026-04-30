@@ -1,0 +1,471 @@
+.clientes-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* --- 1. HERO BANNER --- */
+.clients-hero {
+    height: 370px;
+    /* Imagen de tienda/comercio o trato comercial */
+    background-image: url('clientes.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 47, 58, 0.701); /* Azul corporativo */
+}
+
+.clients-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.clients-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.clients-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- 2. CÓMO TRABAJAMOS (INTRO) --- */
+.clients-intro-section {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.clients-intro-section h2 {
+    color: var(--color-corporate-blue);
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.intro-box {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* --- 3. PILARES DE VALOR (GRID) --- */
+.value-pillar-section {
+    background-color: #f9f9f9;
+    padding: 60px 0 80px;
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pilla-card {
+    background: #fff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 5px solid #E31C23; 
+    transition: transform 0.3s;
+}
+
+.pilla-card:hover {
+    transform: translateY(-5px);
+}
+
+.pilla-icon {
+    font-size: 2.5rem;
+    color: #003B71; 
+    margin-bottom: 20px;
+}
+
+.pilla-card h3 {
+    font-size: 1.2rem;
+    /* CAMBIO: Título de tarjeta oscuro/azul para lectura clara */
+    color: #333; 
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.pilla-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- 4. CANALES Y COBERTURA --- */
+
+/* --- 4. CANALES Y COBERTURA (ESTILO SÓLIDO & PLUS) --- */
+
+.channels-section {
+    padding: 10px 0;
+    background-color: #f4f6f9; 
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Cabecera alineada a la IZQUIERDA */
+.channels-header-left {
+    text-align: center; /* Centra el texto */
+    max-width: 800px;
+    margin: 0 auto 50px; /* El 'auto' en los laterales centra el contenedor */
+    padding: 0 20px; 
+}
+
+.channels-header-left h3 {
+    color: var(--color-corporate-blue);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido si hay iconos o símbolos */
+    gap: 10px;
+}
+
+/* El signo MÁS (+) */
+.plus-symbol {
+    color: var(--color-primary); /* Rojo Delycorp */
+    font-weight: 500; /* Más delgado para que se vea elegante */
+    font-size: 3rem; /* Grande */
+    line-height: 0;
+    margin-top: -5px; /* Ajuste visual */
+}
+
+.channels-header-left p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 auto; /* Asegura que el párrafo también se centre dentro del bloque */
+    max-width: 600px; 
+}
+
+/* Grid de Tarjetas */
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Tarjeta Sólida */
+.channel-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 4px; /* Bordes menos redondeados = más solidez */
+    text-align: left; /* Contenido alineado a la izquierda también */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent; /* Línea invisible abajo */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.channel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom-color: var(--color-primary); /* Línea roja al pasar el mouse */
+}
+
+/* Caja del Icono (Cuadrada/Sólida en vez de círculo) */
+.icon-box-solid {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-corporate-blue); /* Fondo Azul Sólido */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border-radius: 8px; /* Ligeramente redondeado */
+    margin-bottom: 25px;
+    transition: background-color 0.3s;
+}
+
+.channel-card:hover .icon-box-solid {
+    background-color: var(--color-primary); /* Cambia a Rojo al hover */
+}
+
+.channel-card h4 {
+    color: #222;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.channel-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- RESPONSIVE PARA ESTA SECCIÓN --- */
+@media (max-width: 992px) {
+    .channels-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    .channels-header-left h3 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+    ESTILOS RESPONSIVE (MEJORADOS)
+   ========================================= */
+
+/* 1. TABLET (IPADS / TABLETS - 601px a 1024px) */
+@media (max-width: 1024px) {
+    
+    /* Ajuste de espaciado general */
+    .clientes-page {
+        padding-top: 70px;
+    }
+    
+    .clients-hero {
+        height: 280px; /* Un poco menos alto */
+    }
+
+    .clients-hero-content h1 {
+        font-size: 2.5rem; /* Título ajustado */
+    }
+
+    /* --- PILARES (GRID) --- */
+    /* EN TABLET: Usamos 2 columnas o automático para que no se vea una lista eterna */
+    .pillar-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        padding: 0 30px; /* Margen lateral */
+    }
+
+    /* --- CANALES (Flexbox) --- */
+    .channels-flex {
+        flex-direction: column; /* Apilamos texto e imagen */
+        text-align: center;
+        gap: 40px;
+        padding: 0 30px;
+    }
+
+    .channels-image img {
+        max-height: 350px; /* Limitamos la altura para que no sea gigante */
+        object-fit: cover;
+    }
+}
+
+/* 2. MÓVIL (CELULARES - Menos de 600px) */
+@media (max-width: 600px) {
+    
+    /* --- HERO (CABECERA) --- */
+    .clients-hero {
+        height: 220px; /* Más compacto para celular */
+        background-position: center top; /* Enfocamos mejor la imagen */
+    }
+
+    .clients-hero-content h1 {
+        font-size: 1.8rem; /* Tamaño ideal para móvil */
+        line-height: 1.2;
+    }
+
+    .clients-hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* --- INTRODUCCIÓN --- */
+    .clients-intro-section {
+        padding: 50px 20px; /* Reducimos mucho el padding vertical */
+    }
+
+    .clients-intro-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .intro-box {
+        font-size: 0.95rem; /* Texto de lectura cómoda */
+        text-align: left; /* En móvil se lee mejor alineado a la izq (opcional) */
+        padding: 0 10px;
+    }
+
+    /* --- PILARES (GRID) --- */
+    .value-pillar-section {
+        padding: 40px 0 60px;
+    }
+
+    .pilla-grid {
+        grid-template-columns: 1fr; /* Una columna obligatoria */
+        gap: 25px;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    .pilla-card {
+        padding: 30px 20px; /* Tarjetas más compactas */
+    }
+
+    .pilla-icon {
+        font-size: 2rem; /* Icono un poco más chico */
+        margin-bottom: 15px;
+    }
+
+    /* --- CANALES Y COBERTURA --- */
+    .channels-section {
+        padding: 50px 0;
+    }
+
+    .channels-flex {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .channels-info h3 {
+        font-size: 1.5rem;
+        text-align: center; /* Título centrado */
+    }
+
+    .channels-info p {
+        font-size: 0.95rem;
+        text-align: justify; /* Texto justificado o izq para lectura */
+    }
+
+    .channels-image img {
+        height: auto;
+        max-height: 250px; /* Imagen controlada */
+        width: 100%;
+    }
+}
+
+/* =========================================
+   5. SECCIÓN CLIENTES FELICES (GALERÍA)
+   ========================================= */
+.happy-clients-section {
+    padding: 80px 0 100px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-header h2 {
+    color: var(--color-corporate-blue, #2b2f3a); /* Usa tu variable o el hex */
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+/* La Cuadrícula de Fotos */
+.gallery-grid {
+    display: grid;
+    /* Esto es magia: crea columnas automáticas de mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+}
+
+/* Tarjeta individual de foto */
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    /*height: 300px; /* Altura fija para uniformidad */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la foto llene el espacio sin deformarse */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto Hover: Zoom en la imagen */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Capa oscura con texto (Overlay) */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    transform: translateY(100%); /* Oculto inicialmente (opcional) o visible siempre */
+    transform: translateY(0); /* Lo dejamos visible para que se lea siempre */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.gallery-overlay span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.gallery-overlay .stars {
+    color: #ffd700; /* Color dorado */
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: flex;
+    gap: 3px;
+}
+
+/* =========================================
+   RESPONSIVE PARA LA GALERÍA
+   ========================================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .happy-clients-section {
+        padding: 60px 0;
+    }
+    
+    .gallery-item {
+        height: 250px; /* Un poco más bajas en tablet */
+    }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-grid {
+        /* En móvil forzamos 1 columna o dejamos el auto-fit que ya funciona bien, 
+           pero vamos a ajustar el padding */
+        padding: 0 20px;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        height: 220px; /* Altura ideal para celular */
+    }
+}

@@ -1,0 +1,196 @@
+    .news-section {
+    padding: 80px 0;
+    background-color: #f9f9f9; /* Fondo gris muy suave */
+    }
+
+    .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinea el enlace abajo con el título */
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    }
+
+    .section-title {
+    font-size: 2.2rem;
+    color: var(--color-corporate-blue);
+    font-weight: 800;
+    margin: 0;
+    }
+
+    .view-all-link {
+    color: var(--color-primary); /* Rojo */
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    }
+
+    .view-all-link:hover {
+    color: var(--color-corporate-blue);
+    }
+
+    /* GRID DE NOTICIAS */
+    .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas siempre en escritorio */
+    gap: 30px;
+    }
+
+    /* TARJETA (CARD) */
+    .news-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Imagen */
+    .news-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    }
+
+    .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    }
+
+    .news-card:hover .news-image img {
+    transform: scale(1.1);
+    }
+
+    /* Etiqueta de Fecha (Flotante) */
+    .news-date {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-corporate-blue);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    }
+
+    /* Contenido de texto */
+    .news-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .news-content h3 {
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    line-height: 1.4;
+    }
+
+    .news-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex: 1; /* Empuja el botón hacia abajo */
+    }
+
+    .read-more {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    }
+
+    .read-more:hover {
+    text-decoration: underline;
+    }
+
+    /* --- ESTILOS RESPONSIVE (Móvil y Tablet) --- */
+
+/* 1. TABLET (Hasta 1024px - iPads, Tablets grandes) */
+@media (max-width: 1024px) {
+    .news-section {
+        padding: 60px 0; /* Reducimos el aire vertical */
+    }
+
+    .news-grid {
+        /* En tablet usamos 2 columnas para que se lean bien */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px; /* Un poco menos de espacio entre tarjetas */
+        padding: 0 20px; /* Margen lateral de seguridad */
+    }
+
+    .section-header {
+        padding: 0 20px 15px; /* Ajuste del borde inferior */
+    }
+}
+
+/* 2. MÓVIL (Hasta 768px - Celulares) */
+@media (max-width: 768px) {
+    
+    .news-section {
+        padding: 40px 0; /* Más compacto en celular */
+    }
+
+    /* Cabecera de sección: Título arriba, enlace abajo */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Título más pequeño para que no ocupe 3 líneas */
+        line-height: 1.2;
+    }
+
+    /* Enlace "Ver todas" */
+    .view-all-link {
+        font-size: 0.9rem;
+        /* Opcional: darle un poco de margen extra si se siente pegado */
+        margin-top: 5px; 
+    }
+
+    /* Grid de 1 sola columna */
+    .news-grid {
+        grid-template-columns: 1fr; /* Una tarjeta debajo de otra */
+        gap: 25px;
+        padding: 0 15px; /* Margen para que no toque los bordes de la pantalla */
+    }
+
+    /* Ajustes de la tarjeta individual */
+    .news-card {
+        /* En móvil, a veces la sombra muy difusa se ve sucia, la ajustamos */
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08); 
+    }
+
+    .news-image {
+        height: 180px; /* Imagen un poco menos alta en celular */
+    }
+
+    .news-content {
+        padding: 20px; /* Menos relleno interno para dar más espacio al texto */
+    }
+
+    .news-content h3 {
+        font-size: 1.1rem; /* Título de la noticia ajustado */
+    }
+}

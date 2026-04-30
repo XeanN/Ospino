@@ -1,0 +1,188 @@
+    .noticias-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    }
+
+    /* HERO BANNER */
+    .news-hero {
+    background-color: var(--color-corporate-blue);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    }
+    .news-hero h1 { font-size: 3rem; font-weight: 800; }
+
+    /* GRID DE NOTICIAS */
+    .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+    }
+
+    .news-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .news-card-image {
+    height: 200px;
+    overflow: hidden;
+    }
+
+    .news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    }
+
+    .news-card:hover .news-card-image img {
+    transform: scale(1.1);
+    }
+
+    .news-card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .news-meta {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+    .news-category { color: var(--color-primary); }
+
+    .news-card h3 {
+    font-size: 1.3rem;
+    color: var(--color-corporate-blue);
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+    }
+
+    .news-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+    }
+
+    .read-more-btn {
+    font-weight: 700;
+    color: var(--color-corporate-blue);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    }
+
+    /* --- DETALLE DE NOTICIA --- */
+    .news-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-top: -40px; /* Efecto superpuesto al banner */
+    position: relative;
+    z-index: 2;
+    margin-bottom: 60px;
+    }
+
+    .detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    }
+
+    .detail-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .detail-header h1 { color: var(--color-corporate-blue); font-size: 2.5rem; margin-bottom: 10px; }
+    .detail-date { color: #888; font-weight: 600; }
+
+    .detail-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    }
+
+    .detail-body p { margin-bottom: 20px; }
+
+    /* Otras Noticias */
+    .related-news-section {
+    padding: 40px 0 80px;
+    border-top: 1px solid #ddd;
+    }
+
+    /* --- RESPONSIVE PARA MÓVIL (Celulares) --- */
+@media (max-width: 768px) {
+    
+    .noticias-page {
+        padding-top: 60px; /* Reducir padding superior del menú */
+    }
+
+    /* Ajuste del Hero Banner en móvil */
+    .news-hero {
+        padding: 40px 20px;
+        margin-bottom: 20px;
+    }
+    .news-hero h1 {
+        font-size: 2rem; /* Título más pequeño */
+    }
+
+    /* --- ARREGLO PRINCIPAL DEL DETALLE --- */
+    .news-detail-container {
+        width: 95%; /* Que ocupe casi todo el ancho */
+        margin: 0 auto 40px auto; /* Centrado y sin margen negativo */
+        padding: 20px; /* Menos relleno interno */
+        margin-top: -20px; /* Margen negativo más sutil o quítalo poniendo 0 */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .detail-image {
+        height: 250px; /* Imagen más bajita para que se vea bien en celular */
+        margin-bottom: 20px;
+    }
+
+    .detail-header h1 {
+        font-size: 1.8rem; /* Título de noticia legible */
+        line-height: 1.3;
+    }
+
+    .detail-body {
+        font-size: 1rem; /* Texto de lectura cómodo */
+        text-align: left; /* Alineación natural */
+    }
+
+    /* Ajuste de la cuadrícula de noticias relacionadas */
+    .news-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: 0 20px 60px; /* Margen lateral */
+        gap: 25px;
+    }
+}

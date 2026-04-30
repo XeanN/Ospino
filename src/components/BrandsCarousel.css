@@ -1,0 +1,171 @@
+    /* --- ESTILOS GENERALES (Escritorio) --- */
+
+    .brands-carousel-section {
+    padding: 60px 0 80px;
+    background-color: #fff;
+    width: 100%;
+    }
+
+    .carousel-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center; /* Aseguramos que siempre esté centrado */
+    }
+
+    /* CONTENEDOR FULL WIDTH */
+    .carousel-full-width-wrapper {
+    width: 100%;
+    overflow-x: auto; /* 'auto' es mejor que 'scroll' para navegadores modernos */
+    cursor: grab;
+    padding: 20px 0;
+    
+    /* MEJORA: Scroll suave y nativo en iOS */
+    -webkit-overflow-scrolling: touch;
+    
+    /* Ocultar scrollbar (Firefox, IE, Edge) */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+    }
+
+    /* Ocultar scrollbar en Chrome/Safari */
+    .carousel-full-width-wrapper::-webkit-scrollbar {
+    display: none;
+    }
+
+    .carousel-full-width-wrapper:active {
+    cursor: grabbing;
+    }
+
+    /* PISTA DE ELEMENTOS */
+    .carousel-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    padding: 0 20px; /* Margen lateral inicial */
+    margin: 0 auto; /* Intenta centrar si hay pocos elementos */
+    }
+
+    /* ÍTEM INDIVIDUAL */
+    .brand-item {
+    flex-shrink: 0;
+    width: 160px;
+    transition: transform 0.3s ease;
+    }
+
+    .brand-link {
+    text-decoration: none;
+    display: block;
+    user-select: none;
+    -webkit-user-drag: none;
+    }
+
+    /* CÍRCULO BLANCO */
+    .brand-circle {
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Sombra suave */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06); 
+    border: 1px solid #f5f5f5;
+    transition: all 0.3s ease;
+    }
+
+    .brand-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    border-color: var(--color-primary);
+    }
+
+    .brand-circle img {
+    max-width: 70%; /* Ajustado ligeramente para que no se vean apretados */
+    max-height: 70%;
+    object-fit: contain;
+    pointer-events: none;
+    }
+
+    /* --- MEDIA QUERIES (Aquí está la magia para Tablet y Móvil) --- */
+
+    /* --- ANIMACIÓN Y COMPORTAMIENTO MÓVIL/TABLET --- */
+
+/* 1. Definimos la animación de desplazamiento */
+@keyframes scroll-mobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Se mueve hasta la mitad (donde empieza la copia) */
+}
+
+/* 2. Configuración para pantallas menores a 1024px */
+@media (max-width: 1024px) {
+  
+  .carousel-full-width-wrapper {
+    overflow: hidden; /* Ocultamos lo que se sale de la pantalla */
+    width: 100%;
+    position: relative;
+    /* IMPORTANTE: Quitamos pointer-events: none para permitir clics */
+  }
+
+  .carousel-track {
+    display: flex;
+    width: max-content; /* El ancho se ajusta al contenido */
+    
+    /* La animación: 25 segundos, velocidad constante (linear), infinita */
+    animation: scroll-mobile 25s linear infinite;
+  }
+
+  /* --- EL TRUCO DE LA PAUSA --- */
+  /* Si el usuario toca (active) o pasa el mouse (hover), la animación se PAUSA */
+  /* Esto facilita muchísimo poder hacer clic en el enlace sin fallar */
+  .carousel-track:hover, 
+  .carousel-track:active {
+    animation-play-state: paused;
+  }
+  
+  .brand-item {
+     width: 120px; /* Tamaño cómodo para ver */
+     margin-right: 30px; /* Espacio entre logos */
+     flex-shrink: 0; /* Evita que se aplasten */
+  }
+
+  /* Aseguramos que los enlaces y círculos reciban el clic */
+  .brand-link, .brand-circle {
+      cursor: pointer;
+      pointer-events: auto; 
+  }
+}
+   /* --- ANIMACIÓN PARA MOVIL Y TABLET --- */
+
+/* 1. Definimos la animación */
+@keyframes scroll-mobile {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Mueve el track hasta la mitad */
+}
+
+@media (max-width: 1024px) { /* Aplica a Tablet y Celular */
+  
+  .carousel-full-width-wrapper {
+    overflow: hidden; /* Ocultamos la barra de scroll manual */
+    pointer-events: none; /* Evita que el usuario pare la animación al tocar (opcional) */
+  }
+
+  .carousel-track {
+    /* Aquí está la magia: Animación infinita */
+    animation: scroll-mobile 20s linear infinite; 
+    width: max-content;
+    
+    /* IMPORTANTE: Para que esto se vea bien, en tu archivo JSX (React)
+       deberías duplicar la lista de marcas. Ejemplo: 
+       {[...brands, ...brands].map(brand => ...)} 
+       Si no las duplicas, al terminar la animación dará un salto brusco. */
+  }
+  
+  .brand-item {
+     width: 120px; /* Tamaño ajustado */
+     margin-right: 20px; /* Usamos margin en lugar de gap para animaciones más fluidas */
+  }
+}

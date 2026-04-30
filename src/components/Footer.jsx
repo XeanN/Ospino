@@ -14,7 +14,7 @@
             
             {/* COLUMNA 1: MARCA + DESCRIPCIÓN + SOCIALES */}
             <div className="footer-brand-col">
-                <img src={getAssetUrl('LogoDiapositiva.png')} alt="Delycorp" className="footer-logo" />
+                <img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Delycorp" className="footer-logo" />
                 {/*<p className="footer-desc">
                 Compañía global de alimentos que busca cautivar al consumidor a través de la innovación y el sabor de sus productos. 
                 Sustentada en una marca sombrilla fuerte, marcas reconocidas y de alto valor percibido.
@@ -22,10 +22,10 @@
                 
                 {/* Iconos sociales */}
                 <div className="footer-social-icons">
-                <a href="https://www.facebook.com/delycorpdeyelli#" aria-label="Facebook" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-                <a href="https://www.tiktok.com/@deyelli.pe" aria-label="TikTok" target="_blank" rel="noreferrer"><FaTiktok /></a>
-                <a href="https://www.instagram.com/deyelli.pe/" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>
-                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noreferrer"><FaYoutube /></a>
+                <a href="https://web.facebook.com/profile.php?id=61573849888646" aria-label="Facebook" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+                <a href="https://www.tiktok.com/@0ospino" aria-label="TikTok" target="_blank" rel="noreferrer"><FaTiktok /></a>
+                {/*<a href="https://www.instagram.com/deyelli.pe/" aria-label="Instagram" target="_blank" rel="noreferrer"><FaInstagram /></a>*/}
+                {/*<a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noreferrer"><FaYoutube /></a>*/}
                 </div>
 
                 {/* --- LIBRO DE RECLAMACIONES (Google Form) --- */}
@@ -83,7 +83,7 @@
             {/* SECCIÓN INFERIOR: COPYRIGHT */}
             <div className="footer-bottom">
             <div className="copyright-text">
-                {new Date().getFullYear()} © Delycorp S.A.C. - Todos los derechos reservados - 
+                {new Date().getFullYear()} © Ospino S.A.C. - Todos los derechos reservados - 
                 <Link to="/privacidad"> Políticas de Protección de datos personales</Link> | 
                 <Link to="/cookies"> Política de Cookies</Link> | 
                 <Link to="/terminos"> Términos y Condiciones</Link> | 

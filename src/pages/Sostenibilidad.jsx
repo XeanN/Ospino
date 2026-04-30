@@ -11,7 +11,7 @@
         <section className="sust-hero">
             <div className="sust-hero-overlay"></div>
             <div className="sust-hero-content container">
-            <span className="sust-tag">Compromiso Delycorp</span>
+            <span className="sust-tag">Compromiso Ospino</span>
             <h1>Sembrando un Futuro Sostenible</h1>
             <p>
                 Integramos la responsabilidad ambiental en cada paso de nuestra cadena logística, 

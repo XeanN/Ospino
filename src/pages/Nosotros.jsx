@@ -9,7 +9,7 @@
         {/* 1. INTRODUCCIÓN Y ¿QUIÉNES SOMOS? (Estilo Imagen 4bb06a.png) */}
         <section id="quienes-somos" className="intro-section container">
             <div className="intro-text">
-            <p className="subtitle">DELYCORP</p>
+            <p className="subtitle">OSPINO</p>
             <h1 className="main-title">Quiénes Somos</h1>
             <p className="summary-text">
                 Somos un aliado estratégico cuyo objetivo es que tu cliente busque la recompra en tu negocio, 

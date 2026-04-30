@@ -11,7 +11,7 @@
         <div className="news-hero">
             <div className="container">
             <h1>Novedades</h1>
-            <p>Entérate de lo último en Delycorp y nuestras marcas.</p>
+            <p>Entérate de lo último en Ospino y nuestras marcas.</p>
             </div>
         </div>
 

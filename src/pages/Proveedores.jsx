@@ -51,7 +51,7 @@
             <div className="intro-content-centered">
                 <h2>Crezcamos Juntos</h2>
                 <p>
-                En Delycorp buscamos socios estratégicos que compartan nuestra visión de excelencia. 
+                En Ospino buscamos socios estratégicos que compartan nuestra visión de excelencia. 
                 Nuestro objetivo es potenciar las marcas que representamos, garantizando que lleguen 
                 a cada rincón del país a través de nuestra robusta red de distribución.
                 </p>

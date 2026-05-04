@@ -71,7 +71,7 @@ export default function AppRouter() {
 
       {/* Blogs */}
       <Route path="/blogs" element={<Blog />} />
-      <Route path="/blogs/:id" element={<NovedadDetalle />} />
+      <Route path="/blogs/:slug" element={<NovedadDetalle />} />
     </Routes>
   );
 }

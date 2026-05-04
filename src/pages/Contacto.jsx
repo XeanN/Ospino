@@ -33,7 +33,7 @@
                         <FaMapMarkerAlt className="info-icon" />
                         <div className="info-text">
                             <h4>Dirección</h4>
-                            <p>Pasaje Giraldez 111<br />Av. La Cultura 701 - Mercado Productores Santa Anita - Lima</p>
+                            <p>Pasaje Giraldez 47<br />Av. La Cultura 701 - Mercado Productores Santa Anita - Lima</p>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@
                         <FaEnvelope className="info-icon" />
                         <div className="info-text">
                             <h4>Correo Electrónico</h4>
-                            <p>comercialretail@ospino.pe </p>
+                            <p>ventas1@bony.pe </p>
                         </div>
                     </div>
 

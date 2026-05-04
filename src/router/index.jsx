@@ -15,8 +15,6 @@ import Inversionistas from "../pages/Inversionistas";
 import Proveedores from "../pages/Proveedores";
 import Clientes from "../pages/Clientes";
 
-// Sostenibilidad
-import Sostenibilidad from "../pages/Sostenibilidad"; 
 
 // Productos
 import CatalogPage from '../pages/CatalogPage'; // <--- USAREMOS ESTE (El que tiene marcas y todo)
@@ -41,9 +39,6 @@ export default function AppRouter() {
       <Route path="/nosotros/quienes-somos" element={<QuienesSomos />} />
       <Route path="/nosotros/historia" element={<Historia />} />
       <Route path="/nosotros/nuestro-equipo" element={<NuestroEquipo />} />
-
-      {/* Sostenibilidad */}
-      <Route path="/sostenibilidad" element={<Sostenibilidad />} />
 
       {/* --- CORRECCIÓN DE PRODUCTOS --- */}
       

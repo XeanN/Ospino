@@ -18,7 +18,7 @@
         <div className="container">
             <div className="news-grid">
             {newsData.map((item) => (
-                <Link to={`/blogs/${item.id}`} key={item.id} className="news-card">
+                <Link to={`/blogs/${item.slug}`} key={item.id} className="news-card">
                 <div className="news-card-image">
                     <img src={item.image} alt={item.title} />
                 </div>

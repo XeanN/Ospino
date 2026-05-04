@@ -173,7 +173,7 @@ const Header = () => {
                     <Link to="/sostenibilidad">Sostenibilidad</Link>
                 </li>
 
-                <li><Link to="/novedades">Novedades</Link></li>
+                <li><Link to="/blogs">Blogs</Link></li>
                 <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="contact-link">Contáctanos</Link></li>
                 </ul>
@@ -239,7 +239,7 @@ const Header = () => {
                     </Link>
                 </li>
 
-                <li><Link to="/novedades" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Novedades</Link></li>
+                <li><Link to="/blogs" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link></li>
                 <li><Link to="/trabaja" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Contáctanos</Link></li>
             </ul>

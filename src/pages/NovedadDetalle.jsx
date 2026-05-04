@@ -2,7 +2,7 @@
     import { useParams, Link } from 'react-router-dom';
     import { newsData } from '../data/news';
     import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-    import './Novedades.css'; // Reusa el CSS
+    import './Blog.css'; // Reusa el CSS
 
     const NoticiaDetalle = () => {
     const { id } = useParams();
@@ -24,8 +24,8 @@
         {/* Banner Simple */}
         <div className="news-hero" style={{height:'250px', padding:'40px 0'}}>
             <div className="container">
-            <Link to="/novedades" style={{color:'white', textDecoration:'none', display:'flex', alignItems:'center', gap:'10px', justifyContent:'center', marginBottom:'10px'}}>
-                <FaArrowLeft /> Volver a Novedades
+            <Link to="/blogs" style={{color:'white', textDecoration:'none', display:'flex', alignItems:'center', gap:'10px', justifyContent:'center', marginBottom:'10px'}}>
+                <FaArrowLeft /> Volver a Blogs
             </Link>
             <h1>Actualidad Ospino</h1>
             </div>
@@ -51,11 +51,11 @@
         <div className="related-news-section">
             <div className="container">
             <h3 style={{color:'var(--color-corporate-blue)', fontSize:'2rem', marginBottom:'30px', textAlign:'center'}}>
-                Otras novedades de interés
+                Otros Blogs de interés
             </h3>
             <div className="news-grid">
                 {otherNews.map((item) => (
-                <Link to={`/novedades/${item.id}`} key={item.id} className="news-card">
+                <Link to={`/blogs/${item.id}`} key={item.id} className="news-card">
                     <div className="news-card-image">
                     <img src={item.image} alt={item.title} />
                     </div>

@@ -26,7 +26,7 @@ import ProductDetail from "../pages/ProductDetail";
 import Contacto from "../pages/Contacto";
 
 // Noticias
-import Novedades from "../pages/Novedades";       // Antes Noticias
+import Blog from "../pages/Blog";       // Antes Noticias
 import NovedadDetalle from "../pages/NovedadDetalle";
 
 
@@ -69,9 +69,9 @@ export default function AppRouter() {
       {/* Contacto */}
       <Route path="/contacto" element={<Contacto />} />
 
-      {/* Novedades */}
-      <Route path="/novedades" element={<Novedades />} />
-      <Route path="/novedades/:id" element={<NovedadDetalle />} />
+      {/* Blogs */}
+      <Route path="/blogs" element={<Blog />} />
+      <Route path="/blogs/:id" element={<NovedadDetalle />} />
     </Routes>
   );
 }

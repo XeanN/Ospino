@@ -12,14 +12,14 @@
         <div className="container">
             
             <div className="section-header">
-            <h2 className="section-title">Últimas Novedades</h2>
-            <Link to="/novedades" className="view-all-link">Ver todas las novedades &rarr;</Link>
+            <h2 className="section-title">Últimos Blogs</h2>
+            <Link to="/blogs" className="view-all-link">Ver todos los BLogs &rarr;</Link>
             </div>
 
             <div className="news-grid">
             {latestNews.map((item) => (
                 // Envolvemos toda la tarjeta en un Link para que sea más fácil hacer clic
-                <Link to={`/novedades/${item.id}`} key={item.id} className="news-card" style={{textDecoration: 'none', color: 'inherit'}}>
+                <Link to={`/blogs/${item.id}`} key={item.id} className="news-card" style={{textDecoration: 'none', color: 'inherit'}}>
                 
                 <div className="news-image">
                     <img src={item.image} alt={item.title} />

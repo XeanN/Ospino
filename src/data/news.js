@@ -83,7 +83,7 @@ export const newsData = [
     title: "Chocolates Nestlé para tu bodega: Sublime, Princesa, Morochas y más",
     date: "18 SEP, 2024",
     category: "Marcas",
-    image: getAssetUrl('Nestle-sublime-pack.jpeg'),
+    image: getAssetUrl('sublime-morochas-triangulo-princesa.jpg'),
     summary: "Ospino distribuye el portafolio completo de chocolates Nestlé en Perú, incluyendo Sublime, Princesa, Besos de Moza, Morochas, Lentejas Mini Fiesta y KitKat.",
     content: `
       <p>Nestlé es la <strong>marca número 1 de chocolates en el Perú</strong>, y en Ospino tenemos todo su portafolio disponible para tu bodega o mayorista. Con décadas de presencia en el mercado peruano, los chocolates Nestlé son un infaltable en cada punto de venta.</p>

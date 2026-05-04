@@ -1,4 +1,4 @@
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter  } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop'; 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter >
       <AnalyticsTracker />
       <ScrollToTop />
       <div className="app-container">
@@ -22,7 +22,7 @@ function App() {
         <CtaSection />
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter >
   );
 }
 

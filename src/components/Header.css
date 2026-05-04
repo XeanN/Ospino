@@ -24,8 +24,8 @@
     gap: 40px;
     }
 
-    .header-logo img { height: 75px; width: auto; display: block; transition: height 0.3s ease; }
-    .header.scrolled .header-logo img { height: 60px; }
+    .header-logo img { height: auto; width: 68%;max-width: 220px; display: block; transition: height 0.3s ease; }
+    .header.scrolled .header-logo img { height: auto; }
 
     .header-content { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 12px; align-items: flex-end; }
 

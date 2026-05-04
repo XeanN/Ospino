@@ -112,7 +112,10 @@ const Header = () => {
 
             <nav className="header-bottom-row desktop-only">
                 <ul className="main-menu">
-                
+                {/* --- INICIO (AHORA ES UN LINK DIRECTO) --- */}
+                <li>
+                    <Link to="/">Inicio</Link>
+                </li>
                 {/* --- PRODUCTOS (Con Dropdown) --- */}
                 <li className="menu-item-has-children static-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'productos')} className={desktopMenuOpen === 'productos' ? 'active-link' : ''}>
@@ -167,10 +170,7 @@ const Header = () => {
                     </div>
                     )}
                 </li>--- */}
-
-                {/* --- SOSTENIBILIDAD (AHORA ES UN LINK DIRECTO) --- */}
                 <li><Link to="/nosotros">Nosotros</Link></li>
-                <li><Link to="/sostenibilidad">Sostenibilidad</Link></li>
                 <li><Link to="/blogs">Blogs</Link></li>
                 <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="contact-link">Contáctanos</Link></li>

@@ -120,14 +120,15 @@
     transition: all 0.3s ease;
     
     /* ESTILO: Borde Azul, Fondo Transparente */
-    border: 2px solid var(--color-primary);
-    color: var(--color-corporate-blue);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-dark);
     background-color: transparent;
     }
 
     .btn-view-all:hover {
     /* HOVER: Fondo Azul, Letra Blanca */
     background-color: var(--color-primary);
+    border: 2px solid var(--color-dark);
     color: #fff;
     transform: translateY(-3px); /* Pequeño salto hacia arriba */
     box-shadow: 0 5px 15px rgba(0, 59, 113, 0.2); /* Sombra suave azul */

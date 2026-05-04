@@ -5,10 +5,10 @@
 
 :root {
   /* COLORES OFICIALES OSPINO */
-  --color-primary: #6B35A8;       /* Morado principal (para letras y fondos principales) */
-  --color-secondary: #F5A623;     /* Dorado (para botones, bordes y detalles de atención) */
-  --color-dark: #4A2080;          /* Morado oscuro (ideal para el Footer o Taglines) */
-  
+  --color-primary: #6B35A8 !important;       /* Morado principal (para letras y fondos principales) */
+  --color-secondary: #F5A623 !important;     /* Dorado (para botones, bordes y detalles de atención) */
+  --color-dark: #4A2080 !important;          /* Morado oscuro (ideal para el Footer o Taglines) */
+
   /* Colores neutros */
   --color-text-main: #212121;
   --color-text-light: #757575;
@@ -20,8 +20,8 @@
   font-weight: 400;
 
   color-scheme: light;
-  color: var(--color-text-main);
-  background-color: var(--color-background);
+  color: var(--color-text-main) !important;
+  background-color: var(--color-background) !important;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;

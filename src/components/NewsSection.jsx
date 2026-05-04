@@ -25,10 +25,10 @@
                     <img src={item.image} alt={item.title} />
                     <div className="news-date">{item.date}</div>
                 </div>
-                
+                    
                 <div className="news-content">
                     {/* Agregamos la categoría para que se vea más profesional */}
-                    <span style={{fontSize:'0.8rem', color:'var(--color-primary)', fontWeight:'bold', textTransform:'uppercase', marginBottom:'5px', display:'block'}}>
+                    <span style={{fontSize:'0.8rem', color:'var(--color-secondary)', fontWeight:'bold', textTransform:'uppercase', marginBottom:'5px', display:'block'}}>
                     {item.category}
                     </span>
                     

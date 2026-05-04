@@ -47,12 +47,12 @@
 
     /* Estilo para los enlaces padres */
     .main-menu a { 
-    font-size: 1rem; font-weight: 600; color: var(--color-corporate-blue); 
+    font-size: 1rem; font-weight: 600; color: var(--color-primary); 
     display: flex; align-items: center; gap: 6px; cursor: pointer; text-decoration: none;
     }
-    .main-menu a:hover, .active-link { color: var(--color-primary) !important; }
+    .main-menu a:hover, .active-link { color: var(--color-secondary) !important; }
     .menu-arrow { font-size: 0.7rem; margin-top: 2px; }
-    .contact-link { color: var(--color-corporate-blue) !important; }
+    .contact-link { color: var(--color-primary) !important; }
 
     /* --- SISTEMA DE POSICIONAMIENTO DROPDOWN --- */
 

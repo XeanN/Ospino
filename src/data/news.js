@@ -119,7 +119,7 @@ export const newsData = [
     title: "Arcor en Perú: Bon o Bon, Mogul, tabletas y más golosinas para tu bodega",
     date: "10 AGO, 2024",
     category: "Marcas",
-    image: getAssetUrl('Pack-ospino-publicidad.jpeg'),
+    image: getAssetUrl('arcor-colombina.png'),
     summary: "Descubre el portafolio completo de Arcor que distribuye Ospino en Perú: Bon o Bon, Mogul, caramelos, tabletas y toda la línea de chocolates y golosinas.",
     content: `
       <p><strong>Arcor</strong> es una de las empresas de golosinas más importantes de América Latina, y en Ospino tenemos su portafolio completo disponible para distribución en Lima y el Perú.</p>

@@ -19,17 +19,17 @@ const HeroSlider = () => {
         },
         {
             id: 2,
-            image: getAssetUrl("s_Marcas.jpg"),
-            title: "Nuestras Marcas",
-            subtitle: "Representamos a las mejores marcas del mercado.",
+            image: getAssetUrl("s_Compromiso.png"),
+            title: "Relaciones que generan crecimiento",
+            subtitle: "Conectamos con clientes y proveedores para crecer juntos.",
             link: "/productos", // <--- Este botón llevará a "Productos"
             buttonText: "Ver Catálogo"
         },
         {
             id: 3,
-            image: getAssetUrl("s_Compromiso.jpg"),
-            title: "Compromiso y Pasión",
-            subtitle: "Un equipo dedicado a servirte mejor.",
+            image: getAssetUrl("s_Confianza.png"),
+            title: "Impulsamos tu negocio",
+            subtitle: "Ofrecemos productos de calidad y un servicio confiable para tu éxito.",
             link: "/trabaja", // <--- Este botón llevará a "Trabaja con Nosotros"
             buttonText: "Únete al Equipo"
         }

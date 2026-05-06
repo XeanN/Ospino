@@ -51,7 +51,7 @@
         {/* 3. PILARES DE VALOR (GRID) */}
         <section className="value-pillar-section">
             <div className="container">
-                <h3 style={{textAlign:'center', color: '#003B71', fontSize:'2rem', fontWeight:'800', marginBottom:'40px'}}>
+                <h3 style={{textAlign:'center', color: ' #6B35A8', fontSize:'2rem', fontWeight:'800', marginBottom:'40px'}}>
                     Nuestra Propuesta de Valor
                 </h3>
                 

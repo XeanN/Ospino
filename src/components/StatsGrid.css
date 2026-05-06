@@ -23,7 +23,7 @@
 
 .metric-icon {
     font-size: 3rem;
-    color: var(--color-corporate-blue); /* Íconos Azules */
+    color: var(--color-primary); /* Íconos Azules */
     margin-bottom: 10px;
 }
 
@@ -37,7 +37,7 @@
 .metric-label {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     margin-bottom: 5px;
 }
 
@@ -57,7 +57,7 @@
 .stats-intro-title {
     font-size: 2.5rem; /* Título grande */
     font-weight: 800;
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     margin-bottom: 15px;
 }
 

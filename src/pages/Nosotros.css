@@ -10,7 +10,7 @@
 
     /* --- ESTILOS DE ENCABEZADOS --- */
     .section-header-blue {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 40px;
@@ -34,7 +34,7 @@
     }
 
     .intro-text .subtitle {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -42,7 +42,7 @@
     }
 
     .intro-text .main-title {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 3.2rem;
     font-weight: 800;
     margin: 0 0 20px 0;
@@ -101,7 +101,7 @@
     }
 
     .history-timeline {
-        border-left: 3px solid var(--color-corporate-blue);
+        border-left: 3px solid var(--color-primary);
         padding-left: 20px;
     }
 
@@ -189,7 +189,7 @@
     }
 
     .logistics-info h3 {
-        color: var(--color-corporate-blue);
+        color: var(--color-primary);
         font-size: 1.8rem;
         margin-top: 0;
         margin-bottom: 15px;

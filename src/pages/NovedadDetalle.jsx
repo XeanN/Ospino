@@ -130,7 +130,7 @@ const NoticiaDetalle = () => {
       <div className="related-news-section">
         <div className="container">
           <h2 style={{
-            color: 'var(--color-corporate-blue)',
+            color: 'var(--color-primary)',
             fontSize: '2rem',
             marginBottom: '30px',
             textAlign: 'center'

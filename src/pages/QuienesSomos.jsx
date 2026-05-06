@@ -37,10 +37,12 @@ const QuienesSomos = () => {
                             <h1 className="page-main-title">Quiénes Somos</h1>
                             
                             <p className="intro-paragraph">
-                                Impulsamos tu negocio como aliado estratégico, enfocados en maximizar tus ventas y fidelizar
-                                a tus clientes con la variedad y calidad característicos de nuestro portafolio de productos como
-                                Golosinas interactivas Deyelli, Bebidas D'Loe y Bombones Monfer, Así mismo, estamos comprometidos
-                                en brindar un soporte post-venta profesional.
+                                OSPINO es una empresa peruana especializada en la distribución mayorista de golosinas, chocolates, snacks y productos de consumo masivo a nivel nacional.
+
+                                Trabajamos junto a bodegas, distribuidores y negocios aliados, ofreciendo un portafolio variado de marcas reconocidas y productos propios como Ospino Cusco y Panetón Ospino.
+
+                                Nos enfocamos en brindar un servicio confiable, atención personalizada y una distribución eficiente, construyendo relaciones comerciales sólidas que impulsan el crecimiento de nuestros clientes.
+
                             </p>
                             
                             {/*<hr className="title-divider" />*/}
@@ -57,7 +59,7 @@ const QuienesSomos = () => {
                         
                         <div className="content-right-image">
                             <img 
-                                src={getAssetUrl('quienes somos.jpg')}
+                                src={getAssetUrl('quienes somos.png')}
                                 alt="Equipo Ospino" 
                             />
                         </div>

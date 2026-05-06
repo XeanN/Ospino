@@ -1315,6 +1315,9 @@ export const newsData = [
       <p>Para el bodeguero peruano, tener Sayón en stock no es solo una decisión de negocio: es también un reconocimiento a la tradición y al sabor peruano. Con <strong>Ospino</strong> como tu distribuidor, tienes acceso a toda la línea Sayón con la comodidad de un solo pedido. Contáctanos para empezar.</p>
     `
   },
+  // ═══════════════════════════════════════════════
+// BLOG 8 — PEPSICO
+// ═══════════════════════════════════════════════
   {
     id: 8,
     slug: "snacks-pepsico-doritos-cheetos-lays-peru",
@@ -1323,41 +1326,153 @@ export const newsData = [
     keywords: "Doritos Perú, Cheetos Peru, Lays Peru, snacks Pepsico distribuidora, Karinto maní, snacks Lima",
     title: "Snacks Pepsico para tu bodega: Lays, Doritos, Cheetos y más",
     date: "03 ABR, 2024",
+    dateISO: "2024-04-03",
     category: "Marcas",
     image: getAssetUrl('ospino-fondo.jpg'),
-    summary: "Ospino distribuye el catálogo WHS 2025 de Pepsico en Perú: Lays, Doritos, Cheetos, Dinamita, Karito y toda la línea de snacks para bodegas y mayoristas.",
+    summary: "Ospino distribuye el catálogo WHS 2025 de Pepsico en Perú: Lays, Doritos, Cheetos, Dinamita, Karinto y toda la línea de snacks para bodegas y mayoristas.",
     content: `
-      <p>Los snacks de <strong>PepsiCo</strong> son de los más vendidos en bodegas y kioscos de todo el Perú. En Ospino distribuimos el portafolio completo del catálogo WHS 2025 para que nunca te falten los más pedidos.</p>
+      <p>En el mundo de los snacks salados, existe una empresa que domina el mercado global con una consistencia que pocas industrias pueden igualar: <strong>PepsiCo</strong>. A través de sus marcas Lays, Doritos, Cheetos y Karinto, PepsiCo ha construido un portafolio de snacks presentes en prácticamente cada rincón del planeta, y el Perú no es la excepción.</p>
 
-      <h2>Lays – Las papitas de siempre</h2>
-      <p><strong>Lays</strong> es la marca de papitas número 1 en el mundo. En Perú disponemos de:</p>
+      <p>Los snacks PepsiCo son algunos de los productos de mayor rotación en el canal bodega peruano. Las papitas Lays, los Doritos, los Cheetos y el maní Karinto tienen una demanda constante y predecible que los convierte en productos de altísimo valor para cualquier punto de venta. No importa el día ni la temporada: en algún momento del día, algún cliente va a entrar a tu bodega y pedir sus snacks favoritos de PepsiCo.</p>
+
+      <p>En <strong>Ospino</strong>, distribuidora peruana de golosinas y snacks, contamos con el catálogo WHS 2025 de PepsiCo completo para distribución a bodegas, kioscos y mayoristas en Lima y el Perú. En este artículo te presentamos cada marca, sus productos más vendidos y cómo pueden fortalecer la sección de snacks de tu bodega.</p>
+
+      <h2>PepsiCo: el gigante global de los snacks</h2>
+
+      <h3>Una empresa que conoce el snack</h3>
+      <p>PepsiCo no es solo la empresa de la Pepsi. Es uno de los grupos de alimentos y bebidas más grandes del mundo, y su división de snacks — liderada por la marca Frito-Lay — es responsable de algunos de los productos más vendidos del planeta. Lays, Doritos, Cheetos, Tostitos: todos son marcas del universo PepsiCo Frito-Lay.</p>
+      <p>Esta escala global tiene una implicación directa para el mercado peruano: los productos PepsiCo se benefician de décadas de inversión en desarrollo de sabor, tecnología de producción y marketing global. El resultado son productos con un sabor consistente y una calidad confiable que los consumidores aprenden a esperar.</p>
+
+      <h3>PepsiCo en el canal bodega peruano</h3>
+      <p>En el canal bodega peruano, los snacks PepsiCo tienen una posición privilegiada en el segmento de snacks salados. Cuentan con la ventaja del reconocimiento de marca global y la inversión publicitaria constante que mantiene las marcas top of mind en el consumidor. Un cliente que entra a una bodega y ve Doritos no necesita conocer el producto: ya lo conoce, ya lo ha comido, y sabe exactamente qué esperar.</p>
+
+      <h2>Lays – La papita que conquistó el mundo</h2>
+
+      <p><strong>Lays</strong> es la marca de papas fritas más vendida del mundo. Con décadas de presencia global y una propuesta de valor simple pero irresistible — papas de calidad con sabores que gustan — Lays ha logrado algo extraordinario: convencer a personas de culturas completamente diferentes de que sus papitas son las mejores.</p>
+
+      <h3>El secreto del éxito de Lays</h3>
+      <p>La clave del éxito de Lays está en la combinación de tres factores: la calidad de la papa utilizada, el proceso de cocción que maximiza el crujido y la variedad de sabores que responden a los gustos locales. PepsiCo ha entendido desde hace tiempo que los sabores locales importan: por eso Lays tiene sabores adaptados al gusto peruano, como el Pollo a la Brasa, que es prácticamente una declaración de amor a la gastronomía nacional.</p>
+
+      <h3>La línea Lays completa para el mercado peruano</h3>
+
+      <h4>Lays Clásicas</h4>
+      <p>Las <strong>Lays Clásicas</strong> son el producto de entrada de la línea: papas fritas con sal, crujientes y sabrosas. Sin saborizantes elaborados, solo la calidad de la papa y el proceso de fritura. Son la opción para el consumidor que quiere una papita "de verdad".</p>
       <ul>
-        <li>Lays Clásicas – en presentaciones de 39g, 85g, 140g y 155g</li>
-        <li>Lays Ondas – Clásicas, Pollo a la Brasa, Mayonesa y Picante (37g)</li>
-        <li>Lays Sal Marina y Alitas BBQ (30g)</li>
+        <li>Presentaciones: 39g, 85g, 140g y 155g para distintos momentos de consumo y presupuestos.</li>
+        <li>La presentación de 39g es la de mayor rotación en bodega por su formato individual accesible.</li>
       </ul>
+
+      <h4>Lays Ondas</h4>
+      <p>Las <strong>Lays Ondas</strong> son la versión con forma ondulada, que crea una textura más crujiente con más superficie para capturar el sabor. Disponibles en cuatro variantes que representan algunos de los sabores más populares del mercado peruano:</p>
+      <ul>
+        <li><strong>Lays Ondas Clásicas</strong> – El ondulado clásico, más crujiente que la versión plana.</li>
+        <li><strong>Lays Ondas Pollo a la Brasa</strong> – El homenaje a la gastronomía peruana. El sabor a pollo a la brasa es uno de los más populares en el mercado de snacks del país.</li>
+        <li><strong>Lays Ondas Mayonesa</strong> – Cremoso y untuoso en formato crujiente. Muy popular entre adolescentes y jóvenes adultos.</li>
+        <li><strong>Lays Ondas Picante</strong> – Para los amantes del picante, con un nivel accesible para la mayoría de los consumidores.</li>
+        <li>Presentación: 37g individual.</li>
+      </ul>
+
+      <h4>Lays Especiales</h4>
+      <ul>
+        <li><strong>Lays Sal Marina (30g)</strong> – Con sal marina, ofrece un sabor ligeramente diferente y una percepción de producto más premium.</li>
+        <li><strong>Lays Alitas BBQ (30g)</strong> – El sabor BBQ ahumado-dulce aplicado al formato de papitas.</li>
+      </ul>
+
+      <h3>Estrategia de exhibición Lays</h3>
+      <p>Las papitas Lays funcionan mejor en una sección dedicada a snacks, organizada por tamaño. Ten siempre el formato de 39g en stock suficiente ya que es el de mayor rotación. Los formatos más grandes apuntan a un consumidor que compra para llevar a casa y compartir; exhibirlos en una posición visible puede generar una venta adicional de mayor ticket.</p>
 
       <h2>Doritos – El snack favorito de los jóvenes</h2>
-      <p><strong>Doritos</strong> es el snack de maíz más vendido del mercado. Disponible en:</p>
+
+      <p>Si Lays es la marca más universal de PepsiCo, <strong>Doritos</strong> es la más aspiracional. Con su formato triangular de maíz y sus sabores intensos, Doritos ha construido una imagen de marca que conecta directamente con el público joven y con una actitud desafiante y divertida hacia la vida.</p>
+
+      <h3>El fenómeno Doritos en el Perú</h3>
+      <p>En el Perú, Doritos tiene una presencia muy fuerte entre el segmento de 13 a 30 años. Los jóvenes peruanos han adoptado los Doritos no solo como un snack sino como parte de una cultura de consumo que incluye videojuegos, reuniones con amigos y momentos de relajación. La imagen de Doritos — atrevida, intensa, sin complejos — resuena perfectamente con este segmento.</p>
+
+      <h3>La línea Doritos para el mercado peruano</h3>
+
+      <h4>Doritos Queso Fuego</h4>
+      <p>El <strong>Doritos Queso Fuego</strong> es el producto de mayor venta de la línea en el Perú. Su combinación de maíz crujiente con sabor a queso intenso y un toque de picante lo hace adictivo en el mejor sentido. Disponible en presentaciones de 21g, 45g, 100g y 190g para distintos momentos de consumo.</p>
+
+      <h4>Doritos Queso Atrevido</h4>
+      <p>El <strong>Doritos Queso Atrevido</strong> es la versión con sabor a queso más intenso. Para los consumidores que quieren más sabor en cada chip. Presentaciones de 23g, 55g, 105g y 225g.</p>
+
+      <h4>Doritos Dinamita</h4>
+      <p>El <strong>Doritos Dinamita</strong> es la versión enrollada, con forma de rollito de maíz en lugar del triángulo clásico. Su forma diferente crea una experiencia de consumo distinta y es especialmente popular entre quienes quieren algo diferente al Doritos tradicional.</p>
+
+      <h3>Cómo exhibir los Doritos</h3>
+      <p>Los Doritos funcionan mejor en una sección visible de snacks salados, organizados por variante. El formato de 21g es el de mayor rotación para venta individual; los formatos más grandes se venden como snack para compartir, especialmente los fines de semana. Una exhibición que muestre claramente las dos variantes principales (Queso Fuego y Queso Atrevido) permite al cliente elegir rápidamente.</p>
+
+      <h2>Cheetos – El queso crujiente de los snacks</h2>
+
+      <p><strong>Cheetos</strong> es la marca de snacks de maíz con sabor a queso más reconocida del mundo. Con su característica forma alargada y su recubrimiento de polvo de queso naranja, Cheetos tiene una identidad visual y sensorial inconfundible que lo distingue de cualquier competidor.</p>
+
+      <h3>La propuesta de valor de Cheetos</h3>
+      <p>Cheetos tiene una propuesta de valor muy clara: snacks de maíz con el sabor más intenso posible a queso. No hay ambigüedad en lo que es Cheetos: es queso, intenso, crujiente y adictivo. Esta claridad de propuesta hace que los consumidores sepan exactamente qué esperar cuando compran Cheetos, generando una alta tasa de recompra.</p>
+
+      <h3>La línea completa de Cheetos</h3>
+
+      <h4>Cheetos Boliqueso</h4>
+      <p>La versión de bolitas de maíz con sabor a queso, con una textura ligeramente diferente a la forma alargada tradicional. Disponible en presentaciones de 21g, 34g, 35g, 180g y 190g.</p>
+
+      <h4>Cheetos Queso Picante</h4>
+      <p>Añade el factor picante al sabor a queso clásico. Una de las opciones de mayor crecimiento en la línea, impulsada por la tendencia hacia snacks más picantes entre el público joven peruano. Presentaciones de 21g, 34g, 90g y 180g.</p>
+
+      <h4>Cheetos Horneados</h4>
+      <p>La opción para el consumidor más consciente de su alimentación. Al ser horneados en lugar de fritos, tienen menor contenido de grasa sin sacrificar el sabor característico. Disponible en formato Bolsaza de 90g, ideal para compartir.</p>
+
+      <h2>Karinto – El maní de PepsiCo</h2>
+
+      <p><strong>Karinto</strong> es la línea de maní crocante de PepsiCo para el mercado peruano. El maní es una categoría de snack diferente a las papitas y snacks de maíz, con un perfil nutricional más robusto y un sabor más sustancial que lo convierte en una alternativa interesante para el consumidor que quiere algo más "de verdad" en su snack.</p>
+
+      <h3>La línea Karinto</h3>
       <ul>
-        <li>Doritos Queso Fuego – 21g, 45g, 100g, 190g</li>
-        <li>Doritos Queso Atrevido – 23g, 55g, 105g, 225g</li>
-        <li>También en formato Dinamita (rollito de maíz)</li>
+        <li><strong>Karinto Clásico</strong> – Maní tostado con sal, la versión más básica y popular. Crujiente, sabroso y satisfactorio.</li>
+        <li><strong>Karinto Salado</strong> – Con más sal para los amantes de los sabores más intensos.</li>
+        <li><strong>Karinto Picante</strong> – Maní con un recubrimiento picante que añade una dimensión extra al sabor.</li>
+        <li>Presentaciones disponibles: 35g y 100g.</li>
       </ul>
 
-      <h2>Cheetos – El queso crujiente</h2>
-      <ul>
-        <li>Cheetos Boliqueso – 21g, 34g, 35g, 180g, 190g</li>
-        <li>Cheetos Queso Picante – 21g, 34g, 90g, 180g</li>
-        <li>Cheetos Horneados – opción más ligera, 90g Bolsaza</li>
-      </ul>
+      <h3>El maní como alternativa a las papitas</h3>
+      <p>Karinto ocupa un nicho diferente al de las papitas fritas: el consumidor que quiere un snack más sustancial, con más proteína y un sabor más sobrio que los Doritos o los Cheetos. Tener Karinto en la exhibición junto a los otros snacks PepsiCo te permite atender a un segmento de consumidores que de otra forma no encuentran en tu bodega lo que buscan.</p>
 
-      <h2>Karinto – Maní crocante</h2>
-      <p><strong>Karinto</strong> es la línea de maní crocante de PepsiCo, disponible en Clásico, Salado y Picante, en presentaciones de 35g y 100g. Ideal como alternativa a las papitas en la exhibición.</p>
+      <h2>La categoría de snacks salados en el Perú: oportunidades para el bodeguero</h2>
 
-      <p>Todos los snacks PepsiCo están disponibles en Ospino para entrega a bodegas, kioscos y mayoristas.</p>
+      <p>La categoría de snacks salados es una de las de mayor crecimiento en el canal bodega peruano. Varios factores impulsan esta tendencia:</p>
+
+      <h3>El snacking como hábito en crecimiento</h3>
+      <p>Los peruanos — especialmente los más jóvenes — están adoptando el snacking como parte de su rutina diaria. En lugar de tres comidas grandes, muchos consumidores prefieren comer con más frecuencia en porciones más pequeñas, y los snacks salados son una de las opciones preferidas para estos momentos intermedios del día.</p>
+
+      <h3>La influencia del entretenimiento digital</h3>
+      <p>El crecimiento del consumo de contenido digital — videojuegos, streaming, redes sociales — ha creado nuevos momentos de consumo de snacks. El consumidor que pasa horas frente a una pantalla necesita un snack que se pueda comer fácilmente con una mano. Los Doritos, los Cheetos y las Lays son perfectos para este uso.</p>
+
+      <h3>La oportunidad del formato individual</h3>
+      <p>El formato individual de 21g a 39g es especialmente relevante para el canal bodega porque responde al consumidor que quiere satisfacer un antojo específico sin comprometerse con una bolsa grande. Este formato tiene una rotación muy alta y permite al bodeguero renovar su stock con frecuencia, manteniendo siempre producto fresco en el exhibidor.</p>
+
+      <h2>Cómo organizar la sección de snacks PepsiCo en tu bodega</h2>
+
+      <p>Una sección de snacks bien organizada puede generar ventas significativamente mayores que una exhibición caótica o poco visible.</p>
+
+      <h3>El principio de la visibilidad total</h3>
+      <p>Los snacks se venden con los ojos. Las bolsas coloridas de Lays, Doritos y Cheetos son en sí mismas publicidad: sus colores llamativos atraen la vista desde lejos. Organiza los snacks en un lugar visible, preferiblemente a la altura de los ojos del consumidor adulto para los formatos más grandes y a la altura de los ojos del niño para los formatos individuales más pequeños.</p>
+
+      <h3>Organización por marca y tamaño</h3>
+      <p>Dentro de la sección de snacks, organiza por marca (todos los Lays juntos, todos los Doritos juntos, todos los Cheetos juntos) y dentro de cada marca, por tamaño de menor a mayor. Esta organización facilita la decisión del consumidor y puede resultar en la compra de un formato más grande al ver las opciones lado a lado.</p>
+
+      <h2>¿Cómo pedir snacks PepsiCo a través de Ospino?</h2>
+
+      <p>En <strong>Ospino</strong>, el catálogo completo WHS 2025 de PepsiCo está disponible junto con el resto de nuestras marcas. Nuestros asesores de preventa conocen qué productos tienen mayor rotación en cada tipo de bodega y zona, y pueden ayudarte a diseñar un pedido de snacks PepsiCo que se ajuste a las necesidades específicas de tu negocio.</p>
+
+      <h2>Conclusión: PepsiCo en tu bodega es tener los snacks que el Perú pide</h2>
+
+      <p>El portafolio PepsiCo — <strong>Lays, Doritos, Cheetos y Karinto</strong> — representa lo mejor del mercado global de snacks salados aplicado al gusto del consumidor peruano. Son marcas con reconocimiento global, demanda constante y alta rotación que no pueden faltar en ninguna bodega bien surtida.</p>
+
+      <p>Con <strong>Ospino</strong> como tu distribuidor, tienes acceso al portafolio completo de snacks PepsiCo con la eficiencia de un solo proveedor y servicio personalizado. Contáctanos hoy para incluir PepsiCo en tu próximo pedido.</p>
     `
   },
+
+// ═══════════════════════════════════════════════
+// BLOG 9 — CEREALES BENOTI / ALICORP
+// ═══════════════════════════════════════════════
   {
     id: 9,
     slug: "cereales-benoti-alicorp-peru-bodegas",
@@ -1366,83 +1481,322 @@ export const newsData = [
     keywords: "cereales Benoti, cereales bodega Perú, Ángel cereal Alicorp, Choco Bum Alicorp, distribuidora cereales Lima",
     title: "Cereales para tu bodega: Benoti, Ángel de Alicorp y más",
     date: "20 MAR, 2024",
+    dateISO: "2024-03-20",
     category: "Marcas",
     image: getAssetUrl('benoti-cereales.jpeg'),
     summary: "Ospino distribuye cereales para bodegas en Perú: Benoti (hojuelas, bolitas, fibra), Alicorp con Cereal Ángel, Choco Bum y glacitas. Consulta disponibilidad.",
     content: `
-      <p>Los cereales son una categoría de alto consumo en el canal bodega, especialmente en la franja del desayuno familiar. En Ospino tenemos una selección de marcas peruanas e internacionales para abastecer tu negocio.</p>
+      <p>El desayuno es la comida más importante del día, y en el hogar peruano, el cereal de caja ocupa un lugar cada vez más relevante en esa primera comida. Desde las hojuelas clásicas hasta los cereales de chocolate que los niños adoran, pasando por las opciones de fibra para adultos conscientes de su alimentación, los cereales son una categoría en crecimiento en el canal bodega peruano.</p>
 
-      <h2>Benoti – Cereales peruanos con hierro y vitaminas</h2>
-      <p><strong>Benoti</strong> es una marca peruana de cereales que destaca por su compromiso con la nutrición. Toda la línea contiene hierro y vitaminas del complejo B, ideales para el desayuno familiar.</p>
+      <p>En <strong>Ospino</strong>, distribuidora peruana especializada en golosinas, snacks y productos de consumo masivo, hemos ampliado nuestro portafolio para incluir cereales de marcas que combinan calidad, nutrición y un precio accesible para el consumidor peruano. Trabajamos con <strong>Benoti</strong> — una marca peruana comprometida con la nutrición — y con el portafolio de cereales de <strong>Alicorp</strong>, la empresa peruana líder en consumo masivo.</p>
+
+      <p>En este artículo te presentamos cada marca y cada producto, con toda la información que necesitas para decidir qué cereales incluir en tu bodega y cómo posicionarlos para maximizar las ventas.</p>
+
+      <h2>El cereal en el mercado peruano: una categoría en expansión</h2>
+
+      <h3>Del desayuno tradicional al cereal moderno</h3>
+      <p>El desayuno peruano tradicional varía mucho según la región: en Lima puede ser pan con mantequilla y café con leche; en la sierra, una sopa consistente o un api de maíz; en la selva, frutas y productos locales. Sin embargo, en las últimas décadas, el cereal de caja ha ganado terreno en todos estos contextos, especialmente en los hogares urbanos y entre las familias con niños en edad escolar.</p>
+      <p>Este crecimiento está impulsado por varios factores: la comodidad de preparación (solo agregar leche), la percepción de valor nutritivo, la aceptación de los niños especialmente de los cereales de chocolate, y la creciente disponibilidad en el canal bodega.</p>
+
+      <h3>La bodega como punto de venta de cereales</h3>
+      <p>Históricamente, los cereales se vendían principalmente en supermercados. Sin embargo, la expansión del canal bodega y la demanda de los consumidores de tener todos sus productos básicos disponibles en su tienda del barrio ha llevado a los cereales al canal tradicional. Hoy, las bodegas bien surtidas incluyen al menos dos o tres opciones de cereales, y las que tienen una sección bien organizada pueden generar ventas consistentes en esta categoría.</p>
+
+      <h2>Benoti – Cereales peruanos con nutrición al frente</h2>
+
+      <p><strong>Benoti</strong> es una marca peruana de cereales que ha construido su propuesta de valor sobre un pilar claro: la nutrición. En un mercado donde muchas marcas de cereales se venden principalmente por su sabor, Benoti se diferencia por poner al frente el contenido nutricional de sus productos: hierro, vitaminas del complejo B y vitamina C en toda la línea.</p>
+
+      <h3>¿Por qué la nutrición importa en el segmento de cereales?</h3>
+      <p>El consumidor peruano, especialmente los padres que compran para sus hijos, está cada vez más consciente de la importancia de la nutrición en el desayuno. El cereal es uno de los primeros alimentos del día y, por tanto, uno de los que más influye en el rendimiento escolar y la energía del niño durante la mañana. Un cereal que combine buen sabor con aportes nutricionales reales tiene una ventaja competitiva clara frente a los que solo ofrecen sabor.</p>
+      <p>Benoti entendió esto desde el inicio y desarrolló toda su línea con hierro y vitaminas del complejo B como características estándar. Esta decisión no solo tiene valor nutricional real: también da a los padres una razón adicional para elegir Benoti sobre otras opciones del mercado.</p>
+
+      <h3>La línea completa de cereales Benoti</h3>
+
+      <h4>Benoti Hojuelas (350g)</h4>
+      <p>Las <strong>Benoti Hojuelas</strong> son el producto de entrada de la línea: cereal tipo hojuela a base de maíz azucarado. Es el formato de cereal más familiar para el consumidor peruano, similar en concepto a los corn flakes internacionales pero con el valor agregado nutricional de Benoti.</p>
       <ul>
-        <li><strong>Benoti Hojuelas</strong> – Cereal tipo hojuela a base de maíz azucarado (350g). Con Hierro, Vitamina C y Vitaminas del Complejo B</li>
-        <li><strong>Benoti Bolitas</strong> – Extruido a base de maíz sabor chocolate (350g)</li>
-        <li><strong>Benoti Aritos</strong> – A base de trigo sabor chocolate con marshmallow</li>
-        <li><strong>Benoti Fibra</strong> – Hojuelas de trigo, arroz y salvado (380g). Ideal para equilibrar el organismo</li>
-        <li><strong>Benoti Estrellas</strong> – Con hierro y vitaminas del complejo B (150g)</li>
+        <li>Base: maíz azucarado</li>
+        <li>Nutrición: Hierro, Vitamina C y Vitaminas del Complejo B</li>
+        <li>Presentación: 350g, ideal para el consumo semanal de un hogar de 3-4 personas</li>
+        <li>Perfil de consumidor: familias con niños, adultos que buscan un desayuno rápido y nutritivo</li>
       </ul>
 
-      <h2>Alicorp – Cereal Ángel y Choco Bum</h2>
-      <p>Alicorp, la empresa peruana líder en consumo masivo, también tiene su línea de cereales. A través de Ospino tienes acceso a:</p>
+      <h4>Benoti Bolitas (350g)</h4>
+      <p>Las <strong>Benoti Bolitas</strong> son el cereal de chocolate de la línea, presentado en formato de bolitas extruidas. El sabor a chocolate hace que este cereal sea especialmente popular entre los niños, que lo prefieren sobre las opciones más neutras.</p>
       <ul>
-        <li><strong>Cereal Ángel</strong> – El cereal de Alicorp para el desayuno familiar</li>
-        <li><strong>Choco Bum</strong> – Cereal sabor a chocolate, favorito de los niños</li>
+        <li>Base: maíz extruido sabor chocolate</li>
+        <li>Nutrición: Hierro y Vitaminas del Complejo B</li>
+        <li>Presentación: 350g</li>
+        <li>Perfil de consumidor: niños en edad escolar, familias con hijos que prefieren el chocolate</li>
       </ul>
 
-      <p>Además, Ospino distribuye el portafolio completo de Alicorp que incluye galletas Casino, Glacitas, Marquesitas y galletas Soda.</p>
+      <h4>Benoti Aritos</h4>
+      <p>Los <strong>Benoti Aritos</strong> son el cereal en formato de aros, que combina la textura crujiente del aro con un sabor a chocolate y la adición de marshmallows. La combinación de cereal y marshmallow en un mismo plato es una de las preferidas de los niños más pequeños, que disfrutan pescando los marshmallows con la cuchara.</p>
+      <ul>
+        <li>Base: trigo sabor chocolate con marshmallow</li>
+        <li>Especialmente popular entre niños de 3 a 8 años</li>
+      </ul>
 
-      <p>Consulta disponibilidad de stock y precios de cereales con tu ejecutivo Ospino.</p>
+      <h4>Benoti Fibra (380g)</h4>
+      <p>Las <strong>Benoti Fibra</strong> son la opción para el consumidor adulto que busca un cereal con mayor aporte de fibra. La mezcla de trigo, arroz y salvado crea un cereal con una textura más densa y un perfil nutricional más completo que los cereales de maíz.</p>
+      <ul>
+        <li>Base: hojuelas de trigo, arroz y salvado</li>
+        <li>Nutrición: alto contenido de fibra, ideal para equilibrar el organismo</li>
+        <li>Presentación: 380g</li>
+        <li>Perfil de consumidor: adultos mayores de 30 años conscientes de su salud digestiva</li>
+      </ul>
+
+      <h4>Benoti Estrellas (150g)</h4>
+      <p>Las <strong>Benoti Estrellas</strong> son la presentación más pequeña de la línea, perfectas para hogares más pequeños o para bodegueros que quieren ofrecer una opción de cereales Benoti a un punto de precio más bajo y accesible.</p>
+      <ul>
+        <li>Nutrición: Hierro y Vitaminas del Complejo B</li>
+        <li>Presentación: 150g, la más accesible de la línea</li>
+      </ul>
+
+      <h3>Cómo vender cereales Benoti en tu bodega</h3>
+      <p>Los cereales son una compra planificada más que una compra por impulso, lo que significa que la estrategia de exhibición es diferente a la de golosinas y snacks. Para los cereales Benoti, te recomendamos:</p>
+      <ul>
+        <li>Organizar los cereales en una sección dedicada, claramente visible y bien iluminada.</li>
+        <li>Agrupar los cereales por tipo: infantiles (Bolitas, Aritos) y para adultos (Hojuelas, Fibra).</li>
+        <li>Destacar el valor nutricional de Benoti con cartelería que mencione el hierro y las vitaminas.</li>
+        <li>Tener siempre stock suficiente: el consumidor de cereales que no encuentra su marca preferida buscará otra opción y puede cambiar de bodega para esa categoría.</li>
+      </ul>
+
+      <h2>Alicorp – La empresa peruana líder en cereales y galletas</h2>
+
+      <p><strong>Alicorp</strong> es la empresa peruana de consumo masivo más grande del país. Con marcas que van desde los aceites hasta las pastas, pasando por detergentes y jabones, Alicorp tiene una presencia en el hogar peruano que pocas empresas pueden igualar. En la categoría de cereales y galletas, Alicorp ofrece productos que complementan perfectamente el portafolio de Benoti.</p>
+
+      <h3>Cereal Ángel – El desayuno de las familias peruanas</h3>
+      <p>El <strong>Cereal Ángel</strong> de Alicorp es uno de los cereales más conocidos del mercado peruano. Con una propuesta orientada al desayuno familiar nutritivo, el Cereal Ángel tiene una base de consumidores fiel que lo compra regularmente como parte de su rutina de desayuno. Su reconocimiento de marca dentro del portafolio Alicorp le da una ventaja de confianza con el consumidor peruano.</p>
+
+      <h3>Choco Bum – El cereal de los niños</h3>
+      <p>El <strong>Choco Bum</strong> de Alicorp es el cereal de chocolate más popular de la marca entre el segmento infantil. Con un sabor intenso a chocolate y una textura que los niños adoran, el Choco Bum compite directamente con el Benoti Bolitas en el segmento de cereales de chocolate para niños. Tener ambos en tu bodega te permite ofrecer opciones en este segmento y capturar las preferencias de distintas familias.</p>
+
+      <h3>El portafolio completo de Alicorp</h3>
+      <p>Además de los cereales, Ospino distribuye el portafolio completo de Alicorp en la categoría de galletas y snacks:</p>
+      <ul>
+        <li><strong>Galletas Casino</strong> – Las galletas rellenas más vendidas del Perú, con sus variantes clásica, chocolate y menta.</li>
+        <li><strong>Glacitas</strong> – Galletas con cobertura de chocolate, un clásico del mercado peruano.</li>
+        <li><strong>Marquesitas</strong> – Galletas con relleno cremoso en distintos sabores.</li>
+        <li><strong>Galletas Soda</strong> – Las galletas saladas de Alicorp, perfectas para acompañar queso y otros untables.</li>
+      </ul>
+
+      <h2>Cómo armar la sección de cereales en tu bodega</h2>
+
+      <p>Una sección de cereales bien organizada puede generar ventas consistentes en tu bodega con relativamente poca inversión en espacio y visual merchandising.</p>
+
+      <h3>Dedica un espacio fijo a los cereales</h3>
+      <p>Los cereales necesitan un espacio propio en la bodega, no mezclado con otros productos. Un espacio fijo — una repisa dedicada o una sección de la vitrina — comunica al cliente que tu bodega tiene una selección de cereales, lo que aumenta la probabilidad de que piensen en tu bodega cuando necesiten comprar cereal.</p>
+
+      <h3>Mantén stock permanente</h3>
+      <p>El consumidor de cereales tiene una rutina de compra: compra cada semana o cada dos semanas. Si visita tu bodega y no encuentra su cereal, irá a otro lugar. Mantener stock permanente de los cereales más populares (Benoti Hojuelas, Benoti Bolitas, Cereal Ángel, Choco Bum) es esencial para fidelizar a este tipo de cliente habitual.</p>
+
+      <h3>Comunica el valor nutricional</h3>
+      <p>Los padres que compran cereales para sus hijos valoran la información nutricional. Tener pequeños carteles o stickers que destaquen "Con hierro y vitaminas" o "Alto en fibra" junto a los productos correspondientes puede ser un factor decisivo en la compra, especialmente frente a marcas competidoras que no destacan este aspecto.</p>
+
+      <h3>El cereal como producto ancla</h3>
+      <p>El cereal tiene la característica de ser un producto ancla: una vez que el consumidor empieza a comprar su cereal en tu bodega, volverá semana a semana por él. Y cada vez que viene por el cereal, hay una oportunidad de que compre otras cosas. Sumar cereales a tu surtido no es solo una venta adicional: es una herramienta de fidelización de clientes.</p>
+
+      <h2>¿Cómo pedir cereales a través de Ospino?</h2>
+
+      <p>En <strong>Ospino</strong>, tanto la línea de cereales Benoti como el portafolio de Alicorp están disponibles en un solo pedido junto con el resto de nuestras marcas. Tu asesor de preventa puede incluir los cereales en tu pedido regular y recomendarte las cantidades adecuadas para tu tipo de bodega y tu zona de cobertura.</p>
+
+      <h2>Conclusión: los cereales son la categoría que tu bodega necesita sumar</h2>
+
+      <p>Los cereales son una categoría con demanda creciente, consumidores habituales y una lógica de compra que genera visitas recurrentes a la bodega. Con el portafolio de <strong>Benoti</strong> y <strong>Alicorp</strong> que distribuye Ospino, tienes acceso a las mejores opciones del mercado peruano: cereales nutritivos para toda la familia, desde los más pequeños hasta los adultos.</p>
+
+      <p>Sumar cereales a tu bodega no requiere una inversión grande en espacio ni en stock inicial, pero puede generar un flujo de clientes habituales que vienen semana a semana por su cereal y de paso compran otras cosas. Esa es la lógica del producto ancla, y los cereales cumplen ese rol perfectamente.</p>
+
+      <p>Con <strong>Ospino</strong> como tu distribuidor, tienes la garantía de abastecimiento continuo y el respaldo de un equipo de preventa que te ayuda a gestionar el stock de forma eficiente. Contáctanos hoy para empezar a vender cereales en tu bodega.</p>
     `
   },
+
+// ═══════════════════════════════════════════════
+// BLOG 10 — YICHANG / FERRERO / KINDER / NUTELLA
+// ═══════════════════════════════════════════════
   {
     id: 10,
-    slug: "yichang-ferrero-kinder-nutella-mementos-peru",
+    slug: "yichang-ferrero-kinder-nutella-haribo-mentos-peru",
     metaTitle: "Yichang: Ferrero, Kinder, Nutella y Mentos en Perú | Ospino",
     metaDescription: "Ospino distribuye el catálogo Yichang Confitería en Perú: Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream, Mentos y más marcas premium para bodegas.",
     keywords: "Ferrero Rocher Perú, Kinder Joy Perú, Nutella Perú, Haribo Perú, Mentos Perú, Yichang distribuidora Lima",
     title: "Yichang en Perú: Ferrero, Kinder Joy, Nutella, Haribo y Mentos",
     date: "10 FEB, 2024",
+    dateISO: "2024-02-10",
     category: "Marcas",
     image: getAssetUrl('ospino-fondo.jpg'),
     summary: "Ospino distribuye el catálogo de confitería Yichang 2026 en Perú: Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream y Mentos para bodegas y mayoristas.",
     content: `
-      <p><strong>Yichang & Cía</strong> es el distribuidor oficial en Perú de algunas de las marcas de confitería premium más reconocidas del mundo. A través de Ospino, accedes a este portafolio de alto valor para diferenciarte en tu punto de venta.</p>
+      <p>Existe un segmento del mercado de golosinas y confitería que se diferencia del resto por una sola palabra: <strong>premium</strong>. Son productos que el consumidor percibe como especiales, de mayor calidad, dignos de un regalo o de un momento especial. En este segmento, algunas marcas son absolutamente dominantes: Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream, Mentos. Y en el Perú, todas estas marcas llegan al mercado a través de un distribuidor de confianza: <strong>Yichang & Cía</strong>.</p>
 
-      <h2>Ferrero Rocher</h2>
-      <p>El chocolate más elegante del mundo. Disponible en:</p>
+      <p>En <strong>Ospino</strong>, distribuidora peruana especializada en golosinas y snacks, tenemos el catálogo 2026 de Yichang disponible para bodegas, kioscos, mayoristas y distribuidores. Acceder al portafolio Yichang a través de Ospino significa poder ofrecer a tus clientes las marcas de confitería premium más reconocidas del mundo con la comodidad de un solo proveedor y servicio personalizado.</p>
+
+      <p>En este artículo te presentamos cada marca del portafolio Yichang, sus productos, sus momentos de consumo y por qué pueden marcar una diferencia en la oferta de tu punto de venta.</p>
+
+      <h2>Yichang & Cía: el puente entre el premium global y el mercado peruano</h2>
+
+      <h3>¿Quién es Yichang?</h3>
+      <p><strong>Yichang & Cía</strong> es una empresa de distribución peruana con décadas de experiencia en la importación y distribución de productos de confitería premium en el Perú. Su rol en la cadena es fundamental: importa directamente de los fabricantes globales (Ferrero, Haribo, Mentos) y distribuye a través de redes como la de Ospino para garantizar la disponibilidad en el canal tradicional.</p>
+      <p>La especialización de Yichang en el segmento premium la diferencia de otras distribuidoras: conoce profundamente cada marca que representa, sus estacionalidades, sus momentos de consumo y las estrategias de exhibición que maximizan las ventas. Esta expertise se traslada al servicio que Ospino ofrece a sus clientes al trabajar con el portafolio Yichang.</p>
+
+      <h3>¿Por qué el segmento premium importa para las bodegas?</h3>
+      <p>Muchos bodegueros piensan que los productos premium son exclusivos del supermercado y que su clientela no los busca. Esto es un error que puede costar ventas importantes. El consumidor peruano de todos los segmentos socioeconómicos compra productos premium en determinadas ocasiones: el regalo de cumpleaños, el detalle de San Valentín, el premio para el hijo por las buenas notas. Tener un Ferrero Rocher o un Kinder Joy disponible en tu bodega puede capturar estas ventas que de otra forma se van al supermercado.</p>
+
+      <h2>Ferrero Rocher – El chocolate más elegante del mundo</h2>
+
+      <p><strong>Ferrero Rocher</strong> es posiblemente el chocolate de regalo más reconocido del mundo. Desde su lanzamiento en 1982, este bombón de avellana entera cubierta de chocolate y crema de avellanas, envuelta en una oblea crujiente y finalmente bañada en chocolate con trozos de avellana, se ha convertido en sinónimo de regalo elegante y accesible.</p>
+
+      <h3>¿Qué hace al Ferrero Rocher irresistible?</h3>
       <ul>
-        <li>T3 (37.5g) – ideal para regalo individual</li>
-        <li>T4 (50g) – caja x 10 piezas</li>
-        <li>T8 (100g) – caja x 20 piezas</li>
-        <li>T12 (150g) – caja x 9 piezas</li>
-        <li>Ferrero Rocher Corazón T8 (100g) – caja x 24 piezas</li>
+        <li><strong>Experiencia sensorial única</strong> – Cada bombón ofrece múltiples texturas en un solo bocado: la crema suave de avellanas, la oblea crujiente, la cobertura de chocolate y la avellana entera en el centro. Esta complejidad de texturas crea una experiencia que los consumidores describen como "lujosa".</li>
+        <li><strong>Presentación premium</strong> – El envoltorio dorado, la caja transparente que muestra los bombones, la cápsula individual dorada — todo en el Ferrero Rocher comunica calidad y elegancia.</li>
+        <li><strong>Reconocimiento de marca global</strong> – En más de 170 países, el Ferrero Rocher es reconocido como un regalo de calidad. Esta asociación global con la elegancia se transfiere al mercado peruano.</li>
+        <li><strong>Precio de regalo accesible</strong> – A diferencia de otros chocolates premium que pueden tener un precio prohibitivo, el Ferrero Rocher en sus formatos más pequeños es un regalo accesible para una amplia gama de consumidores.</li>
       </ul>
 
-      <h2>Kinder Joy</h2>
-      <p>El huevo sorpresa más famoso del mundo. En Perú disponemos de:</p>
+      <h3>La línea Ferrero Rocher para el mercado peruano</h3>
+
+      <h4>Ferrero Rocher T3 (37.5g)</h4>
+      <p>El formato más pequeño con 3 bombones. Es el <strong>regalo individual por excelencia</strong>: accesible, bonito y suficientemente generoso para comunicar aprecio. Perfecto para el detallito de San Valentín, el cumpleaños del compañero de trabajo o el pequeño regalo de Navidad.</p>
+
+      <h4>Ferrero Rocher T8 (100g)</h4>
+      <p>Con 8 bombones, el T8 es el formato mediano ideal para regalos de mayor valor. La presentación en caja transparente que muestra los 8 bombones dorados es visualmente impactante en el punto de venta.</p>
+
+      <h4>Ferrero Rocher T12 (150g)</h4>
+      <p>El formato grande con 12 bombones es el preferido para regalos corporativos informales y celebraciones familiares. Es el Ferrero Rocher que aparece en las canastas navideñas y en las mesas de Navidad de todo el Perú.</p>
+
+      <h4>Ferrero Rocher Corazón T8 (100g)</h4>
+      <p>La presentación especial en forma de corazón con 8 bombones es el producto estrella de San Valentín. Su formato especial la convierte en el regalo de chocolate más popular de esa fecha entre los consumidores que buscan algo diferente pero accesible.</p>
+
+      <h3>Cómo exhibir el Ferrero Rocher en tu bodega</h3>
+      <p>El Ferrero Rocher se vende con los ojos. La presentación dorada necesita visibilidad. Te recomendamos tenerlo en un espacio destacado, idealmente con una pequeña sección de "regalos" que incluya también el Kinder Joy y otros productos premium de regalo. Esta agrupación facilita la decisión del cliente que busca un regalo y no sabe qué elegir.</p>
+      <p>En fechas especiales (San Valentín, Día de la Madre, Navidad), el Ferrero Rocher debe tener un espacio protagónico en la bodega. Una pequeña exhibición con cartelería de la fecha puede multiplicar las ventas significativamente.</p>
+
+      <h2>Kinder Joy – La sorpresa más famosa del mundo</h2>
+
+      <p>El <strong>Kinder Joy</strong> es uno de los productos de confitería más innovadores del mundo. Creado por Ferrero, el Kinder Joy combina una experiencia de consumo única — el huevo que se abre para revelar chocolate y una sorpresa — con una presentación que lo convierte en el regalo favorito para los niños.</p>
+
+      <h3>La magia del Kinder Joy</h3>
+      <p>El Kinder Joy tiene una propuesta de valor que ningún otro producto replica exactamente: es una golosina, un juguete y una experiencia de descubrimiento en un solo producto. Cuando un niño recibe un Kinder Joy, no solo está recibiendo chocolate: está recibiendo la emoción de abrir el huevo y descubrir qué sorpresa hay dentro. Esta dimensión experiencial es lo que hace al Kinder Joy único y explica su éxito global en más de 100 países.</p>
+
+      <h3>La línea Kinder Joy disponible en Perú</h3>
+
+      <h4>Kinder T12 DS (huevo clásico)</h4>
+      <p>El formato más popular para el canal bodega: un display con 12 huevos Kinder. Cada display se puede abrir para exhibir los huevos individualmente en el mostrador. La venta por unidad es la más común en bodega, y el display facilita enormemente esta exhibición.</p>
+
+      <h4>Kinder Joy Niña T12 y Niño T12</h4>
+      <p>Los Kinder Joy diferenciados por género tienen sorpresas específicamente diseñadas: accesorios coloridos para las niñas y juguetes de acción para los niños. Tener ambas versiones en stock permite atender a cualquier padre que quiera comprar un regalo específico para su hijo.</p>
+
+      <h4>Kinder Joy T2 (Niño y Niña)</h4>
+      <p>El pack doble con dos huevos Kinder, uno para niño y uno para niña. Ideal para familias con dos hijos o para el regalo de dos niños a la vez.</p>
+
+      <h3>El Kinder Joy como motor de tráfico</h3>
+      <p>El Kinder Joy tiene una característica que lo hace especialmente valioso para el bodeguero: genera tráfico. Los niños que saben que tu bodega tiene Kinder Joy la visitan específicamente para pedirlo. Y un niño que entra a la bodega casi siempre sale con algo más que el Kinder Joy. En ese sentido, tener Kinder Joy en stock no es solo una venta directa: es también un generador de tráfico que beneficia a toda la bodega.</p>
+
+      <h2>Nutella – La crema de avellanas que conquistó el mundo</h2>
+
+      <p><strong>Nutella</strong> es uno de los productos de alimentación más exitosos del mundo. Lanzada en Italia en 1964, esta crema de avellanas con cacao ha conquistado los desayunos y meriendas de millones de hogares en todo el planeta. En el Perú, Nutella ha ganado una presencia creciente, especialmente en los hogares de clase media de Lima.</p>
+
+      <h3>Nutella en el contexto peruano</h3>
+      <p>En el Perú, Nutella ocupa un nicho muy particular: el de la crema especial para el desayuno o la merienda. El consumidor que compra Nutella no la percibe como un sustituto de la mantequilla: la percibe como algo diferente, más especial, que convierte el pan del desayuno en un pequeño placer. Esta percepción de "placer accesible" es una de las claves de su éxito en el mercado peruano.</p>
+
+      <h3>Presentaciones Nutella disponibles</h3>
       <ul>
-        <li>Kinder T12 DS (huevo clásico) – 1 DS x 12 huevos, caja x 6 DS</li>
-        <li>Kinder Joy Niña T12 y Niño T12</li>
-        <li>Kinder Joy T2 (Niño y Niña) – 1 pz x 2 huevos, caja x 48 pz</li>
+        <li><strong>Nutella 140g</strong> – El formato de entrada, ideal para consumidores que quieren probar el producto o que tienen un consumo bajo.</li>
+        <li><strong>Nutella 200g</strong> – El formato de mayor rotación en bodega. Es el equilibrio perfecto entre precio accesible y cantidad suficiente para el consumo semanal.</li>
+        <li><strong>Nutella 350g</strong> – Para familias de mayor consumo o para quienes prefieren comprar en mayor volumen.</li>
+        <li><strong>Nutella 650g</strong> – El formato familiar grande, preferido por hogares con varios niños o con alto consumo.</li>
       </ul>
 
-      <h2>Nutella</h2>
-      <p>La crema de avellanas con cacao más famosa del mundo. Presentaciones disponibles: 140g, 200g, 350g y 650g. La versión de 200g es la de mayor rotación en bodega.</p>
+      <h2>Haribo – Las gomitas alemanas que el mundo adora</h2>
 
-      <h2>Haribo – Las gomitas alemanas</h2>
+      <p><strong>Haribo</strong> es la empresa de gomitas más antigua y reconocida del mundo. Fundada en Alemania en 1920, Haribo inventó literalmente el osito de goma — el producto más icónico del segmento de gummies globalmente — y ha pasado un siglo refinando el arte de hacer gomitas de calidad excepcional.</p>
+
+      <h3>¿Qué diferencia a las gomitas Haribo?</h3>
+      <p>La diferencia entre Haribo y otras gomitas está en la calidad de los ingredientes y en el proceso de producción. Las gomitas Haribo tienen una textura específica — más firme que muchas otras marcas, con una masticabilidad que los consumidores que las conocen aprenden a apreciar profundamente — y sabores más naturales que la media del mercado.</p>
+
+      <h3>La línea Haribo para el mercado peruano</h3>
+
+      <h4>Haribo Classic Bears (100g)</h4>
+      <p>Los legendarios ositos de goma Haribo. El producto más icónico de la marca, con sabores de frutas variados en la mezcla clásica. Es el producto de referencia de toda la categoría de gomitas a nivel mundial.</p>
+
+      <h4>Haribo Sour Glowworms (100g)</h4>
+      <p>Gusanos de goma con cobertura ácida, perfectos para los amantes del sabor ácido-dulce tan popular entre adolescentes y jóvenes adultos.</p>
+
+      <h4>Haribo Sharks y Octopus (100g)</h4>
+      <p>Formas marinas en versiones de tiburones y pulpos, con los sabores de fruta característicos de Haribo que los distinguen de las imitaciones del mercado.</p>
+
+      <h4>Haribo en formato bowl (90g)</h4>
+      <p>Los formatos bowl de Haribo incluyen Pizza, Gecko, Hot Dog y Mini Burger — formas creativas e inesperadas que hacen de cada gomita una pequeña obra de arte comestible. Estos formatos son especialmente populares entre adultos que buscan experiencias de consumo únicas y entre quienes hacen regalos originales.</p>
+
+      <h4>Formatos especiales</h4>
       <ul>
-        <li>Classic Bears, Sour Glowworms, Sharks, Octopus, Neon Squiggles (100g)</li>
-        <li>Candy Pizza Mini, Funiverse Sour y Dulce, Big Burger XL (100g)</li>
-        <li>Pizza, Gecko, Hot Dog, Mini Burger (formato bowl 90g)</li>
+        <li><strong>Candy Pizza Mini</strong> – Una pizza de gomitas en miniatura, muy popular como regalo y snack compartible.</li>
+        <li><strong>Funiverse Sour y Dulce</strong> – Surtidos de formas divertidas en versiones ácida y dulce.</li>
+        <li><strong>Big Burger XL (100g)</strong> – Una hamburguesa de gomitas de gran tamaño, llamativa y divertida.</li>
+        <li><strong>Neon Squiggles (100g)</strong> – Gusanos de colores neón, brillantes y llamativos.</li>
       </ul>
 
-      <h2>Pirucream</h2>
-      <p><strong>Pirucream</strong> es el wafer de avellana de Perugina. Disponible en display 24g, lata 155g y 300g Avellana, Bites 200g y Multipack x6.</p>
+      <h2>Pirucream – El wafer de avellanas de Perugina</h2>
 
-      <h2>Mentos – Frescura en cada pastilla</h2>
-      <p>La línea de Mentos incluye barras de 11 caramelos masticables (Menta, Fruta, Tutti Frutti, Fresa), Mentos Kiss (35g sin azúcar), Mentos Clear Breath y Mentos Spearmint/Fresh Mint (30g).</p>
+      <p><strong>Pirucream</strong> es el wafer de avellanas de la legendaria casa italiana Perugina. Con una receta que combina obleas crujientes con una crema de avellanas de alta calidad, el Pirucream es el snack premium de wafer más reconocido del mercado, con una propuesta de valor que conecta con el consumidor adulto que aprecia la calidad italiana.</p>
 
-      <p>El portafolio Yichang es ideal para bodegas que quieren ofrecer productos premium a sus clientes. Consulta disponibilidad con Ospino.</p>
+      <h3>Presentaciones Pirucream</h3>
+      <ul>
+        <li><strong>Display 24g</strong> – La presentación individual para bodega. Un snack accesible que introduce al consumidor al sabor Pirucream.</li>
+        <li><strong>Lata 155g Avellana</strong> – La presentación en lata metálica, elegante y perfecta para regalo.</li>
+        <li><strong>Lata 300g Avellana</strong> – La lata grande para mayor consumo o para regalo más generoso.</li>
+        <li><strong>Bites 200g</strong> – Pirucream en formato de pequeñas porciones individuales, perfectas para compartir en reuniones.</li>
+        <li><strong>Multipack x6</strong> – Pack con 6 unidades individuales, ideal para tener en casa y disfrutar a lo largo de la semana.</li>
+      </ul>
+
+      <h2>Mentos – La frescura en cada pastilla</h2>
+
+      <p><strong>Mentos</strong> es una de las marcas de caramelos masticables más reconocidas del mundo. Con su formato de pastillas en rollo y su característica dureza inicial que se vuelve masticable en pocos segundos, Mentos ocupa un lugar único en el mercado de confitería: es a la vez un caramelo, un chicle informal y un refresco de aliento.</p>
+
+      <h3>La línea Mentos disponible en Perú</h3>
+      <ul>
+        <li><strong>Mentos Menta</strong> – El clásico original, con su sabor refrescante e inconfundible a menta.</li>
+        <li><strong>Mentos Fruta</strong> – Versión con sabores de frutas variados: fresa, naranja, limón.</li>
+        <li><strong>Mentos Tutti Frutti</strong> – La mezcla de frutas tropicales en un solo rollo.</li>
+        <li><strong>Mentos Fresa</strong> – Solo fresa, para los fans de este sabor específico.</li>
+        <li><strong>Mentos Kiss (35g sin azúcar)</strong> – La versión sin azúcar para consumidores que cuidan su ingesta pero no quieren renunciar al placer del Mentos.</li>
+        <li><strong>Mentos Clear Breath</strong> – Con mayor efecto refrescante para el aliento.</li>
+        <li><strong>Mentos Spearmint y Fresh Mint (30g)</strong> – Las versiones de menta suave y menta fresca.</li>
+      </ul>
+
+      <h3>Mentos como producto de impulso</h3>
+      <p>Mentos funciona muy bien como producto de compra por impulso en la zona de cobro. El consumidor que está pagando ve el rollo de Mentos, recuerda que quiere algo fresco después de comer, y lo añade a su compra. Esta lógica de complemento post-comida hace que Mentos tenga una demanda natural en momentos específicos del día que, si tu bodega los captura bien, pueden generar ventas adicionales consistentes sin ningún esfuerzo especial de venta.</p>
+
+      <h2>Cómo maximizar las ventas del portafolio Yichang en tu bodega</h2>
+
+      <p>El portafolio Yichang tiene características especiales que requieren una estrategia de exhibición diferente a la de las golosinas de consumo masivo.</p>
+
+      <h3>Crea una sección de "Regalos Dulces"</h3>
+      <p>Una de las estrategias más efectivas para las marcas premium es agruparlas en una sección específica de "regalos" o "especiales". Cuando el cliente ve el Ferrero Rocher, el Kinder Joy y el Nutella juntos en un mismo espacio, inmediatamente piensa en regalo, en celebración, en algo especial. Esta asociación mental facilita la decisión de compra y puede resultar en ventas que de otra forma no ocurrirían.</p>
+
+      <h3>Aprovecha las fechas especiales</h3>
+      <p>Las marcas premium tienen picos de venta muy claros en fechas especiales:</p>
+      <ul>
+        <li><strong>San Valentín (febrero)</strong> – Ferrero Rocher Corazón y Kinder Joy son los protagonistas indiscutibles.</li>
+        <li><strong>Día de la Madre (mayo)</strong> – Ferrero Rocher T12 y Nutella en presentaciones grandes.</li>
+        <li><strong>Navidad (diciembre)</strong> – Todo el portafolio Yichang tiene pico en esta temporada.</li>
+        <li><strong>Cumpleaños</strong> – Kinder Joy es el regalo perfecto para niños en cualquier cumpleaños del año.</li>
+      </ul>
+
+      <h3>Anticipate al stock</h3>
+      <p>El error más común de los bodegueros con productos premium es quedarse sin stock en las fechas pico. Si en San Valentín se te acaba el Ferrero Rocher Corazón, pierdes ventas que no van a esperar a que te reabastas. Planifica con anticipación — al menos dos semanas antes de cada fecha especial — y ordena un stock mayor del habitual para los productos más relevantes de cada temporada.</p>
+
+      <h2>¿Cómo pedir el portafolio Yichang a través de Ospino?</h2>
+
+      <p>En <strong>Ospino</strong>, el catálogo completo de Yichang 2026 está disponible junto con el resto de nuestras marcas en un solo pedido. Nuestros asesores conocen la estacionalidad de cada marca del portafolio y pueden ayudarte a anticipar los pedidos para las fechas de mayor demanda, evitando que te quedes sin stock en los momentos más importantes del año.</p>
+
+      <h2>Conclusión: Yichang en tu bodega, el premium que diferencia tu negocio</h2>
+
+      <p>El portafolio Yichang — <strong>Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream y Mentos</strong> — representa la oportunidad de elevar la oferta de tu bodega hacia el segmento premium de la confitería. Son marcas que el consumidor busca específicamente, que generan ventas en momentos de regalo y celebración, y que añaden un margen diferencial respecto a las golosinas de consumo masivo.</p>
+
+      <p>Tener estas marcas en tu bodega no solo te genera ventas adicionales: también eleva la percepción de tu negocio. Una bodega que tiene Ferrero Rocher y Nutella transmite que es un punto de venta completo, donde el cliente puede encontrar desde las golosinas del día a día hasta el regalo especial del fin de semana.</p>
+
+      <p>Con <strong>Ospino</strong> como tu distribuidor, tienes acceso a todo el portafolio Yichang con un solo pedido y servicio personalizado. Contáctanos hoy y empieza a ofrecer lo mejor de la confitería premium a tus clientes.</p>
     `
-  }
+  },
 ];

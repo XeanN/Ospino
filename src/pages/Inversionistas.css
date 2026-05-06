@@ -55,7 +55,7 @@
 }
 
 .investor-intro h2 {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2.2rem;
     margin-bottom: 20px;
 }
@@ -92,7 +92,7 @@
 
 .stat-icon-large {
     font-size: 3rem;
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     margin-bottom: 15px;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .contact-box h3 {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2rem;
     margin-bottom: 20px;
 }

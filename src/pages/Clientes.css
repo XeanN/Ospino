@@ -53,7 +53,7 @@
 }
 
 .clients-intro-section h2 {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 30px;
@@ -86,7 +86,7 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 5px solid #E31C23; 
+    border-top: 5px solid  #6B35A8; 
     transition: transform 0.3s;
 }
 
@@ -96,7 +96,7 @@
 
 .pilla-icon {
     font-size: 2.5rem;
-    color: #003B71; 
+    color: #6B35A8; 
     margin-bottom: 20px;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .channels-header-left h3 {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 15px;
@@ -190,7 +190,7 @@
 .icon-box-solid {
     width: 60px;
     height: 60px;
-    background-color: var(--color-corporate-blue); /* Fondo Azul Sólido */
+    background-color: var(--color-primary); /* Fondo Azul Sólido */
     color: #fff;
     display: flex;
     align-items: center;
@@ -364,7 +364,7 @@
 }
 
 .section-header h2 {
-    color: var(--color-corporate-blue, #2b2f3a); /* Usa tu variable o el hex */
+    color: var(--color-primary, #2b2f3a); /* Usa tu variable o el hex */
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 10px;

@@ -1,7 +1,7 @@
     .hero-slider {
     position: relative;
     width: 100%;
-    height: 600px; /* Altura del banner, ajustable */
+    height: 80vh; /* Altura del banner, ajustable */
     overflow: hidden;
     margin-top: 120px; /* IMPORTANTE: Este margen empuja el slider debajo del Header fijo */
     }
@@ -13,7 +13,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     display: flex;

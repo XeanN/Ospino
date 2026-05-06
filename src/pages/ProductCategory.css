@@ -9,7 +9,7 @@
     position: relative;
     height: 200px;
     /* Degradado rojo/naranja estilo Colombina */
-    background: linear-gradient(135deg, #E31C23 0%, #b71c1c 100%); 
+    background: linear-gradient(135deg, #6B35A8 0%,  #6B35A8 100%); 
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -52,7 +52,7 @@
     }
     .breadcrumbs a { color: #888; }
     .breadcrumbs .icon { font-size: 0.7rem; }
-    .breadcrumbs .current { color: var(--color-corporate-blue); font-weight: 700; }
+    .breadcrumbs .current { color: var(--color-primary); font-weight: 700; }
 
     /* --- LAYOUT (SIDEBAR + GRID) --- */
     .category-layout {
@@ -110,14 +110,14 @@
     }
 
     .filter-list a:hover {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     padding-left: 5px;
     font-weight: 600;
     }
 
     /* Línea roja vertical a la izquierda para la categoría activa (opcional) */
     .filter-list li:first-child a {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-weight: 700;
     border-left: 3px solid var(--color-primary);
     padding-left: 10px;
@@ -174,7 +174,7 @@
 
     .product-info h4 {
     font-size: 1rem;
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     margin: 0 0 5px;
     line-height: 1.4;
     font-weight: 700;
@@ -191,16 +191,16 @@
     .btn-details {
     display: inline-block;
     padding: 8px 20px;
-    border: 1px solid var(--color-corporate-blue);
+    border: 1px solid var(--color-primary);
     border-radius: 20px;
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 0.8rem;
     font-weight: 600;
     transition: all 0.3s;
     }
 
     .product-card:hover .btn-details {
-    background-color: var(--color-corporate-blue);
+    background-color: var(--color-primary);
     color: #fff;
     }
     
@@ -214,11 +214,11 @@
     }
 
     .filter-list span:hover {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     }
 
     .active-filter {
-    color: var(--color-corporate-blue) !important;
+    color: var(--color-primary) !important;
     font-weight: 700;
     padding-left: 10px;
     border-left: 3px solid var(--color-primary);
@@ -254,7 +254,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 25px;
-    background-color: var(--color-corporate-blue);
+    background-color: var(--color-primary);
     color: #fff;
     border-radius: 50px;
     text-decoration: none;
@@ -397,8 +397,8 @@
         padding: 8px 0;
         font-size: 0.75rem;
         background-color: transparent; 
-        color: var(--color-corporate-blue);
-        border: 1px solid var(--color-corporate-blue);
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
         margin-top: 5px;
         border-radius: 20px;
     }
@@ -505,7 +505,7 @@
 }
 
 .product-title {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2.5rem;
     font-weight: 800;
     margin: 0 0 25px 0;

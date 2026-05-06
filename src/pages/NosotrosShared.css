@@ -48,9 +48,9 @@
 
 /* Estilo Activo (similar al de la referencia) */
 .internal-menu a.active {
-    color: var(--color-corporate-blue); /* Azul fuerte para el link activo */
+    color: var(--color-primary); /* Azul fuerte para el link activo */
     font-weight: 700;
-    border-left-color: var(--color-corporate-blue);
+    border-left-color: var(--color-primary);
     padding-left: 10px;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .sub-title {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-weight: 700;
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -87,7 +87,7 @@
 }
 
 .page-main-title {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 3.5rem; /* Título grande */
     font-weight: 800;
     margin: 5px 0 20px 0;
@@ -127,7 +127,7 @@
 }
 
 .internal-link-anchor {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-weight: 600;
     text-decoration: underline;
     font-size: 0.95rem;
@@ -160,7 +160,7 @@
     }
     .internal-menu a.active {
         border-left: none;
-        border-bottom-color: var(--color-corporate-blue);
+        border-bottom-color: var(--color-primary);
         padding: 5px 10px;
     }
 }

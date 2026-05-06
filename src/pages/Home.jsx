@@ -14,7 +14,7 @@
         
         <BrandsCarousel /> {/* <--- 2. COLOCAR AQUÍ (Entre Categorías y Corporativo) */}
         
-        <CorporateSection />
+        {/*<CorporateSection />*/}
         <NewsSection />
         </div>
     );

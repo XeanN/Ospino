@@ -1,197 +1,140 @@
-    .brands-section {
-    padding: 80px 0;
-    background-color: #fff;
-    }
-
-    .section-header {
-    text-align: center;
-    margin-bottom: 50px;
-    }
-
-    .section-title {
-    font-size: 2.5rem;
-    color: var(--color-corporate-blue); /* Azul Delycorp */
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: -0.5px;
-    }
-
-    .section-subtitle {
-    font-size: 1.1rem;
-    color: var(--color-text-light);
-    max-width: 600px;
-    margin: 0 auto;
-    }
-
-    /* GRIDS */
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
-    gap: 30px;
-    }
-
-    /* TARJETA (CARD) */
-    .brand-card {
+/* --- SECCIÓN PRINCIPAL --- */
+.brands-section {
+    /* EL TRUCO: Margen negativo para que las tarjetas "floten" sobre el Hero borroso */
+    margin-top: -100px; 
     position: relative;
-    height: 300px;
+    z-index: 10; /* Asegura que las tarjetas estén por encima de la foto del hero */
+    padding-bottom: 80px;
+    background-color: transparent; /* Importante para no tapar el hero */
+}
+
+/* --- GRIDS --- */
+.grid-container {
+    display: grid;
+    /* Las tarjetas se ajustan solas, un poco más anchas para parecerse a Molitalia */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+/* --- TARJETA ESTILO MOLITALIA --- */
+.brand-card {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
     border-radius: 12px;
     overflow: hidden;
-    display: block;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    background-color: #fff;
+}
 
-    .brand-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-    }
+.brand-card:hover {
+    transform: translateY(-8px); /* Salta un poco más alto al hacer hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
 
-    /* Imagen de fondo */
-    .card-image {
+/* --- PARTE SUPERIOR (FOTO) --- */
+.card-image-container {
+    flex: 1; /* Toma todo el espacio excepto la franja de abajo */
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
-    }
-
-    .brand-card:hover .card-image {
-    transform: scale(1.1); /* Zoom suave al pasar el mouse */
-    }
-
-    /* Capa superpuesta (Overlay) */
-    .card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 59, 113, 0.9) 0%, rgba(0,0,0,0) 60%); /* Degradado Azul */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 30px;
-    box-sizing: border-box;
-    }
-
-    .brand-card h3 {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .view-more {
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.9rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    display: inline-block;
-    background-color: var(--color-primary); /* Botón Rojo */
-    padding: 8px 16px;
-    border-radius: 20px;
-    align-self: flex-start;
-    }
-
-    /* Animación al hacer hover: Aparece el botón */
-    .brand-card:hover .view-more {
-    opacity: 1;
-    transform: translateY(0);
-    }
-
-    /* --- BOTÓN VER TODOS --- */
-.view-all-container {
-  text-align: center; /* Centrado horizontal */
-  margin-top: 50px;   /* Separación de las tarjetas */
 }
 
-    .btn-view-all {
+.brand-card:hover .card-image {
+    transform: scale(1.1); /* Zoom a la foto al pasar el mouse */
+}
+
+/* --- BOTÓN "VER MÁS" (PÍLDORA FLOTANTE) --- */
+.view-more-pill {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #FFFFFF;
+    color: #6B35A8; /* Letra en morado Ospino */
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 16px;
+    border-radius: 20px; /* Le da la forma redonda de píldora */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* --- PARTE INFERIOR (FRANJA DE COLOR) --- */
+.card-bottom-bar {
+    height: 60px;
+    background-color: #6B35A8; /* Toda la base en Morado Ospino */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-bottom-bar h3 {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+/* --- BOTÓN VER TODOS (Abajo de todo) --- */
+.view-all-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-view-all {
     display: inline-block;
     padding: 14px 40px;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 50px; /* Redondeado estilo píldora */
+    border-radius: 50px;
     transition: all 0.3s ease;
-    
-    /* ESTILO: Borde Azul, Fondo Transparente */
-    border: 2px solid var(--color-primary);
-    color: var(--color-corporate-blue);
+    border: 2px solid #F5A623; /* Borde Dorado Ospino */
+    color: #6B35A8; /* Texto Morado */
     background-color: transparent;
-    }
+}
 
-    .btn-view-all:hover {
-    /* HOVER: Fondo Azul, Letra Blanca */
-    background-color: var(--color-primary);
-    color: #fff;
-    transform: translateY(-3px); /* Pequeño salto hacia arriba */
-    box-shadow: 0 5px 15px rgba(0, 59, 113, 0.2); /* Sombra suave azul */
-    }
+.btn-view-all:hover {
+    background-color: #F5A623; /* Fondo dorado al pasar el mouse */
+    color: #fff; /* Letras blancas */
+    transform: translateY(-3px);
+}
 
-    /* --- ESTILOS RESPONSIVE (Móvil y Tablet) --- */
-
+/* --- RESPONSIVE (Móvil y Tablet) --- */
 @media (max-width: 1024px) {
-    
-    /* 1. Ajuste de espacios (Padding) */
     .brands-section {
-        padding: 40px 0 60px;
-    }
-
-    .section-header {
-        margin-bottom: 30px;
-        padding: 0 15px; /* Margen para que no pegue al borde */
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-
-    /* 2. ARREGLO DE COLUMNAS (GRID) */
-    .grid-container {
-        /* Esto asegura 2 columnas en tablet y se adapta */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-        gap: 20px;
-        padding: 0 15px; 
-    }
-
-    /* 3. Altura de tarjeta en móvil */
-    .brand-card {
-        height: 260px; 
-    }
-
-    .brand-card h3 {
-        font-size: 1.5rem;
-    }
-
-    /* 4. BOTÓN "VER MÁS" VISIBLE SIEMPRE */
-    /* Solo cambiamos opacity y transform. 
-       El color sigue siendo tu var(--color-primary) original. */
-    .view-more {
-        opacity: 1; /* Visible sin hover */
-        transform: translateY(0); /* En su posición final */
-    }
-
-    /* 5. Botón "Ver Todos" (Solo tamaño, mismos colores) */
-    .btn-view-all {
-        width: 80%;
-        padding: 12px 20px;
-        font-size: 0.9rem;
+        margin-top: -60px; /* Sube un poco menos en tablet para no tapar mucho */
     }
 }
 
-/* 5. COLUMNAS PARA MÓVILES PEQUEÑOS */
+@media (max-width: 768px) {
+    .brands-section {
+        margin-top: -40px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas obligatorias en celular grande */
+        padding: 0 15px;
+    }
+    .brand-card {
+        height: 220px;
+    }
+    .card-bottom-bar h3 {
+        font-size: 1rem; /* Letra un poco más chica */
+    }
+}
+
 @media (max-width: 480px) {
     .grid-container {
-        grid-template-columns: 1fr; /* Una sola columna obligatoria para que no se rompa */
-    }
-    
-    .brand-card {
-        height: 240px;
+        grid-template-columns: 1fr; /* 1 columna en celular pequeño */
     }
 }

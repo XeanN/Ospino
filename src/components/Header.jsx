@@ -153,7 +153,7 @@ const Header = () => {
                     )}
                 </li>
 
-                {/* --- NOSOTROS (Con Dropdown) --- */}
+                {/* --- NOSOTROS (Con Dropdown) 
                 <li className="menu-item-has-children relative-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'nosotros')} className={desktopMenuOpen === 'nosotros' ? 'active-link' : ''}>
                     Nosotros {desktopMenuOpen === 'nosotros' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
@@ -169,8 +169,8 @@ const Header = () => {
                         </ul>
                     </div>
                     )}
-                </li>
-
+                </li>--- */}
+                <li><Link to="/nosotros">Nosotros</Link></li>
                 <li><Link to="/blogs">Blogs</Link></li>
                 <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="contact-link">Contáctanos</Link></li>

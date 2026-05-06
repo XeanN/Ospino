@@ -57,7 +57,9 @@ const HeroSlider = () => {
                 <div 
                     key={slide.id} 
                     className={`slide ${index === currentSlide ? 'active' : ''}`}
-                    style={{ backgroundImage: `url(${slide.image})` }}
+                    style={{ 
+    backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 100%), url(${slide.image})` 
+}}
                 >
                     <div className="container slide-content">
                         <h2>{slide.title}</h2>
@@ -73,11 +75,11 @@ const HeroSlider = () => {
                 </div>
             ))}
 
-            {/* Flechas de navegación */}
+            {/* Flechas de navegación 
             <button className="slider-arrow left" onClick={prevSlide}><FaChevronLeft /></button>
-            <button className="slider-arrow right" onClick={nextSlide}><FaChevronRight /></button>
+            <button className="slider-arrow right" onClick={nextSlide}><FaChevronRight /></button>*/}
 
-            {/* Puntos indicadores (Dots) */}
+            {/* Puntos indicadores (Dots) 
             <div className="slider-dots">
                 {slides.map((_, index) => (
                     <div 
@@ -86,7 +88,7 @@ const HeroSlider = () => {
                         onClick={() => setCurrentSlide(index)}
                     ></div>
                 ))}
-            </div>
+            </div>*/}
         </div>
     );
 };

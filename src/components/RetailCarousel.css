@@ -7,7 +7,7 @@
 
 .retail-title {
     text-align: center;
-    color: var(--color-corporate-blue, #003B71);
+    color: var(--color-primary, #003B71);
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 10px;
@@ -64,7 +64,7 @@
 .retail-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    border-color: var(--color-corporate-blue, #003B71);
+    border-color: var(--color-primary, #003B71);
 }
 
 .retail-card img {

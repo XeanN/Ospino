@@ -6,7 +6,7 @@
 
 /* --- 1. HERO BANNER SIMPLE --- */
 .contact-hero {
-    background-color: var(--color-corporate-blue);
+    background-color: var(--color-primary);
     color: white;
     text-align: center;
     padding: 60px 0;
@@ -46,7 +46,7 @@
 }
 
 .contact-info-card h2 {
-    color: var(--color-corporate-blue);
+    color: var(--color-primary);
     font-size: 2rem;
     margin-bottom: 30px;
     border-bottom: 4px solid var(--color-primary);

@@ -30,7 +30,7 @@
     margin-bottom: 25px;
     font-weight: 800;
     /* CAMBIO: Título en Azul Corporativo */
-    color: var(--color-corporate-blue); 
+    color: var(--color-primary); 
     }
 
     .corporate-content p {
@@ -60,7 +60,7 @@
     font-size: 2.5rem;
     font-weight: 800;
     /* CAMBIO: Números en Azul */
-    color: var(--color-corporate-blue); 
+    color: var(--color-primary); 
     }
 
     .stat-item .label {
@@ -72,8 +72,8 @@
     .corporate-btn {
     display: inline-block;
     padding: 15px 35px;
-    border: 2px solid var(--color-corporate-blue); /* Borde Azul */
-    color: var(--color-corporate-blue); /* Texto Azul */
+    border: 2px solid var(--color-primary); /* Borde Azul */
+    color: var(--color-primary); /* Texto Azul */
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -81,7 +81,7 @@
     }
 
     .corporate-btn:hover {
-    background-color: var(--color-corporate-blue);
+    background-color: var(--color-primary);
     color: #fff; /* Texto blanco al pasar el mouse */
     }
 

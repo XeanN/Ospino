@@ -27,6 +27,14 @@ import Contacto from "../pages/Contacto";
 import Blog from "../pages/Blog";       // Antes Noticias
 import NovedadDetalle from "../pages/NovedadDetalle";
 
+// Legales
+// Legales
+import LegalLayout from "../pages/legales/LegalLayout";
+import PoliticaPrivacidad from "../pages/legales/PoliticaPrivacidad";
+import PoliticaCookies from "../pages/legales/PoliticaCookies";
+import TerminosCondiciones from "../pages/legales/TerminosCondiciones";
+import AvisoPrivacidad from "../pages/legales/AvisoPrivacidad";
+
 
 export default function AppRouter() {
   return (
@@ -67,6 +75,14 @@ export default function AppRouter() {
       {/* Blogs */}
       <Route path="/blogs" element={<Blog />} />
       <Route path="/blogs/:slug" element={<NovedadDetalle />} />
+
+      {/* Legales */}
+      <Route path="/legales" element={<LegalLayout />}>
+        <Route path="privacidad" element={<PoliticaPrivacidad />} />
+        <Route path="cookies" element={<PoliticaCookies />} />
+        <Route path="terminos-y-condiciones" element={<TerminosCondiciones />} />
+        <Route path="aviso-privacidad" element={<AvisoPrivacidad />} />
+      </Route>
     </Routes>
   );
 }

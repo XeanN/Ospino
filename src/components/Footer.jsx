@@ -84,10 +84,10 @@
             <div className="footer-bottom">
             <div className="copyright-text">
                 {new Date().getFullYear()} © Ospino S.A.C. - Todos los derechos reservados - 
-                <Link to="/privacidad"> Políticas de Protección de datos personales</Link> | 
-                <Link to="/cookies"> Política de Cookies</Link> | 
-                <Link to="/terminos"> Términos y Condiciones</Link> | 
-                <Link to="/aviso"> Aviso de Privacidad</Link>
+                <Link to="/legales/privacidad"> Políticas de Protección de datos personales</Link> | 
+                <Link to="/legales/cookies"> Política de Cookies</Link> | 
+                <Link to="/legales/terminos-y-condiciones"> Términos y Condiciones</Link> | 
+                <Link to="/legales/aviso-privacidad"> Aviso de Privacidad</Link>
             </div>
             </div>
 

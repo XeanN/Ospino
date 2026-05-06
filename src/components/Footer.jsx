@@ -61,8 +61,8 @@
                 <h4>Enlaces Rápidos</h4>
                 <ul>
                 {/* Nuevo enlace directo */}
-                <li><Link to="/sostenibilidad">Sostenibilidad</Link></li>
-                <li><Link to="/novedades">Novedades</Link></li>
+                {/*<li><Link to="/sostenibilidad">Sostenibilidad</Link></li>*/}
+                <li><Link to="/blogs">Blogs</Link></li>
                 {/*<li><Link to="/inversionistas">Inversionistas</Link></li>*/}
                 <li><Link to="/proveedores">Proveedores</Link></li>
                 <li><Link to="/clientes">Clientes</Link></li>

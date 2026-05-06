@@ -38,7 +38,7 @@
                 En Ospino no somos solo proveedores, somos un <strong>aliado estratégico</strong>. 
                 Nuestro principal objetivo es que tu cliente final busque la recompra en tu negocio. 
                 Para lograrlo, te brindamos un portafolio variado con nuestras líneas <em>Best Seller</em> 
-                de golosinas Deyelli, bebidas D'Loe y bombones Monfer.
+                de golosinas Ospino, bebidas D'Loe y bombones Monfer.
                 </p>
                 <p>
                 Nos enfocamos en asegurar la <strong>rentabilidad que necesita tu negocio</strong> para seguir creciendo, 

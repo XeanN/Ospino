@@ -11,8 +11,8 @@ const HeroSlider = () => {
     const slides = [
         {
             id: 1,
-            image: getAssetUrl("s_Distribución.jpg"),
-            title: "Excelencia en Distribución",
+            image: getAssetUrl("s_AliadoGolosinas.png"),
+            title: "Tu mejor aliado en Golosinas",
             subtitle: "Llevamos calidad a cada rincón del Perú.",
             link: "/nosotros", // <--- Este botón llevará a "Nosotros"
             buttonText: "Conocer Más"

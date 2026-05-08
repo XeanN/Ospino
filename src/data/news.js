@@ -816,7 +816,7 @@ export const newsData = [
     date: "22 JUL, 2024",
     dateISO: "2024-07-22",
     category: "Marcas",
-    image: getAssetUrl('ospino-fondo.jpg'),
+    image: getAssetUrl('Colombina-Peru-BonBonBum-Grissly-Millows.png'),
     summary: "Ospino distribuye el portafolio 2026 de Colombina en Perú: Bon Bon Bum, gomitas Grissly, Millows, Nucita y toda la línea de golosinas para bodegas y mayoristas.",
     content: `
       <p>Hay empresas que fabrican golosinas y hay empresas que crean iconos culturales. <strong>Colombina</strong> pertenece a la segunda categoría. Fundada en Colombia en 1927, esta empresa ha trascendido las fronteras de su país para convertirse en una de las productoras de golosinas más queridas de América Latina, con presencia en más de 60 países y un portafolio que incluye algunos de los productos más vendidos del continente.</p>

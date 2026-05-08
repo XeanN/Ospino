@@ -1011,7 +1011,7 @@ export const newsData = [
     date: "08 JUN, 2024",
     dateISO: "2024-06-08",
     category: "Marcas",
-    image: getAssetUrl('ospino-fondo.jpg'),
+    image: getAssetUrl('costa-ambrosoli-blogs.png'),
     summary: "Ospino distribuye Costa y Ambrosoli en Perú: galletas Chocman, wafers Nik, chocolates Vizzio, barras de cereal y toda la línea de gomitas Ambrosoli.",
     content: `
       <p>Si hay una empresa que puede reclamar el título de "parte del alma de la mesa peruana", esa es <strong>Costa</strong>. Durante décadas, los productos Costa han acompañado el desayuno, la lonchera, el recreo escolar y el antojo de la tarde de millones de peruanos. El Chocman, el Nik, las galletas Frac, el chocolate Vizzio — cada uno de estos nombres evoca un recuerdo, una emoción, un momento compartido.</p>

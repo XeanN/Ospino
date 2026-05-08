@@ -19,7 +19,7 @@
             <div className="news-grid">
             {latestNews.map((item) => (
                 // Envolvemos toda la tarjeta en un Link para que sea más fácil hacer clic
-                <Link to={`/blogs/${item.id}`} key={item.id} className="news-card" style={{textDecoration: 'none', color: 'inherit'}}>
+                <Link to={`/blogs/${item.slug}`} key={item.id} className="news-card" style={{textDecoration: 'none', color: 'inherit'}}>
                 
                 <div className="news-image">
                     <img src={item.image} alt={item.title} />

@@ -42,7 +42,7 @@
             if (category === 'bebidas') newColor = "linear-gradient(135deg, #43A047 0%, #2E7D32 100%)"; // Verde
             if (category === 'cuidado-de-hogar') newColor = "linear-gradient(135deg, #0288D1 0%, #01579B 100%)"; // Azul Claro
         }
-
+        
         setPageInfo({ title: newTitle, bannerColor: newColor });
 
         // 2. Filtrar Productos

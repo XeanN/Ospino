@@ -1,270 +1,214 @@
-    import { getAssetUrl } from '../utils/assets'; // 1. Importar
-    // --- CONFIGURACIÓN DE CATEGORÍAS (Para URLs y títulos) ---
-    export const categoriesConfig = [
-    { slug: "dulces", name: "Dulces" },
+import { getAssetUrl } from '../utils/assets';
+
+export const categoriesConfig = [
+    { slug: "dulces",       name: "Dulces"       },
     { slug: "chocolateria", name: "Chocolatería" },
-    { slug: "bebidas", name: "Bebidas" },
-    { slug: "cuidado-de-hogar", name: "Cuidado de hogar" },
-    { slug: "enlatados", name: "Enlatados" },
-    { slug: "productos-de-campana", name: "Productos de campaña" }
-    ];
-    
-    // Función para generar un placeholder de imagen único
-    const getPlaceholderUrl = (id, color) => 
-    `https://via.placeholder.com/300/${color}/fff?text=ID-${id}`;
-
-    // --- BASE DE DATOS DE PRODUCTOS (Detalle Completo) ---
-    export const allProducts = [
-    // ==============================================
-    // 1. DULCES (40 Productos)
-    // ==============================================
-    // --- Chupetines Juguete (Deyelli) ---
-    { id: 101, name: "Chupetín Helado Led", category: "dulces", subcategory: "Chupetines Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "10 Gramos", code: "CHUP-002", img_primary: getAssetUrl('dulces/chupetin-helado-led.png'), img_secondary: getAssetUrl('dulces/chupetin-helado-led-manzana.png'),extra_images: [
-            getAssetUrl('dulces/chupetin-helado-led-naranja.png'),
-            getAssetUrl('dulces/chupetin-helado-led-uva.png'),
-            getAssetUrl('dulces/chupetin-helado-led-2.png')
-        ], description: "Delicioso chupetín bisabor con palito led que brilla en la oscuridad por más de 5 horas." },
-    
-    { id: 102, name: "Huevo Led", category: "dulces", subcategory: "Chupetines Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "10 Gramos", code: "CHUP-003", img_primary: getAssetUrl('dulces/huevo-led.png'), img_secondary: getAssetUrl('dulces/huevo-led-2.png'), description: "Chupetin bisabor en forma de huevito con palito led que brilla en la oscuridad por más de 5 horas." },
-    { id: 103, name: "Molino de Caramelo", category: "dulces", subcategory: "Chupetines Juguete", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "12 Gramos", code: "CHUP-001", img_primary: getAssetUrl('dulces/molino-de-caramelo.png'), img_secondary: getAssetUrl('dulces/molino-de-caramelo-2.png'), description: "Chupetin que contiene 5 sabores y gira como un molino" },
-    { id: 104, name: "Caramelo Chupadedo", category: "dulces", subcategory: "Chupetines Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "10 Gramos", code: "CHUP-010", img_primary: getAssetUrl('dulces/caramelo-chupadedo.png'), img_secondary: getAssetUrl('dulces/caramelo-chupadedo-2.png'), description: "Cinco mini chupetines para colocarse en cada dedo y saborear la diversión (DEDOS LOKOS)" },
-    { id: 105, name: "Pintor Explosivo", category: "dulces", subcategory: "Chupetín + Polvo", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "6 gramos", code: "CHUP-012", img_primary: getAssetUrl('dulces/pintor-explosivo.png'), img_secondary: getAssetUrl('dulces/pintor-explosivo-2.png'), description: "Rodillo con caramelo y polvo explosivo sabor a frutas surtidas " },
-
-    // --- Caramelo Líquido (Deyelli) ---
-    { id: 106, name: "Mini Gas Spray (Encendedor)", category: "dulces", subcategory: "Caramelo Líquido", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "20 ml", code: "CL-002", img_primary: getAssetUrl('dulces/mini-gas-spray-encendedor.png'), img_secondary: getAssetUrl('dulces/mini-gas-spray-encendedor-2.png'), description: "Caramelo líquido en spray con forma de encendedor, sabor a fresa, cola, naranja y uva" },
-    { id: 107, name: "Mini Pistola Spray", category: "dulces", subcategory: "Caramelo Líquido", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "20 ml", code: "CL-001", img_primary: getAssetUrl('dulces/mini-pistola-spray.png'), img_secondary: getAssetUrl('dulces/mini-pistola-spray-2.png'), description: "Caramelo líquido con forma de pistola, sabor a fresa, arándano, naranja y manzana" },
-    { id: 108, name: "Dino Roll", category: "dulces", subcategory: "Caramelo Líquido", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "20 gr", code: "CL-004", img_primary: getAssetUrl('dulces/dino-roll.png'), img_secondary: getAssetUrl('dulces/dino-roll-2.png'), description: "Caramelo líquido con forma de roll on, sabor a fresa, cola, naranja y uva" },
-    { id: 109, name: "Mini Extintor Spray", category: "dulces", subcategory: "Caramelo Líquido", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 ml", code: "CL-003", img_primary: getAssetUrl('dulces/mini-extintor-spray.png'), img_secondary: getAssetUrl('dulces/mini-extintor-spray-2.png'), description: "Caramelo líquido en spray con forma de extintor, sabor a fresa, manzana, naranja y uva" },
-    { id: 110, name: "Dentito Loko", category: "dulces", subcategory: "Jalea de Caramelo", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "8 gramos", code: "CL-005", img_primary: getAssetUrl('dulces/dentito-loko.png'), img_secondary: getAssetUrl('dulces/dentito-loko-2.png'), description: "Jalea de caramelo en forma en forma de cepillo de dientes. Sabor de fresa manzana y uva" },
-
-    // --- Chicles (Deyelli) ---
-    { id: 111, name: "Chiclazo Tattoo 100 U.", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Bolsa x 100 Unidades", unit_weight: "4.5 gr", code: "CHI-011", img_primary: getAssetUrl('dulces/chiclazo-tattoo-bolsa-100.png'), img_secondary: getAssetUrl('dulces/chiclazo-tattoo-bolsa-100-2.png'), description: "Chicle sabor a fresa, naranja, manzana y uva, con más de 40 tatuajes para coleccionar" },
-    { id: 112, name: "Mini Chiclazo Tattoo 150 U.", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Bolsa x 150 Unidades", unit_weight: "3 gr", code: "CHI-012", img_primary: getAssetUrl('dulces/mini-chiclazo-tattoo-bolsa-150.png'), img_secondary: getAssetUrl('dulces/mini-chiclazo-tattoo-bolsa-150-2.png'), description: "Chicle sabor a fresa, naranja, manzana y uva, con más de 40 tatuajes para coleccionar" },
-    { id: 113, name: "Chiclazo Tattoo 100 U.", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "4.5 gr", code: "CHI-013", img_primary: getAssetUrl('dulces/chiclazo-tattoo-frasco-100.png'), img_secondary: getAssetUrl('dulces/chiclazo-tattoo-frasco-100-2.png'), description: "Chicle sabor a fresa, naranja, manzana y uva, con más de 40 tatuajes para coleccionar" },
-    { id: 114, name: "Mini Chiclazo Tattoo 150 U.", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Frasco x 150 Unidades", unit_weight: "3 gr", code: "CHI-014", img_primary: getAssetUrl('dulces/mini-chiclazo-tattoo-frasco-150.png'), img_secondary: getAssetUrl('dulces/mini-chiclazo-tattoo-frasco-150-2.png'), description: "Chicle sabor a fresa, naranja, manzana y uva, con más de 40 tatuajes para coleccionar" },
-    { id: 115, name: "Gaseosas YELICOLA", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "18 Gramos", code: "CHI-004", img_primary: getAssetUrl('dulces/gaseosas-candy.png'), img_secondary: getAssetUrl('dulces/gaseosas-candy-2.png'), description: "Botellitas de gaseosa con chicles sabores surtidos " },
-    { id: 116, name: "Bolimix", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Frasco x 125 Unidades", unit_weight: "8 Gramos", code: "CHI-016", img_primary: getAssetUrl('dulces/bolimix.png'), img_secondary: getAssetUrl('dulces/bolimix-2.png'), description: "Chicle en forma de bola sin envoltura y sabor a frutas" },
-    { id: 117, name: "Chicle Jirafa (31 CM)", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 60 Unidades", unit_weight: "12 gramos", code: "CHI-015", img_primary: getAssetUrl('dulces/chicle-jirafa-31cm.png'), img_secondary: getAssetUrl('dulces/chicle-jirafa-31cm-2.png'), description: "Mini chicles en tubo de 31 cm con sabor a frutas" },
-    { id: 118, name: "Chicle en Polvo", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "8 gramos", code: "CHI-010", img_primary: getAssetUrl('dulces/chicle-en-polvo.png'), img_secondary: getAssetUrl('dulces/chicle-en-polvo-2.png'), description: "Divertido chicle en polvo sabor a fresa que cambia de textura en la boca" },
-
-    // --- Mini Gelatinas (Deyelli) ---
-    { id: 120, name: "Mini Gelatina Tren", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-006", img_primary: getAssetUrl('dulces/mini-gelatina-tren.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-tren-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 121, name: "Mini Gelatina Auto", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-005", img_primary: getAssetUrl('dulces/mini-gelatina-auto.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-auto-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 122, name: "Mini Gelatina Perro", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-004", img_primary: getAssetUrl('dulces/mini-gelatina-perro.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-perro-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 123, name: "Mini Gelatina Rana", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-003", img_primary: getAssetUrl('dulces/mini-gelatina-rana.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-rana-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 124, name: "Mini Gelatina Super Heroes", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-012", img_primary: getAssetUrl('dulces/mini-gelatina-super-heroes.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-super-heroes-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 125, name: "Mini Gelatina Niño y Niña", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-007", img_primary: getAssetUrl('dulces/mini-gelatina-nino-y-nina.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-nino-y-nina-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva" },
-    { id: 126, name: "Mini Gelatina Dragon Ball ", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 gr", code: "GELA-014", img_primary: getAssetUrl('dulces/mini-gelatina-dragon-ball-frasco.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-dragon-ball-frasco-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva. Producto licenciado por TOEI" },
-    { id: 127, name: "Mini Gelatina Dragon Ball ", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Bolsa x 20 Unidades", unit_weight: "15 gr", code: "G-10026", img_primary: getAssetUrl('dulces/mini-gelatina-dragon-ball-bolsa.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-dragon-ball-bolsa-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva. Producto licenciado por TOEI" },
-    { id: 128, name: "Mini Gelatina 40 UNDS", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Bolsa x 40 Unidades", unit_weight: "15 Gramos", code: "GELA-010", img_primary: getAssetUrl('dulces/mini-gelatina-bolsa-40.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-bolsa-40-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva." },
-    { id: 129, name: "Mini Gelatina 50 UNDS", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Bolsa x 50 Unidades", unit_weight: "15 Gramos", code: "GELA-009", img_primary: getAssetUrl('dulces/mini-gelatina-bolsa-50.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-bolsa-50-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva." },
-    { id: 130, name: "Mini Gelatina 100 UNDS", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Bolsa x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-008", img_primary: getAssetUrl('dulces/mini-gelatina-bolsa-100.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-bolsa-100-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva." },
-    { id: 131, name: "Mini Gelatina 100 UNDS", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Frasco x 100 Unidades", unit_weight: "15 Gramos", code: "GELA-002", img_primary: getAssetUrl('dulces/mini-gelatina-frasco-100.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-frasco-100-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva." },
-    { id: 132, name: "Mini Gelatina a granel 410 UNDS", category: "dulces", subcategory: "Mini Gelatinas", brand: "Deyelli", presentation: "Caja x 410 Unidades", unit_weight: "N/A", code: "GELA-001", img_primary: getAssetUrl('dulces/mini-gelatina-caja-granel-410.png'), img_secondary: getAssetUrl('dulces/mini-gelatina-caja-granel-410-2.png'), description: "Mini gelatinas con trocitos de coco sabor a piña, manzana, fresa y uva." },
-
-    // --- Huevos Sorpresa (Deyelli) ---
-    { id: 133, name: "Huevo Dino Baby", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "12 Gramos", code: "HMU-001", img_primary: getAssetUrl('dulces/huevo-dino-baby.png'), img_secondary: getAssetUrl('dulces/huevo-dino-baby-2.png'), description: "Huevito con crema sabor a vainilla y chocolate, con galletas doraditas y juguete sorpresa" },
-    { id: 134, name: "Huevo Dino Xplor", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "12 Gramos", code: "HMU-004", img_primary: getAssetUrl('dulces/huevo-dino-xplor.png'), img_secondary: getAssetUrl('dulces/huevo-dino-xplor-2.png'), description: "Huevito con crema sabor a vainilla y chocolate, con galletas doraditas y juguete sorpresa" },
-    { id: 135, name: "Huevo Baby Pets", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "12 Gramos", code: "HMU-003", img_primary: getAssetUrl('dulces/huevo-baby-pets.png'), img_secondary: getAssetUrl('dulces/huevo-baby-pets-2.png'), description: "Huevito con crema sabor a vainilla y chocolate, con galletas doraditas y juguete sorpresa" },
-    { id: 136, name: "Huevo Mini Dino Kids", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 48 Unidades", unit_weight: "8 Gramos", code: "HMU-006", img_primary: getAssetUrl('dulces/huevo-mini-dino-kids.png'), img_secondary: getAssetUrl('dulces/huevo-mini-dino-kids-2.png'), description: "Huevito con crema sabor a vainilla y chocolate, con galletas doraditas y juguete sorpresa" },
-    { id: 137, name: "Huevo Doll Sorpresa", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "12 gramos", code: "HMU-0007", img_primary: getAssetUrl('dulces/huevo-doll-sorpresa.png'), img_secondary: getAssetUrl('dulces/huevo-doll-sorpresa-2.png'), description: "Huevito con crema sabor a vainilla y chocolate, con galletas doraditas y juguete sorpresa" },
-    { id: 138, name: "Huevo Super Boys", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "HCH-004", img_primary: getAssetUrl('dulces/huevo-super-boys.png'), img_secondary: getAssetUrl('dulces/huevo-super-boys-2.png'), description: "Huevito de cobertura sabor a chocolate con juguete sorpresa " },
-    { id: 139, name: "Huevo Mini Princesa", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "HCH-003", img_primary: getAssetUrl('dulces/huevo-mini-princesa.png'), img_secondary: getAssetUrl('dulces/huevo-mini-princesa-2.png'), description: "Huevito de cobertura sabor a chocolate con juguete sorpresa " },
-    { id: 140, name: "Huevo Mansión Monster", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "HCH-005", img_primary: getAssetUrl('dulces/huevo-mansion-monster.png'), img_secondary: getAssetUrl('dulces/huevo-mansion-monster-2.png'), description: "Huevito de cobertura sabor a chocolate con juguete sorpresa " },
-    { id: 141, name: "Huevo Eggo Toys", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "HCH-001", img_primary: getAssetUrl('dulces/huevo-eggo-toys.png'), img_secondary: getAssetUrl('dulces/huevo-eggo-toys-2.png'), description: "Huevito de cobertura sabor a chocolate con juguete sorpresa " },
-    { id: 142, name: "Huevo Dino Explor", category: "dulces", subcategory: "Huevos Sorpresa", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "HCH-006", img_primary: getAssetUrl('dulces/huevo-dino-explor.png'), img_secondary: getAssetUrl('dulces/huevo-dino-explor-2.png'), description: "Huevito de cobertura sabor a chocolate con juguete sorpresa " },
-
-    // --- Palitos Yogurt (Deyelli) ---
-    { id: 143, name: "Stick Volador", category: "dulces", subcategory: "Palitos Yogurt", brand: "Deyelli", presentation: "Display x 24 Unidades", unit_weight: "11 Gramos", code: "CB-0002", img_primary: getAssetUrl('dulces/stick-volador.png'), img_secondary: getAssetUrl('dulces/stick-volador-2.png'), description: "Palitos con caramelo blando sabor a yogurt de frutas con doble juguete" },
-    { id: 144, name: "Stick Tattoo", category: "dulces", subcategory: "Palitos Yogurt", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "11 Gramos", code: "CB-0001", img_primary: getAssetUrl('dulces/stick-tattoo.png'), img_secondary: getAssetUrl('dulces/stick-tattoo-2.png'), description: "Palitos con caramelo blando sabor a yogurt de frutas con doble juguete" },
-    { id: 145, name: "Palitos Yogurt Uñas", category: "dulces", subcategory: "Palitos Yogurt", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "5 gramos", code: "CB-0005", img_primary: getAssetUrl('dulces/palitos-yogurt-unas.png'), img_secondary: getAssetUrl('dulces/palitos-yogurt-unas-2.png'), description: "Palitos con caramelo blando sabor a yogurt de frutas con plancha de uñas." },
-
-    // --- Polvo Ácido (Deyelli) ---
-    { id: 146, name: "Polvo Ácido Fruti Kola", category: "dulces", subcategory: "Polvo Ácido", brand: "Deyelli", presentation: "Bolsa x 100 Unidades", unit_weight: "3.5 gr", code: "PA-001", img_primary: getAssetUrl('dulces/polvo-acido-fruti-kola.png'), img_secondary: getAssetUrl('dulces/polvo-acido-fruti-kola-2.png'), description: "Polvo acidulce sabor a frutas manzana, piña, naranja y fresa." },
-    { id: 147, name: "Polvo Ácido K-Nita XXL", category: "dulces", subcategory: "Polvo Ácido", brand: "Deyelli", presentation: "Display x 50 Unidades", unit_weight: "10 gr", code: "PA-002", img_primary: getAssetUrl('dulces/polvo-acido-k-nita-xxl.png'), img_secondary: getAssetUrl('dulces/polvo-acido-k-nita-xxl-2.png'), description: "Polvo acidulce sabor frutas 5 en 1 de 48 cm." },
-
-    // --- Caramelos (Tayas/Deyelli) ---
-    { id: 148, name: "Caramelo Coffee Intense", category: "dulces", subcategory: "Caramelos", brand: "Tayas", presentation: "Bolsa x 105 Unidades", unit_weight: "3.8 gramos", code: "CAR-0001", img_primary: getAssetUrl('dulces/caramelo-coffee-intense.png'), img_secondary: getAssetUrl('dulces/caramelo-coffee-intense-2.png'), description: "Caramelo sabor a café con relleno de crema." },
-    { id: 149, name: "Caramelo Sellito Pop", category: "dulces", subcategory: "Caramelos Sellos", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "2 gr", code: "CD-002", img_primary: getAssetUrl('dulces/caramelo-sellito-pop.png'), img_secondary: getAssetUrl('dulces/caramelo-sellito-pop-2.png'), description: "Caramelo con sabor a fresa, arándano y manzana con sellos coleccionables en la tapa." },
-    { id: 150, name: "Caramelo Garrita Loka", category: "dulces", subcategory: "Caramelos Chupadedo", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "7 gr", code: "CD-003", img_primary: getAssetUrl('dulces/caramelo-garrita-loka.png'), img_secondary: getAssetUrl('dulces/caramelo-garrita-loka-2.png'), description: "Mini chupetines para colocarse en cada dedo con polvo acidulce sabor a frutas." },
-    
-    // --- Chicles Juguete (Deyelli) ---
-    { id: 151, name: "Chicles Balón Volador", category: "dulces", subcategory: "Chicles Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "6 gr", code: "CHI-016", img_primary: getAssetUrl('dulces/chicles-balon-volador.png'), img_secondary: getAssetUrl('dulces/chicles-balon-volador-2.png'), description: "Chicle sabor a fruta surtida con juguete de disco volador coleccionable." },
-    { id: 152, name: "Gomitas Gira Loko", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "4 gr", code: "GOMI-006", img_primary: getAssetUrl('dulces/gomitas-gira-loko.png'), img_secondary: getAssetUrl('dulces/gomitas-gira-loko-2.png'), description: "Gomitas sabor a frutas surtidas con divertido trompo coleccionable." },
-    { id: 153, name: "Gomitas Crayitos", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "4 gr", code: "GOMI-008", img_primary: getAssetUrl('dulces/gomitas-crayitos.png'), img_secondary: getAssetUrl('dulces/gomitas-crayitos-2.png'), description: "Gomitas sabor a frutas surtidas con crayolas coleccionables." },
-    { id: 154, name: "Gomitas Lanza Bomba", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "4 gr", code: "GOMI-009", img_primary: getAssetUrl('dulces/gomitas-lanza-bomba.png'), img_secondary: getAssetUrl('dulces/gomitas-lanza-bomba-2.png'), description: "Gomitas de sabores surtidos con juguete lanza bomba ." },
-    
-    // --- Malvaviscos (Deyelli) ---
-    { id: 155, name: "Malvavisco Angelito Celeste 500g", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 500 g", unit_weight: "500 g", code: "MALV-0010", img_primary: getAssetUrl('dulces/malvavisco-angelito-celeste-500g.png'), img_secondary: getAssetUrl('dulces/malvavisco-angelito-celeste-500g-2.png'), description: "Malvavisco sabor a frutas." },
-    { id: 156, name: "Malvavisco Angelito Fresa 500g", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 500 g", unit_weight: "500 g", code: "MALV-0009", img_primary: getAssetUrl('dulces/malvavisco-angelito-fresa-500g.png'), img_secondary: getAssetUrl('dulces/malvavisco-angelito-fresa-500g-2.png'), description: "Malvavisco sabor a fresa." },
-    { id: 157, name: "Malvavisco Angelito Mix 500g", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 500 g", unit_weight: "500 g", code: "MALV-0008", img_primary: getAssetUrl('dulces/malvavisco-angelito-mix-500g.png'), img_secondary: getAssetUrl('dulces/malvavisco-angelito-mix-500g-2.png'), description: "Malvavisco sabor frutas mixtas." },
-    { id: 158, name: "Malvavisco Bongy 50 UNDS", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 50 Unidades", unit_weight: "5 gramos", code: "MALV-0005", img_primary: getAssetUrl('dulces/malvavisco-bongy-50.png'), img_secondary: getAssetUrl('dulces/malvavisco-bongy-50-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!." },
-    
-    // --- Galletas (NUEVO) ---
-    { id: 159, name: "Mini Galleta Tonazo Fresa", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-001", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-fresa.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-fresa-2.png'), description: "Galleta con relleno de crema sabor a fresa." },
-    { id: 160, name: "Mini Galleta Tonazo Vainilla", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-003", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-vainilla.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-vainilla-2.png'), description: "Galleta con relleno de crema sabor a vainilla." },
-    { id: 161, name: "Mini Galleta Tonazo Chocolate", category: "dulces", subcategory: "Galletas", brand: "Tonazo", presentation: "Bolsa x 50 Unidades", unit_weight: "10 gr", code: "GA-002", img_primary: getAssetUrl('dulces/mini-galleta-tonazo-chocolate.png'), img_secondary: getAssetUrl('dulces/mini-galleta-tonazo-chocolate-2.png'), description: "Galleta con relleno de crema sabor a chocolate." },
-    { id: 162, name: "Yumi Chock", category: "dulces", subcategory: "Galletas", brand: "Deyelli", presentation: "Display x 10 Unidades", unit_weight: "15 Gramos", code: "MG-001", img_primary: getAssetUrl('dulces/yumi-chock.png'), img_secondary: getAssetUrl('dulces/yumi-chock-2.png'), description: "Galletas doradas en forma de palitos con deliciosa crema sabor a chocolate." },
-    
-    // --- King Cookies (NUEVO) ---
-    { 
-        id: 191, name: "King Cookies Vainilla y Chocolate", category: "dulces", subcategory: "Galletas", brand: "King Cookies", presentation: "Paquete x 6 Unidades", unit_weight: "36 gr", code : "KNG-001", img_primary: getAssetUrl('dulces/king-cookies-vainilla-rojo.png'), description: "Deliciosas galletas sabor a vainilla, rellenas de crema con sabor a chocolate (empaque rojo). Tan ricas que merecen corona." 
-    },
-    { 
-        id: 192, name: "King Cookies Choco-Vainilla", category: "dulces", subcategory: "Galletas", brand: "King Cookies", presentation: "Paquete x 6 Unidades", unit_weight: "36 gr", code: "KNG-002", img_primary: getAssetUrl('dulces/king-cookies-choco-marron.png'), description: "Deliciosas galletas sabor chocolate y vainilla, rellenas de crema con sabor a chocolate (empaque marrón). Tan ricas que merecen corona." 
-    },
-
-    // --- Gomitas (NUEVO) ---
-    { id: 163, name: "Gomitas Culebritas", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 gramos", code: "GOMI-004", img_primary: getAssetUrl('dulces/gomitas-culebritas.png'), img_secondary: getAssetUrl('dulces/gomitas-culebritas-2.png'), description: "Gomitas divertidas en forma de culebritas sabores surtidos." },
-    { id: 164, name: "Gomitas Banana Banana", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 gramos", code: "GOMI-003", img_primary: getAssetUrl('dulces/gomitas-banana-banana.png'), img_secondary: getAssetUrl('dulces/gomitas-banana-banana-2.png'), description: "Gomitas divertidas en forma de banana sabor a plátano." },
-    { id: 165, name: "Batalla Goko (con Juguete)", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "6 gramos", code: "GOMI-002", img_primary: getAssetUrl('dulces/batalla-goko.png'), img_secondary: getAssetUrl('dulces/batalla-goko-2.png'), description: "Gomitas sabor a fruta surtidas con juguete que baila y contiene una canica." },
-    { id: 166, name: "Frie Tu Huevo XL", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 20 Unidades", unit_weight: "25 gramos", code: "GOMI-001", img_primary: getAssetUrl('dulces/frie-tu-huevo-xl.png'), img_secondary: getAssetUrl('dulces/frie-tu-huevo-xl-2.png'), description: "Vive la experiencia de freír tu huevito colocando caramelo explosivo en la sartén ." },
-    { id: 167, name: "Frie Tu Huevito", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "16 gramos", code: "GOMI-005", img_primary: getAssetUrl('dulces/frie-tu-huevito.png'), img_secondary: getAssetUrl('dulces/frie-tu-huevito-2.png'), description: "Vive la experiencia de freír tu huevito colocando caramelo explosivo en la sartén ." },
-    { id: 168, name: "Gomitas Gummy Lunch", category: "dulces", subcategory: "Gomitas", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "10 gramos", code: "G-53019", img_primary: getAssetUrl('dulces/gomitas-gummy-lunch.png'), img_secondary: getAssetUrl('dulces/gomitas-gummy-lunch-2.png'), description: "Gomitas sabor a frutas con forma de gaseosa, pan con hot dog y papitas fritas." },
-    { id: 169, name: "Gomitas Corazones Sweet Heart", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-016", img_primary: getAssetUrl('dulces/gomitas-corazones-sweet-heart.png'), img_secondary: getAssetUrl('dulces/gomitas-corazones-sweet-heart-2.png'), description: "Gomitas sabor a fresa con forma de corazones." },
-    { id: 170, name: "Gomitas Sandía", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-017", img_primary: getAssetUrl('dulces/gomitas-sour-watermelon.png'), img_secondary: getAssetUrl('dulces/gomitas-sour-watermelon-2.png'), description: "Gomitas ácidas sabor y forma de sandía." },
-    { id: 171, name: "Gomitas Ositos", category: "dulces", subcategory: "Gomitas", brand: "Guandy", presentation: "Tira x 24 Unidades", unit_weight: "20 Gramos", code: "GOMI-018", img_primary: getAssetUrl('dulces/gomitas-ositos-sour-bear.png'), img_secondary: getAssetUrl('dulces/gomitas-ositos-sour-bear-2.png'), description: "Gomita ácida sabor a frutas con forma de osito." },
-    { id: 172, name: "Gomi Blox", category: "dulces", subcategory: "Gomitas Juguete", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "8.5 gr", code: "GOMI-010", img_primary: getAssetUrl('dulces/gomitas-chatarrita-gomi-blox.png'), img_secondary: getAssetUrl('dulces/gomitas-chatarrita-gomi-blox-2.png'), description: "Gomitas sabor a frutas con forma de comida chatarra y caramelo sabor a frutas ." },
-
-    // --- Gomitas Ácidas Damla (NUEVO) ---
-    { id: 173, name: "Gomita Damla Tropical XL", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 72 Unidades", unit_weight: "15 Gramos", code: "G-53018", img_primary: getAssetUrl('dulces/damla-sour-belts-tropical-xl.png'), img_secondary: getAssetUrl('dulces/damla-sour-belts-tropical-xl-2.png'), description: "Gomita ácida sabor tropical de tamaño XL." },
-    { id: 174, name: "Gomita Damla Tropical", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53014", img_primary: getAssetUrl('dulces/damla-sour-tubes-tropical.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-tropical-2.png'), description: "Tubos de gomita ácida sabor tropical ." },
-    { id: 175, name: "Gomita Damla Mora Frambuesa", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53011", img_primary: getAssetUrl('dulces/damla-sour-tubes-mora-frambuesa.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-mora-frambuesa-2.png'), description: "Tubos de gomita ácida sabor mora frambuesa ." },
-    { id: 176, name: "Gomita Damla Frutas", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53017", img_primary: getAssetUrl('dulces/damla-sour-tubes-frutas.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-frutas-2.png'), description: "Tubos de gomita ácida sabor frutas." },
-    { id: 177, name: "Gomita Damla Manzana", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53016", img_primary: getAssetUrl('dulces/damla-sour-tubes-manzana.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-manzana-2.png'), description: "Tubos de gomita ácida sabor manzana." },
-    { id: 178, name: "Gomita Damla Fresa", category: "dulces", subcategory: "Gomitas Ácidas", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "30 Gramos", code: "G-53012", img_primary: getAssetUrl('dulces/damla-sour-tubes-fresa.png'), img_secondary: getAssetUrl('dulces/damla-sour-tubes-fresa-2.png'), description: "Tubos de gomita ácida sabor fresa." },
-
-    // --- Malvaviscos (NUEVO) ---
-    { id: 179, name: "Malvavisco Twister Celeste", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0002", img_primary: getAssetUrl('dulces/malvavisco-twister-celeste.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-celeste-2.png'), description: "Malvavisco sabor a frutas." },
-    { id: 180, name: "Malvavisco Twister Fresa", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0001", img_primary: getAssetUrl('dulces/malvavisco-twister-fresa.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-fresa-2.png'), description: "Malvavisco sabor a fresa." },
-    { id: 181, name: "Malvavisco Twister Frutas", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Bolsa x 200 gramos", unit_weight: "200 gramos", code: "MALV-0003", img_primary: getAssetUrl('dulces/malvavisco-twister-frutas.png'), img_secondary: getAssetUrl('dulces/malvavisco-twister-frutas-2.png'), description: "Malvavisco sabor a frutas." },
-    { id: 182, name: "Malvavisco Mini Mini", category: "dulces", subcategory: "Malvaviscos", brand: "Angelitos", presentation: "Tira x 12 Unidades", unit_weight: "40 gramos", code: "MALV-0004", img_primary: getAssetUrl('dulces/malvavisco-mini-mini.png'), img_secondary: getAssetUrl('dulces/malvavisco-mini-mini-2.png'), description: "Malvavisco Mini Mini." },
-    { id: 183, name: "Malvavisco Chocomanchas", category: "dulces", subcategory: "Malvaviscos", brand: "Guandy", presentation: "Tira x 12 Unidades", unit_weight: "26 gramos", code: "MALV-0006", img_primary: getAssetUrl('dulces/malvavisco-chocomanchas.png'), img_secondary: getAssetUrl('dulces/malvavisco-chocomanchas-2.png'), description: "Malvavisco bañado en chocolate." },
-    { id: 184, name: "Marshmellosos", category: "dulces", subcategory: "Malvaviscos", brand: "Guandy", presentation: "Bolsa x 50 Unidades", unit_weight: "5 Gramos", code: "MALV-0011", img_primary: getAssetUrl('dulces/marshmellosos.png'), img_secondary: getAssetUrl('dulces/marshmellosos-2.png'), description: "Malvavisco sabor vainilla ." },
-
-    // --- Chicles (NUEVO) ---
-    { id: 185, name: "Bolimix con envoltura", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 100 Unidades", unit_weight: "8 gr", code: "CHI-018", img_primary: getAssetUrl('dulces/bolichicle-boli-mix.png'), img_secondary: getAssetUrl('dulces/bolichicle-boli-mix-2.png'), description: "Chicle bola con envoltura de sabores surtidos." },
-    { id: 186, name: "Dino Huevitos", category: "dulces", subcategory: "Chicles", brand: "Deyelli", presentation: "Display x 30 Unidades", unit_weight: "20 Gramos", code: "G-61004", img_primary: getAssetUrl('dulces/dino-huevitos.png'), img_secondary: getAssetUrl('dulces/dino-huevitos-2.png'), description: "Chicle en forma de huevito de dinosaurio con sabor a tutifrui ." },
-
-    // --- Piñatería (NUEVO)---
-
-    //{ id: 187, name: "Piñatón Deyelli", category: "dulces", subcategory: "Piñatería", brand: "Deyelli", presentation: "Bolsa x 100 Piezas", unit_weight: "1 Kg", code: "PC-001", img_primary: getAssetUrl('dulces/pinaton-deyelli.png'), img_secondary: getAssetUrl('dulces/pinaton-deyelli-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-
-    { id: 188, name: "Piñatero Deyelli", category: "dulces", subcategory: "Piñatería", brand: "Deyelli", presentation: "Bolsa x 100 Piezas", unit_weight: "1 Kg", code: "PC-006", img_primary: getAssetUrl('dulces/pinatero-deyelli.png'), img_secondary: getAssetUrl('dulces/pinatero-deyelli-2.png'), description: "La bolsa piñatera más completa que contiene juguete y golosinas. Ideal para piñatas, compartir, detalles y más." },
-    
-    // ==============================================
-    // 2. CHOCOLATERÍA (36 Productos)
-    // ==============================================
-    
-    // --- Bombones Monfer (Corazón Rojo) ---
-    { id: 201, name: "Monfer Corazón Rojo", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 3 Unidades", unit_weight: "12 g", code: "HO3RH", img_primary: getAssetUrl('chocolateria/monfer-corazon-rojo-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-rojo-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 202, name: "Monfer Corazón Rojo", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 5 Unidades", unit_weight: "8g", code: "HO5RH", img_primary: getAssetUrl('chocolateria/monfer-corazon-rojo-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-rojo-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 203, name: "Monfer Corazón Rojo GOLD", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón Gold x 8 Unidades", unit_weight: "8g", code: "HO8RH1", img_primary: getAssetUrl('chocolateria/monfer-corazon-rojo-gold.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-rojo-gold-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 204, name: "Monfer Corazón Rojo", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 15 Unidades", unit_weight: "8 g", code: "HI5RH", img_primary: getAssetUrl('chocolateria/monfer-corazon-rojo-15.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-rojo-15-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    
-    // --- Bombones Monfer (Corazón Dorado y Especiales) ---
-    { id: 205, name: "Monfer Corazón Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 3 Unidades", unit_weight: "12.5 g", code: "HO3G-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-dorado-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-dorado-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 206, name: "Monfer Corazón Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 5 Unidades", unit_weight: "12.5 g", code: "HO5G-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-dorado-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-dorado-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 207, name: "Monfer Corazón Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 8 Unidades", unit_weight: "12.5 g", code: "HO8G-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-dorado-8.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-dorado-8-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 208, name: "Monfer Corazón Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 12 Unidades", unit_weight: "12.5 g", code: "HI2G-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-dorado-12.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-dorado-12-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 209, name: "Monfer Corazón Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 16 Unidades", unit_weight: "12.5 g", code: "H16G-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-dorado-16.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-dorado-16-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 210, name: "Monfer Corazón Azul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón Azul x 3 Unidades", unit_weight: "12.5 g", code: "BH03M-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-azul-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-azul-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 211, name: "Monfer Corazón Azul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón Azul x 5 Unidades", unit_weight: "12.5 g", code: "BH05M-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-azul-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-azul-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 212, name: "Monfer Corazón Azul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón Azul x 8 Unidades", unit_weight: "12.5 g", code: "BH08M-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-azul-8.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-azul-8-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 213, name: "Monfer Corazón Blanquiazul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 3 Unidades", unit_weight: "12.5 gr", code: "BH03M3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 214, name: "Monfer Corazón Blanquiazul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 5 Unidades", unit_weight: "12.5 gr", code: "BH05M3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 215, name: "Monfer Corazón Blanquiazul", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 8 Unidades", unit_weight: "12.5 gr", code: "BH08M3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-8.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-blanquiazul-8-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 216, name: "Monfer Corazón Crema", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 3 Unidades", unit_weight: "12.5 gr", code: "H03G3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-crema-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-crema-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 217, name: "Monfer Corazón Crema", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 5 Unidades", unit_weight: "12.5 gr", code: "H05G3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-crema-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-crema-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 218, name: "Monfer Corazón Crema", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Corazón x 8 Unidades", unit_weight: "12.5 gr", code: "H08G3-C", img_primary: getAssetUrl('chocolateria/monfer-corazon-crema-8.png'), img_secondary: getAssetUrl('chocolateria/monfer-corazon-crema-8-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-
-    // --- Chocolates y Trufas ---
-    { id: 219, name: "Monfer Cuadro Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Cuadro x 5 Unidades", unit_weight: "12.5 g", code: "SD05G-C", img_primary: getAssetUrl('chocolateria/monfer-cuadro-dorado-5.png'), img_secondary: getAssetUrl('chocolateria/monfer-cuadro-dorado-5-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 220, name: "Monfer Cuadro Dorado", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Cuadro x 8 Unidades", unit_weight: "12.5 g", code: "RTD08G-C", img_primary: getAssetUrl('chocolateria/monfer-cuadro-dorado-8.png'), img_secondary: getAssetUrl('chocolateria/monfer-cuadro-dorado-8-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 221, name: "Monfer Regalo con Lazo", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Regalo x 8 Unidades", unit_weight: "12.5 g", code: "DO8GF-C", img_primary: getAssetUrl('chocolateria/monfer-regalo-con-lazo.png'), img_secondary: getAssetUrl('chocolateria/monfer-regalo-con-lazo-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 222, name: "Monfer Cuadro x 11 UNDS", category: "chocolateria", subcategory: "Bombones Granel", brand: "Monfer", presentation: "Cuadro x 11 Unidades", unit_weight: "12.5g", code: "RTD11G-G", img_primary: getAssetUrl('chocolateria/monfer-cuadro-11.png'), img_secondary: getAssetUrl('chocolateria/monfer-cuadro-11-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 223, name: "Monfer Pack 3 UNDS", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Pack x 16 Packs", unit_weight: "12.5 g x3", code: "EM03G-C", img_primary: getAssetUrl('chocolateria/monfer-pack-3.png'), img_secondary: getAssetUrl('chocolateria/monfer-pack-3-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 224, name: "Truffete (Pote)", category: "chocolateria", subcategory: "Trufas", brand: "Deyelli", presentation: "Pote x 100 Unidades", unit_weight: "N/A", code: "TRU-002", img_primary: getAssetUrl('chocolateria/truffete-pote.png'), img_secondary: getAssetUrl('chocolateria/truffete-pote-2.png'), description: "Deliciosas trufas sabor chocolate, con un suave y cremoso relleno en irresistibles sabores de fresa coco, avellana, capuchino y caramelo. Una combinación perfecta de textura y sabor que convierte cada bocado en un momento de indulgencia." },
-    { id: 225, name: "Truffete (Bolsa)", category: "chocolateria", subcategory: "Trufas", brand: "Deyelli", presentation: "Bolsa x 100 Unidades", unit_weight: "N/A", code: "TRU-001", img_primary: getAssetUrl('chocolateria/truffete-bolsa.png'), img_secondary: getAssetUrl('chocolateria/truffete-bolsa-2.png'), description: "Deliciosas trufas sabor chocolate, con un suave y cremoso relleno en irresistibles sabores de fresa coco, avellana, capuchino y caramelo. Una combinación perfecta de textura y sabor que convierte cada bocado en un momento de indulgencia." },
-    { id: 226, name: "Carilokis (Pote)", category: "chocolateria", subcategory: "Barras/Copas", brand: "Deyelli", presentation: "Pote x 200 Unidades", unit_weight: "4 Gramos", code: "G-99003", img_primary: getAssetUrl('chocolateria/carilokis-pote.png'), img_secondary: getAssetUrl('chocolateria/carilokis-pote-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 227, name: "Snack Turrón", category: "chocolateria", subcategory: "Barras", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "TA-005", img_primary: getAssetUrl('chocolateria/snack-turron.png'), img_secondary: getAssetUrl('chocolateria/snack-turron-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-    { id: 228, name: "Cocobum (Barra de Coco)", category: "chocolateria", subcategory: "Barras", brand: "Tayas", presentation: "Display x 24 Unidades", unit_weight: "20 Gramos", code: "TA-001", img_primary: getAssetUrl('chocolateria/cocobum-barra-de-coco.png'), img_secondary: getAssetUrl('chocolateria/cocobum-barra-de-coco-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio." },
-        // --- Barras Crash (NUEVO) ---
-    { 
-        id: 251, 
-        name: "Barra Crash Caramelo", category: "chocolateria", subcategory: "Barras", brand: "Crash", presentation: "Display x 24 Unidades", unit_weight: "18 gr", code: "CRA-001", img_primary: getAssetUrl('chocolateria/crash-barra-caramelo-rojo.png'), description: "Barra sabor a delicioso chocolate con arroz crujiente y relleno con sabor a caramelo ." 
-    },
-    { 
-        id: 252, name: "Barra Crash Coco", category: "chocolateria", subcategory: "Barras", brand: "Crash", presentation: "Display x 24 Unidades", unit_weight: "18 gr", code: "CRA-002", img_primary: getAssetUrl('chocolateria/crash-barra-coco-celeste.png'), description: "Barra sabor a delicioso chocolate con arroz crujiente y relleno con sabor a coco ." 
-    },
-    { 
-        id: 253, name: "Barra Crash Maní", category: "chocolateria", subcategory: "Barras", brand: "Crash", presentation: "Display x 24 Unidades", unit_weight: "18 gr", code: "CRA-003", img_primary: getAssetUrl('chocolateria/crash-barra-mani-amarillo.png'), description: "Barra sabor a delicioso chocolate con arroz crujiente y relleno con sabor a maní ." 
-    },
-    // ==============================================
-    // 3. BEBIDAS (1 Producto)
-    // ==============================================
-    {id: 301, name: "Bebida Aloe Vera D'Loe", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0001", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-dloe.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-dloe-2.png'), description: "Bebida refrescante de aloe vera con trozos de sábila, pensada para quienes buscan una opción ligera y natural. Sin octógonos, con un sabor suave y refrescante que hidrata y se disfruta en cualquier momento del día sin culpas"},
-    { id: 302, name: "Bebida Aloe Vera Piña", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0002", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-pina.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-pina-2.png'), description: "Bebida refrescante de aloe vera con trozos reales de aloe, ahora con un delicioso sabor a piña. Sin octógonos, ligera y naturalmente refrescante, ideal para hidratarte y disfrutar una sensación tropical en cualquier momento del día." },
-    { id: 303, name: "Bebida Aloe Vera Arándano", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0003", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-arandano.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-arandano-2.png'), description: "Bebida refrescante de aloe vera con trozos reales de aloe, con un delicioso sabor a arándano. Sin octógonos, ligera y naturalmente revitalizante, perfecta para disfrutar una bebida saludable y llena de sabor en cualquier momento del día." },
-    { id: 304, name: "Bebida Aloe Vera Fresa", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0004", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-fresa.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-fresa-2.png'), description: "bebida refrescante de aloe vera con trozos reales de aloe, con un irresistible sabor a fresa. Sin octógonos, ligera y naturalmente deliciosa, perfecta para hidratarte y disfrutar en cualquier momento del día sin culpas." },
-    { id: 305, name: "Bebida Aloe Vera Coco", category: "bebidas", subcategory: "Aloe Vera", brand: "D'Loe", presentation: "Caja x 24 Botellas", unit_weight: "500 ml", code: "DYL-0005", img_primary: getAssetUrl('bebidas/bebida-aloe-vera-coco.png'), img_secondary: getAssetUrl('bebidas/bebida-aloe-vera-coco-2.png'), description: "Bebida refrescante de aloe vera con trozos reales de aloe, con un delicioso sabor a coco. Sin octógonos, ligera y naturalmente hidratante, perfecta para disfrutar una sensación tropical y saludable en cualquier momento del día." },
-
-    // ==============================================
-    // 4. CUIDADO DE HOGAR (3 Productos)
-    // ==============================================
-    {   
-        id: 401, name: "Detergente Huracán Limón", category: "cuidado-de-hogar", subcategory: "Detergentes", brand: "Huracán",
-        presentation: "Saco x 15 KG", unit_weight: "15 KG", code: "DET-0002",
-        img_primary: getAssetUrl('cuidado-de-hogar/detergente-huracan-limon.png'), img_secondary: getAssetUrl('cuidado-de-hogar/detergente-huracan-limon-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio."
-    },
-    {
-        id: 402, name: "Detergente Huracán Floral", category: "cuidado-de-hogar", subcategory: "Detergentes", brand: "Huracán",
-        presentation: "Saco x 15 KG", unit_weight: "15 KG", code: "DET-0001",
-        img_primary: getAssetUrl('cuidado-de-hogar/detergente-huracan-floral.png'), img_secondary: getAssetUrl('cuidado-de-hogar/detergente-huracan-floral-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio."
-    },
-    {
-        id: 403, name: "Esponja Alambrada", category: "cuidado-de-hogar", subcategory: "Esponjas", brand: "Huracán",
-        presentation: "Plancha x 12 Unidades", unit_weight: "N/A", code: "ESP-001",
-        img_primary: getAssetUrl('cuidado-de-hogar/esponja-alambrada.png'), img_secondary: getAssetUrl('cuidado-de-hogar/esponja-alambrada-2.png'), description: "Este producto está diseñado para generar el efecto ¡Wow!en tus clientes gracias  a su calidad  y precio."
-    },
-
-    // ==============================================
-    // 5. ENLATADOS (1 Producto)
-    // ==============================================
-    {
-        id: 501, name: "Gran Durazno en Almíbar", category: "enlatados", subcategory: "Frutas en Conserva", brand: "Delycorp",
-        presentation: "Caja x 12 Latas", unit_weight: "820 Gramos", code: "D-00001",
-        img_primary: getAssetUrl('enlatados/gran-durazno-en-almibar.png'), img_secondary: getAssetUrl('enlatados/gran-durazno-en-almibar-2.png'), description: "Conserva Gran Durazno en almíbar, elaborada con duraznos cuidadosamente seleccionados, jugosos y de sabor natural. Ideal para postres, acompañamientos o para disfrutar sola, ofreciendo frescura y dulzura en cada cucharada"
-    },
-    
-    // ==============================================
-    // 6. PRODUCTOS DE CAMPAÑA (3 Productos)
-    // ==============================================
-    {
-        id: 601, name: "Ricotón Panetón Bolsa", category: "productos-de-campana", subcategory: "Panetones", brand: "Deyelli",
-        presentation: "Bolsa x 800 gramos", unit_weight: "800 gramos", code: "PAN-0005",
-        img_primary: getAssetUrl('productos-de-campana/ricoton-paneton-bolsa.png'), img_secondary: getAssetUrl('productos-de-campana/ricoton-paneton-bolsa-2.png'), description: "Ricoton, el panetón que hace honor a su nombre: rico y esponjoso. Elaborado con una masa suave, llena de sabor, con pasas y frutas confitadas seleccionadas. Empacado en bolsa para conservar su frescura, ideal para compartir momentos dulces en cualquier ocasión."
-    },
-    {
-        id: 602, name: "Delitón Panetón Bolsa", category: "productos-de-campana", subcategory: "Panetones", brand: "Deyelli",
-        presentation: "Bolsa x 800 gramos", unit_weight: "800 gramos", code: "PAN-0001",
-        img_primary: getAssetUrl('productos-de-campana/deliton-paneton-bolsa.png'), img_secondary: getAssetUrl('productos-de-campana/deliton-paneton-bolsa-2.png'), description: "Delitón, un panetón verdaderamente delicioso. Su masa suave y esponjosa, con pasas y frutas confitadas seleccionadas, ofrece un sabor que conquista en cada bocado. Presentado en bolsa con cierre zíper para conservar mejor su frescura y disfrutarlo por más tiempo."
-    },
-    {
-        id: 603, name: "Delitón Panetón Caja", category: "productos-de-campana", subcategory: "Panetones", brand: "Deyelli",
-        presentation: "Caja x 6 Unidades", unit_weight: "750 gramos", code: "PAN-0004",
-        img_primary: getAssetUrl('productos-de-campana/deliton-paneton-caja.png'), img_secondary: getAssetUrl('productos-de-campana/deliton-paneton-caja-2.png'), description: "Delitón, un panetón que hace honor a su nombre. Elaborado con una masa suave y esponjosa, con pasas y frutas confitadas seleccionadas, y presentado en una elegante caja que realza su calidad. Ideal para regalar, compartir y disfrutar momentos especiales."
-    },
+    { slug: "galletas",     name: "Galletas"     },
+    { slug: "snacks",       name: "Snacks"       },
+    { slug: "bebidas",      name: "Bebidas"      },
+    { slug: "abarrotes",    name: "Abarrotes"    },
 ];
 
-    // --- FUNCIONES HELPERS ---
+export const allProducts = [
 
-    export const getSubcategories = (categorySlug) => {
+    // =========================================================
+    // AMBROSOLI
+    // =========================================================
+    { id: 1, name: "Limón Ambrosoli", category: "dulces", subcategory: "Caramelos Duros", brand: "Ambrosoli",
+        presentation: "Caja x 20 Bolsas x 100 Und", unit_weight: "390 gr", code: "2044",
+        img_primary: getAssetUrl('dulces/001_limonambrosoli.jpg'),
+        description: "Caramelo de limón Ambrosoli." },
+
+    // =========================================================
+    // BENOTI
+    // =========================================================
+    { id: 10, name: "Benoti Copitos de Chocolate", category: "galletas", subcategory: "Cereales", brand: "Benoti",presentation: "Bolsa x 30 Und", unit_weight: "160 gr", code: "9015",img_primary: getAssetUrl('galletas/002_benoticopitos.jpg'),description: "Copitos de chocolate Benoti." },
+
+    { id: 11, name: "Benoti Aritos", category: "galletas", subcategory: "Cereales", brand: "Benoti",presentation: "Bolsa x 30 Und", unit_weight: "160 gr", code: "9013",img_primary: getAssetUrl('galletas/003_benotiaritos.jpg'),description: "Aritos Benoti." },
+
+    // =========================================================
+    // BOGIE
+    // =========================================================
+    { id: 20, name: "Bogie Menta x 120", category: "dulces", subcategory: "Chicles", brand: "Bogie", presentation: "Caja x 41 Disp x 120 Und", unit_weight: "N/A", code: "16018", img_primary: getAssetUrl('dulces/004_bogie_menta120.jpg'), description: "Chiclets Bogie sabor menta." },
+    { id: 21, name: "Bogie Familiar (Surtido)", category: "dulces", subcategory: "Chicles", brand: "Bogie", presentation: "Caja x 38 Disp x 20 Und", unit_weight: "N/A", code: "16020", img_primary: getAssetUrl('dulces/005_bogie_familiar.jpg'), description: "Chiclets Bogie Familiar surtido." },
+    { id: 22, name: "Bogie Surtido x 120", category: "dulces", subcategory: "Chicles", brand: "Bogie", presentation: "Caja x 41 Disp x 120 Und", unit_weight: "N/A", code: "16013", img_primary: getAssetUrl('dulces/006_bogie_surtido120.jpg'), description: "Chiclets Bogie surtido." },
+
+    // =========================================================
+    // BON O BON
+    // =========================================================
+    { id: 30, name: "Bon O Bon Corazón (Petit)", category: "chocolateria", subcategory: "Bonbones", brand: "Bon O Bon", presentation: "Caja x 18 Dsp x 45 Gr", unit_weight: "45 Gr", code: "007006", img_primary: getAssetUrl('chocolateria/007_bonobon_corazonpetit.jpg'), description: "Bombón Bon O Bon Corazón Petit." },
+    { id: 31, name: "Bon O Bon Ventana Leche", category: "chocolateria", subcategory: "Bonbones", brand: "Bon O Bon", presentation: "Caja x 20 Dis x 18 Uni", unit_weight: "N/A", code: "007054", img_primary: getAssetUrl('chocolateria/008_bonobon_ventana.jpg'), description: "Bombón Bon O Bon Ventana Leche." },
+    { id: 32, name: "Corazón Pote Bon O Bon", category: "chocolateria", subcategory: "Bonbones", brand: "Bon O Bon", presentation: "Caja x 16 Potes x 180 Gr", unit_weight: "180 Gr", code: "007055", img_primary: getAssetUrl('chocolateria/009_bonobon_pote.jpg'), description: "Pote de bombones Bon O Bon Corazón." },
+    { id: 33, name: "Mini Bon O Bon Oblea", category: "chocolateria", subcategory: "Bonbones", brand: "Bon O Bon", presentation: "Caja x 12 Bls x 288 Gr", unit_weight: "288 Gr", code: "007030", img_primary: getAssetUrl('chocolateria/010_bonobon_minioblea.jpg'), description: "Mini Bon O Bon en oblea." },
+
+    // =========================================================
+    // CASINO
+    // =========================================================
+    { id: 40, name: "Casino Pack Choco", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 8 Pack x 6 Und", unit_weight: "258 Grs", code: "017033", img_primary: getAssetUrl('galletas/011_casino_packchoco.jpg'), description: "Galleta Casino rellena de crema de chocolate." },
+    { id: 41, name: "Casino Taco (Chocolate)", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 28 Pqt", unit_weight: "129 Gr", code: "017005", img_primary: getAssetUrl('galletas/012_casino_tacochoco.jpg'), description: "Galletas Casino Taco sabor chocolate." },
+    { id: 42, name: "Casino Pack Fresa", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 8 Pack x 6 Und", unit_weight: "258 Grs", code: "017035", img_primary: getAssetUrl('galletas/013_casino_packfresa.jpg'), description: "Galleta Casino rellena de crema de fresa." },
+    { id: 43, name: "Casino Pack Menta", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 8 Pack x 6 Und", unit_weight: "258 Grs", code: "017037", img_primary: getAssetUrl('galletas/014_casino_packmenta.jpg'), description: "Galleta Casino rellena de crema de menta." },
+    { id: 44, name: "Casino Pack Vainilla", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 8 Pack x 6 Und", unit_weight: "258 Grs", code: "017038", img_primary: getAssetUrl('galletas/015_casino_packvainilla.jpg'), description: "Galleta Casino rellena de crema de vainilla." },
+    { id: 45, name: "Casino Taco (Menta)", category: "galletas", subcategory: "Galletas Rellenas", brand: "Casino", presentation: "Caja x 28 Pqt", unit_weight: "129 Gr", code: "017016", img_primary: getAssetUrl('galletas/016_casino_tacomenta.jpg'), description: "Galletas Casino Taco sabor menta." },
+
+    // =========================================================
+    // CHIPS AHOY
+    // =========================================================
+    { id: 50, name: "Chips Ahoy Pack", category: "galletas", subcategory: "Galletas Bulces", brand: "Chips Ahoy",
+        presentation: "Caja x 24 Pack x 6 Und", unit_weight: "N/A", code: "36032",
+        img_primary: getAssetUrl('galletas/017_chipsahoy_pack.jpg'),
+        description: "Galleta Chips Ahoy con chips de chocolate." },
+
+    // =========================================================
+    // COSTA
+    // =========================================================
+    { id: 60, name: "Chips Chocolate Costa", category: "galletas", subcategory: "Galletas Rellenas", brand: "Costa", presentation: "Caja x 12 Pack x 6 Und", unit_weight: "36 Gr", code: "019077", img_primary: getAssetUrl('galletas/018_chipschoco_costa.jpg'), description: "Galletas Costa Chips con chispas de chocolate." },
+    { id: 61, name: "Frac Galleta Chocolate", category: "galletas", subcategory: "Galletas Rellenas", brand: "Costa", presentation: "Caja x 12 Pack x 6 Und", unit_weight: "41 Gr", code: "019065", img_primary: getAssetUrl('galletas/019_frac_choco_costa.jpg'), description: "Galletas Frac rellenas de chocolate." },
+    { id: 62, name: "Wafer Costa Chocolate", category: "galletas", subcategory: "Wafers", brand: "Costa", presentation: "Caja x 32 Un", unit_weight: "124 Gr", code: "019070", img_primary: getAssetUrl('galletas/020_waferchoco_costa.jpg'), description: "Wafer Costa sabor a chocolate." },
+    { id: 63, name: "Agua Line Pack", category: "galletas", subcategory: "Galletas Saladas", brand: "Costa", presentation: "Caja x 12 Pqs x 6 Und", unit_weight: "42 Gr", code: "019062", img_primary: getAssetUrl('galletas/021_agualine_pack.jpg'), description: "Galletas de agua Agua Line en pack." },
+    { id: 64, name: "Agua Line Taco", category: "galletas", subcategory: "Galletas Dulces", brand: "Costa", presentation: "Caja x 21 Und", unit_weight: "200 Gr", code: "019063", img_primary: getAssetUrl('galletas/022_agualine_taco.jpg'), description: "Galletas de agua Agua Line en taco." },
+    { id: 65, name: "Caritas Costa", category: "galletas", subcategory: "Galletas Dulces", brand: "Costa", presentation: "Caja x 16 Pack x 6 Und", unit_weight: "44.5 Gr", code: "019060", img_primary: getAssetUrl('galletas/023_caritas_costa.jpg'), description: "Galletas dulces Caritas de Costa." },
+    { id: 66, name: "Surtidas Costa Lata", category: "galletas", subcategory: "Galletas Dulces", brand: "Costa", presentation: "Lata", unit_weight: "18 x 452 Gr", code: "019081", img_primary: getAssetUrl('galletas/024_surtidas_lata.jpg'), description: "Lata de galletas surtidas Costa." },
+    { id: 67, name: "Vainiya Galleta", category: "galletas", subcategory: "Galletas Dulces", brand: "Costa", presentation: "Caja x 20 Pack x 6 Unds", unit_weight: "32 Gr", code: "019035", img_primary: getAssetUrl('galletas/025_vainiyapack.jpg'), description: "Galletas de vainilla Vainiya Costa." },
+    { id: 68, name: "Soda Line Pack", category: "galletas", subcategory: "Galletas Saladas", brand: "Costa", presentation: "Caja x 12 Pack x 6 Und", unit_weight: "40 Gr", code: "019040", img_primary: getAssetUrl('galletas/026_sodaline_pack.jpg'), description: "Galletas Soda Line de Costa en pack." },
+    { id: 69, name: "Soda Line Taco", category: "galletas", subcategory: "Galletas Saladas", brand: "Costa", presentation: "Caja x 21 Und", unit_weight: "170 Gr", code: "019041", img_primary: getAssetUrl('galletas/027_sodaline_taco.jpg'), description: "Galletas Soda Line de Costa en taco." },
+    { id: 70, name: "Wafer Costa Fresa", category: "galletas", subcategory: "Wafers", brand: "Costa", presentation: "Caja x 32 Un", unit_weight: "124 Gr", code: "019071", img_primary: getAssetUrl('galletas/028_waferfresa_costa.jpg'), description: "Wafer Costa sabor a fresa." },
+    { id: 71, name: "Wafer Costa Vainilla", category: "galletas", subcategory: "Wafers", brand: "Costa", presentation: "Caja x 32 Un", unit_weight: "124 Gr", code: "019073", img_primary: getAssetUrl('galletas/029_wafervainilla_costa.jpg'), description: "Wafer Costa sabor a vainilla." },
+    { id: 72, name: "Nik Chico Vainilla", category: "galletas", subcategory: "Wafers", brand: "Costa", presentation: "12 Pack x 6 Und", unit_weight: "27 Gr", code: "019050", img_primary: getAssetUrl('galletas/030_nikchico_vainilla.jpg'), description: "Galletas Nik Chico sabor vainilla." },
+    { id: 73, name: "Vizio Pequeño", category: "chocolateria", subcategory: "Almendras", brand: "Costa", presentation: "Caja x 60 Dis", unit_weight: "63 Gr", code: "019036", img_primary: getAssetUrl('chocolateria/031_vizio_pequeno.jpg'), description: "Almendras bañadas en chocolate Vizio." },
+    { id: 74, name: "Vizio Sobre", category: "chocolateria", subcategory: "Almendras", brand: "Costa", presentation: "Caja x 10 Disp x 20 Sobres", unit_weight: "N/A", code: "019039", img_primary: getAssetUrl('chocolateria/032_vizio_sobre.jpg'), description: "Sobres de almendras bañadas en chocolate Vizio." },
+
+    // =========================================================
+    // FERRERO ROCHER
+    // =========================================================
+    { id: 70, name: "Ferrero Rocher T3 Tripack", category: "chocolateria", subcategory: "Bombones Premium", brand: "Ferrero Rocher",
+        presentation: "Caja x 6 Disp x 16 Bolsas", unit_weight: "37.5 gr", code: "51002",
+        img_primary: getAssetUrl('chocolateria/033_ferrero_rocher.jpg'),
+        description: "Bombón Ferrero Rocher en tripack de 3 unidades." },
+
+    // =========================================================
+    // FIELD
+    // =========================================================
+    { id: 80, name: "Soda Galleta Field", category: "galletas", subcategory: "Galletas Importadas", brand: "Field", presentation: "Caja x 36 Pack x 6 Und", unit_weight: "32 Gr", code: "036059", img_primary: getAssetUrl('galletas/034_soda_field.jpg'), description: "Galleta Soda Field importada." },
+    { id: 81, name: "Vainilla Field Galleta", category: "galletas", subcategory: "Galletas Importadas", brand: "Field", presentation: "Caja x 24 Pack x 6 Und", unit_weight: "N/A", code: "036014", img_primary: getAssetUrl('galletas/035_vainilla_field.jpg'), description: "Galletas de vainilla Field importadas." },
+
+    // =========================================================
+    // GLOBO POP
+    // =========================================================
+    { id: 90, name: "Globo Pop Leche/Chocolate", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bls x 24 Und", unit_weight: "N/A", code: "016015", img_primary: getAssetUrl('dulces/036_globopop_leche.jpg'), description: "Chupete Globo Pop sabor leche y chocolate." },
+    { id: 91, name: "Globo Pop Cereza Acid", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bls x 24 Und", unit_weight: "N/A", code: "016003", img_primary: getAssetUrl('dulces/037_globopop_cereza.jpg'), description: "Chupete Globo Pop Acid sabor cereza." },
+    { id: 92, name: "Globo Pop Fresa Aluminizado", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bls x 24 Und", unit_weight: "N/A", code: "016004", img_primary: getAssetUrl('dulces/038_globopop_fresa.jpg'), description: "Chupete aluminizado Globo Pop sabor a fresa." },
+    { id: 93, name: "Globo Pop Maracuyá", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bls x 24 Und", unit_weight: "432 Gr", code: "016019", img_primary: getAssetUrl('dulces/039_globopop_maracuya.jpg'), description: "Chupete Globo Pop sabor maracuyá." },
+    { id: 94, name: "Globo Pop Neón", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bols x 25 Und", unit_weight: "432 Grs", code: "016005", img_primary: getAssetUrl('dulces/040_globopop_neon.jpg'), description: "Chupete Globo Pop Neón." },
+    { id: 95, name: "Globo Pop Surtido", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja x 30 Bls x 24 Und", unit_weight: "N/A", code: "016006", img_primary: getAssetUrl('dulces/041_globopop_surtido.jpg'), description: "Chupete Globo Pop surtido." },
+    { id: 96, name: "Led (Surtido) Globo Pop", category: "dulces", subcategory: "Chupetes", brand: "Globo Pop", presentation: "Caja de 12 Dpl x 20 Un", unit_weight: "N/A", code: "016028", img_primary: getAssetUrl('dulces/042_globopop_led.jpg'), description: "Chupete Globo Pop Led surtido." },
+
+    // =========================================================
+    // GRANO DE ORO
+    // =========================================================
+    { id: 100, name: "Avena Grano de Oro", category: "abarrotes", subcategory: "Avena", brand: "Grano de Oro", presentation: "Agranel", unit_weight: "5 Kg", code: "048003", img_primary: getAssetUrl('abarrotes/043_avena_granodeoro.jpg'), description: "Avena Grano de Oro a granel." },
+    { id: 101, name: "Fideo Macarrón Grano de Oro", category: "abarrotes", subcategory: "Fideos", brand: "Grano de Oro", presentation: "Caja x 20 Und", unit_weight: "250 Gr", code: "048021", img_primary: getAssetUrl('abarrotes/044_macarron_granodeoro.jpg'), description: "Fideo macarrón Grano de Oro." },
+    { id: 102, name: "Fideo Super Combo Grano de Oro", category: "abarrotes", subcategory: "Fideos", brand: "Grano de Oro", presentation: "Caja x 20 Und", unit_weight: "250 Gr", code: "048001", img_primary: getAssetUrl('abarrotes/045_supercombo_granodeoro.jpg'), description: "Fideo Super Combo Grano de Oro (Canuto, Codo, Tornillo, Corbata)." },
+    { id: 103, name: "Fideo Tallarín Grano de Oro", category: "abarrotes", subcategory: "Fideos", brand: "Grano de Oro", presentation: "Caja x 20 Und", unit_weight: "500 Gr", code: "048015", img_primary: getAssetUrl('abarrotes/046_tallarin_granodeoro.jpg'), description: "Fideo tallarín Grano de Oro." },
+
+    // =========================================================
+    // HALLS
+    // =========================================================
+    { id: 110, name: "Halls Barra Cherry", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Dsp x 12 Und", unit_weight: "2.8 G", code: "036011", img_primary: getAssetUrl('dulces/047_halls_cherry.jpg'), description: "Caramelo Halls sabor a Cherry." },
+    { id: 111, name: "Halls Barra Fruti Mix", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Dis x 12 Und", unit_weight: "302.24 Grs", code: "036046", img_primary: getAssetUrl('dulces/048_halls_frutimix.jpg'), description: "Caramelo Halls sabor Fruti Mix." },
+    { id: 112, name: "Halls Barra Mentol", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Dsp x 12 Und", unit_weight: "28 Grs", code: "036008", img_primary: getAssetUrl('dulces/049_halls_mentol.jpg'), description: "Caramelo Halls clásico sabor a mentol." },
+    { id: 113, name: "Halls Barra Mora Azul", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Dis x 12 Und", unit_weight: "302.24 Grs", code: "036009", img_primary: getAssetUrl('dulces/050_halls_moraazul.jpg'), description: "Caramelo Halls sabor a Mora Azul." },
+    { id: 114, name: "Halls Barra Strong", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Dis x 12 Und", unit_weight: "27.5 G", code: "036010", img_primary: getAssetUrl('dulces/051_halls_strong.jpg'), description: "Caramelo Halls sabor Strong." },
+    { id: 115, name: "Halls Bolsa Xstrong", category: "dulces", subcategory: "Caramelos Mentolados", brand: "Halls", presentation: "Caja x 30 Bls x 100 Und", unit_weight: "300 Grs", code: "036051", img_primary: getAssetUrl('dulces/052_halls_bolsastrong.jpg'), description: "Bolsa de caramelos Halls Xstrong." },
+
+    // =========================================================
+    // INKA CHIPS
+    // =========================================================
+    { id: 120, name: "Inka Chips Familiar Jalapeño", category: "snacks", subcategory: "Papas Fritas", brand: "Inka Chips",presentation: "Caja x 12 Und", unit_weight: "135 gr", code: "29016",img_primary: getAssetUrl('snacks/053_inkachips_jalapeno.jpg'),description: "Inka Chips en presentación familiar sabor a jalapeño." },
+
+    // =========================================================
+    // MONFER
+    // =========================================================
+    { id: 130, name: "Monfer Corazón Rojo x 3", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 90 Estuches", unit_weight: "36 Gr", code: "110001", img_primary: getAssetUrl('chocolateria/054_monfer_corazonrojo3.jpg'), description: "Bombón de chocolate Monfer en estuche corazón rojo x 3 unidades." },
+    { id: 131, name: "Monfer Corazón Rojo x 5", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 60 Estuches", unit_weight: "40 Gr", code: "110010", img_primary: getAssetUrl('chocolateria/055_monfer_corazonrojo5.jpg'), description: "Bombón de chocolate Monfer en estuche corazón rojo x 5 unidades." },
+    { id: 132, name: "Monfer Corazón Rojo x 8", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 36 Estuches", unit_weight: "64 Gr", code: "110012", img_primary: getAssetUrl('chocolateria/056_monfer_corazonrojo8.jpg'), description: "Bombón de chocolate Monfer en estuche corazón rojo x 8 unidades." },
+    { id: 133, name: "Monfer Bolsa Bombones", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 6 Bls x 80 Uni", unit_weight: "1 Kg", code: "110030", img_primary: getAssetUrl('chocolateria/057_monfer_bolsa1kg.jpg'), description: "Bolsa de bombones de chocolate Monfer de 1Kg." },
+    { id: 134, name: "Monfer Estrella", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 36 Estuches", unit_weight: "62.5 Gr", code: "110027", img_primary: getAssetUrl('chocolateria/058_monfer_estrella.jpg'), description: "Bombón de chocolate Monfer en estuche forma de estrella." },
+    { id: 135, name: "Monfer Rosa x 4", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 8 Dsp x 12 Estuches", unit_weight: "50 Gr", code: "110005", img_primary: getAssetUrl('chocolateria/059_monfer_rosa.jpg'), description: "Bombón de chocolate Monfer en estuche de rosa x 4 unidades." },
+    { id: 136, name: "Monfer Rectangular Mix x 12", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 24 Estuches", unit_weight: "123 Gr", code: "110016", img_primary: getAssetUrl('chocolateria/060_monfer_rectangularmix.jpg'), description: "Estuche rectangular mix de bombones Monfer x 12 unidades." },
+    { id: 137, name: "Monfer Corazón Dorado x 12", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 28 Estuches", unit_weight: "150 Gr", code: "110013", img_primary: getAssetUrl('chocolateria/061_monfer_corazondorado12.jpg'), description: "Bombón de chocolate Monfer en estuche corazón dorado x 12 unidades." },
+    { id: 138, name: "Monfer Corazón Dorado x 3", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 90 Estuches", unit_weight: "37.5 Gr", code: "110003", img_primary: getAssetUrl('chocolateria/062_monfer_corazondorado3.jpg'), description: "Bombón de chocolate Monfer en estuche corazón dorado x 3 unidades." },
+    { id: 139, name: "Monfer Corazón Dorado x 8", category: "chocolateria", subcategory: "Bombones Regalo", brand: "Monfer", presentation: "Caja x 36 Estuches", unit_weight: "100 Gr", code: "110011", img_primary: getAssetUrl('chocolateria/063_monfer_corazondorado8.jpg'), description: "Bombón de chocolate Monfer en estuche corazón dorado x 8 unidades." },
+
+    // =========================================================
+    // OREO
+    // =========================================================
+    { id: 140, name: "Oreo (Taco) Regular", category: "galletas", subcategory: "Galletas Importadas", brand: "Oreo", presentation: "Caja x 30 Und", unit_weight: "108 Gr", code: "036056", img_primary: getAssetUrl('galletas/064_oreo_taco.jpg'), description: "Galleta Oreo clásica en presentación taco." },
+    { id: 141, name: "Oreo Pack", category: "galletas", subcategory: "Galletas Importadas", brand: "Oreo", presentation: "Caja x 28 Pack x 6 Pqt", unit_weight: "36 Gr", code: "036054", img_primary: getAssetUrl('galletas/065_oreo_pack.jpg'), description: "Galletas Oreo en presentación pack." },
+
+    // =========================================================
+    // ORQUÍDEA
+    // =========================================================
+    { id: 150, name: "Orquídea Corazón x 5 (Cacao 50%)", category: "chocolateria", subcategory: "Bombones y Trufas", brand: "Orquídea",presentation: "Estuche x 5 Und", unit_weight: "N/A", code: "10009", img_primary: getAssetUrl('chocolateria/066_orquidea_corazon5.jpg'),description: "Bombón Orquídea relleno, cobertura de chocolate 50% cacao." },
+
+    // =========================================================
+    // OSPINO
+    // =========================================================
+    { id: 160, name: "Cusco Ospino Caja", category: "chocolateria", subcategory: "Chocolates Nacionales", brand: "Ospino", presentation: "Caja x 50 Und", unit_weight: "80 Gr", code: "137002", img_primary: getAssetUrl('chocolateria/067_cusco_ospino.jpg'), description: "Chocotaza Cusco Ospino en presentación caja." },
+    { id: 161, name: "Cusco Ospino Plancha", category: "chocolateria", subcategory: "Chocolates Nacionales", brand: "Ospino", presentation: "Plancha x 6 Dsp x 12 Und", unit_weight: "80 Gr", code: "137001", img_primary: getAssetUrl('chocolateria/068_cusco_ospinoplancha.jpg'), description: "Chocotaza Cusco Ospino en presentación plancha." },
+
+    // =========================================================
+    // PICARAS
+    // =========================================================
+    { id: 170, name: "Picaras Fresa Corazón", category: "galletas", subcategory: "Galletas Dulces", brand: "Picaras", presentation: "30 Bolsas x 6 Und", unit_weight: "38 Gr", code: "014026", img_primary: getAssetUrl('galletas/069_picaras_fresa.jpg'), description: "Galletas Picaras sabor fresa con forma de corazón." },
+    { id: 171, name: "Picaras Mini", category: "galletas", subcategory: "Galletas Dulces", brand: "Picaras", presentation: "Caja x 14 Tiras x 6 Unds", unit_weight: "46 Gr", code: "014004", img_primary: getAssetUrl('galletas/070_picaras_mini.jpg'), description: "Galletas Picaras en presentación mini." },
+    { id: 172, name: "Picaras Clásica", category: "galletas", subcategory: "Galletas Dulces", brand: "Picaras", presentation: "30 Packs x 6 Und", unit_weight: "N/A", code: "014045", img_primary: getAssetUrl('galletas/071_picaras_clasica.jpg'), description: "Galleta Picaras clásica." },
+    { id: 173, name: "Picaras Extremas", category: "galletas", subcategory: "Galletas Dulces", brand: "Picaras", presentation: "Caja x 30 Bolsas x 6 Und", unit_weight: "38 Gr", code: "014025", img_primary: getAssetUrl('galletas/072_picaras_extrema.jpg'), description: "Galletas Picaras Extremas." },
+    { id: 174, name: "Picaras Menta", category: "galletas", subcategory: "Galletas Dulces", brand: "Picaras", presentation: "30 Pack x 6 Unds", unit_weight: "40 Gr", code: "014022", img_primary: getAssetUrl('galletas/073_picaras_menta.jpg'), description: "Galletas Picaras sabor a menta." },
+
+    // =========================================================
+    // RITZ
+    // =========================================================
+    { id: 180, name: "Ritz Queso Pack", category: "galletas", subcategory: "Galletas Dulces", brand: "Ritz", presentation: "Caja x 20 Pqts x 6 U", unit_weight: "N/A", code: "036013", img_primary: getAssetUrl('galletas/074_ritz_queso.jpg'), description: "Galletas Ritz con relleno sabor a queso en pack." },
+    { id: 181, name: "Ritz Taco", category: "galletas", subcategory: "Galletas Saladas", brand: "Ritz", presentation: "Caja x 64 Und", unit_weight: "52.5 G", code: "036053", img_primary: getAssetUrl('galletas/075_ritz_taco.jpg'), description: "Galleta Ritz clásica en presentación taco." },
+    { id: 182, name: "Ritz Plain Pack", category: "galletas", subcategory: "Galletas Saladas", brand: "Ritz", presentation: "Caja x 24 Pack x 6 Und", unit_weight: "N/A", code: "036052", img_primary: getAssetUrl('galletas/076_ritz_plain.jpg'), description: "Galleta Ritz clásica (Plain) en presentación pack." },
+
+    // =========================================================
+    // SAN JORGE
+    // =========================================================
+    { id: 190, name: "Agua de Mesa S/Gas", category: "bebidas", subcategory: "Otras Bebidas", brand: "San Jorge", presentation: "Bidón", unit_weight: "20 Lt", code: "047019", img_primary: getAssetUrl('bebidas/077_aguamesa_sanjorge.jpg'), description: "Agua de mesa sin gas San Jorge de 20 litros." },
+    { id: 191, name: "Pebesal (Agua Crackers)", category: "bebidas", subcategory: "Otras Bebidas", brand: "San Jorge", presentation: "Caja x 10 Bls", unit_weight: "450 Gr", code: "047054", img_primary: getAssetUrl('bebidas/078_pebesalagua.jpg'), description: "Galletas Pebesal Agua Crackers San Jorge." },
+    { id: 192, name: "Angel Grande Copix Chocolate", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "130 Grs", code: "004018", img_primary: getAssetUrl('galletas/079_copix_chocolate.jpg'), description: "Cereal Angel Grande Copix sabor chocolate." },
+    { id: 193, name: "Mega Waffer Gn Chocolate", category: "galletas", subcategory: "Wafers", brand: "San Jorge", presentation: "Caja x 16 Pqt", unit_weight: "61 Gr", code: "047029", img_primary: getAssetUrl('galletas/080_megawaffer_choco.jpg'), description: "Mega Waffer Gn sabor a chocolate." },
+    { id: 194, name: "Mini Gn (Chocolate) Rellenita", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "Caja x 8 Bls x 50 Und", unit_weight: "N/A", code: "047032", img_primary: getAssetUrl('galletas/081_minign_choco.jpg'), description: "Mini Gn galleta sandwich rellenita de chocolate." },
+    { id: 195, name: "Rellenita Choco & Fresa", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "Caja x 5 Pack x 8 Und", unit_weight: "N/A", code: "047058", img_primary: getAssetUrl('galletas/082_rellenita_chocofresa.jpg'), description: "Galleta Rellenita San Jorge sabor choco y fresa." },
+    { id: 196, name: "Rellenita Chocolate", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "Caja x 5 Pack x 8 Und", unit_weight: "N/A", code: "047064", img_primary: getAssetUrl('galletas/083_rellenita_choco.jpg'), description: "Galleta Rellenita San Jorge sabor a chocolate." },
+    { id: 197, name: "Taco Rellenitas Chocolate", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "Taco x 24 Und", unit_weight: "N/A", code: "047072", img_primary: getAssetUrl('galletas/084_tacorellenita_choco.jpg'), description: "Taco de galletas Rellenitas de chocolate San Jorge." },
+    { id: 198, name: "Wafer Gn Chocolate", category: "galletas", subcategory: "Wafers", brand: "San Jorge", presentation: "5 Pack x 6 Un", unit_weight: "27 Gr", code: "047038", img_primary: getAssetUrl('galletas/085_wafergn_choco.jpg'), description: "Wafer Gn de chocolate San Jorge." },
+    { id: 199, name: "Angel Grande Avena", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Bls", unit_weight: "130 Gr", code: "004007", img_primary: getAssetUrl('galletas/086_copix_avena.jpg'), description: "Cereal Angel Grande de avena." },
+    { id: 200, name: "Angel Grande Chock", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "130 Grs", code: "004017", img_primary: getAssetUrl('galletas/087_cereal_chock.jpg'), description: "Cereal Angel Grande Chock." },
+    { id: 201, name: "Angel Grande Flakes", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "130 Grs", code: "004021", img_primary: getAssetUrl('galletas/088_cereal_flakes.jpg'), description: "Cereal Angel Grande Flakes." },
+    { id: 202, name: "Angel Grande Fresia Almohada", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "110 Grs", code: "004012", img_primary: getAssetUrl('galletas/089_cereal_fresia.jpg'), description: "Cereal Angel Grande Fresia en almohaditas." },
+    { id: 203, name: "Angel Grande Mel", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "130 Grs", code: "004025", img_primary: getAssetUrl('galletas/090_cereal_mel.jpg'), description: "Cereal Angel Grande Mel." },
+    { id: 204, name: "Angel Grande Zuck", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 30 Und", unit_weight: "130 Grs", code: "004027", img_primary: getAssetUrl('galletas/091_cereal_zuck.jpg'), description: "Cereal Angel Grande Zuck." },
+    { id: 205, name: "Angel (Tira) Fresia Almohada", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "Caja x 15 Tiras x 12 Und", unit_weight: "18 Gr", code: "004011", img_primary: getAssetUrl('galletas/092_angel_tirafresia.jpg'), description: "Cereal Angel Fresia en almohaditas presentación tira." },
+    { id: 206, name: "Angelitos Bongy Masmelos", category: "galletas", subcategory: "Cereales", brand: "San Jorge", presentation: "24 Bls x 50 U", unit_weight: "5 Gr", code: "022044", img_primary: getAssetUrl('galletas/093_angelitos_bongymas.jpg'), description: "Masmelos surtidos Angelitos Bongy." },
+    { id: 207, name: "Animalitos Bolsa", category: "galletas", subcategory: "Galletas Dulces", brand: "San Jorge", presentation: "Bolsa x 20 Bls", unit_weight: "60 Gr", code: "047042", img_primary: getAssetUrl('galletas/094_animalitos_bolsa.jpg'), description: "Galletas Animalitos San Jorge en bolsa." },
+    { id: 208, name: "Animalitos Tren", category: "galletas", subcategory: "Galletas Dulces", brand: "San Jorge", presentation: "Tren x 4 Bls", unit_weight: "N/A", code: "047045", img_primary: getAssetUrl('galletas/095_animalitos_tren.jpg'), description: "Galletas Animalitos San Jorge en presentación tren." },
+    { id: 209, name: "Animalitos x 10 Bolsas", category: "galletas", subcategory: "Galletas Dulces", brand: "San Jorge", presentation: "Bolsa x 10 Bls", unit_weight: "N/A", code: "047044", img_primary: getAssetUrl('galletas/096_animalitos_10bolsas.jpg'), description: "Galletas Animalitos San Jorge paquete de 10 bolsas." },
+    { id: 210, name: "Animalitos 3 Kgs", category: "galletas", subcategory: "Galletas Dulces", brand: "San Jorge", presentation: "Caja/Bolsa", unit_weight: "3 Kgs", code: "047043", img_primary: getAssetUrl('galletas/097_animalitos_3kg.jpg'), description: "Galletas Animalitos San Jorge presentación 3 kilos." },
+    { id: 211, name: "Blackout Clásica", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "8 Paqt x 4 Und", unit_weight: "N/A", code: "047040", img_primary: getAssetUrl('galletas/098_blackout_clasica.jpg'), description: "Galletas Blackout clásica San Jorge." },
+    { id: 212, name: "Blackout Menta", category: "galletas", subcategory: "Galletas Rellenas", brand: "San Jorge", presentation: "8 Paqt x 4 Und", unit_weight: "N/A", code: "047041", img_primary: getAssetUrl('galletas/099_blackout_menta.jpg'), description: "Galletas Blackout sabor a menta San Jorge." },
+    { id: 213, name: "Coconut Lonchera", category: "galletas", subcategory: "Galletas Dulces", brand: "San Jorge", presentation: "Paquete x 25 Unidades", unit_weight: "55 G", code: "047069", img_primary: getAssetUrl('galletas/100_coconut_lonchera.jpg'), description: "Galletas Coconut Lonchera San Jorge." }
+
+];
+
+export const getSubcategories = (categorySlug) => {
     const filtered = allProducts.filter(p => p.category === categorySlug);
     return [...new Set(filtered.map(p => p.subcategory))];
-    };
+};
 
-    export const getCategoryName = (slug) => {
+export const getCategoryName = (slug) => {
     const found = categoriesConfig.find(c => c.slug === slug);
     return found ? found.name : "Todos los Productos";
-    };
+};

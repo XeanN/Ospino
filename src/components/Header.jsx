@@ -15,7 +15,6 @@ const Header = () => {
     const [desktopMenuOpen, setDesktopMenuOpen] = useState(null);
     const menuRef = useRef(null);
 
-    // --- FUNCIÓN PARA CREAR ENLACES LIMPIOS (SLUGS) ---
     const createSlug = (text) => {
         return text
         .toLowerCase()
@@ -62,26 +61,55 @@ const Header = () => {
         else setDesktopMenuOpen(menuName);
     };
 
+    // ─── ACTUALIZADO CON NUEVAS CATEGORÍAS Y MARCAS ───────────────────────────
     const menuStructure = {
         productos: {
-        groups: [
-            {
-            name: "Categorías",
-            basePath: "/productos",
-            items: ["Dulces", "Chocolatería", "Bebidas", "Cuidado de hogar", "Enlatados", "Productos de campaña"]
-            },
-            {
-            name: "Marcas",
-            basePath: "/marca",
-            items: ["Deyelli", "D'loe", "Monfer", "Huracán", "Angelitos", "Guandy", "Tayas", "Crash", "King cookies"]
-            }
-        ]
+            groups: [
+                {
+                    name: "Categorías",
+                    basePath: "/productos",
+                    items: [
+                        "Dulces",
+                        "Chocolatería",
+                        "Galletas",
+                        "Snacks",
+                        "Bebidas",
+                        "Abarrotes",
+                    ]
+                },
+                {
+                    name: "Marcas",
+                    basePath: "/marca",
+                    items: [
+                        "Ambrosoli",
+                        "Benoti",
+                        "Bogie",
+                        "Bon O Bon",
+                        "Casino",
+                        "Chips Ahoy",
+                        "Costa",
+                        "Ferrero Rocher",
+                        "Field",
+                        "Globo Pop",
+                        "Grano de Oro",
+                        "Halls",
+                        "Inka Chips",
+                        "Monfer",
+                        "Oreo",
+                        "Orquídea",
+                        "Ospino",
+                        "Picaras",
+                        "Ritz",
+                        "San Jorge",
+                    ]
+                }
+            ]
         },
         nosotros: { 
             items: ["Quiénes Somos", "Historia", "Nuestro equipo"] 
         }
-        // NOTA: Ya no necesitamos la estructura de "sostenibilidad" aquí porque ahora es un link directo.
     };
+    // ─────────────────────────────────────────────────────────────────────────
 
     const getNosotrosLink = (item) => {
         const slug = createSlug(item);
@@ -103,20 +131,15 @@ const Header = () => {
                 <button type="submit"><FaSearch/></button>
                 </form>
                 <div className="secondary-links">
-                {/*<Link to="/inversionistas">Inversionistas</Link>*/}<Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
-                {/*<a href="http://38.187.16.97:9090/Delycorp" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
-                    Facturación Electrónica
-                </a>*/}
+                <Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
                 </div>
             </div>
 
             <nav className="header-bottom-row desktop-only">
                 <ul className="main-menu">
-                {/* --- INICIO (AHORA ES UN LINK DIRECTO) --- */}
                 <li>
                     <Link to="/">Inicio</Link>
                 </li>
-                {/* --- PRODUCTOS (Con Dropdown) --- */}
                 <li className="menu-item-has-children static-parent">
                     <a href="#" onClick={(e) => toggleDesktopMenu(e, 'productos')} className={desktopMenuOpen === 'productos' ? 'active-link' : ''}>
                     Productos {desktopMenuOpen === 'productos' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
@@ -141,11 +164,11 @@ const Header = () => {
                                     </li>
                                 ))}
                                 </ul>
-                            </div>
+                            </div>  
                             ))}
                             <div className="mega-banners">
-                            <div className="menu-banner cyan"><span>Conoce todas las</span><h3>Promociones</h3><button>Ver promociones</button></div>
-                            <div className="menu-banner yellow"><span>Conoce los Productos</span><h3>Ospino</h3><button>Ver productos</button></div>
+                            <div className="menu-banner cyan"><span>Conoce todas las</span><h3>Promociones</h3> <button onClick={() => {navigate('/promociones');setDesktopMenuOpen(null);}}>Ver promociones</button></div>
+                            <div className="menu-banner yellow"><span>Conoce los Productos</span><h3>Ospino</h3><button onClick={() => {navigate('/marca/ospino');setDesktopMenuOpen(null);}}> Ver productos</button></div>
                             </div>
                         </div>
                         </div>
@@ -153,23 +176,6 @@ const Header = () => {
                     )}
                 </li>
 
-                {/* --- NOSOTROS (Con Dropdown) 
-                <li className="menu-item-has-children relative-parent">
-                    <a href="#" onClick={(e) => toggleDesktopMenu(e, 'nosotros')} className={desktopMenuOpen === 'nosotros' ? 'active-link' : ''}>
-                    Nosotros {desktopMenuOpen === 'nosotros' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
-                    </a>
-                    {desktopMenuOpen === 'nosotros' && (
-                    <div className="desktop-dropdown simple-menu">
-                        <ul>
-                        {menuStructure.nosotros.items.map((item, i) => (
-                            <li key={i}>
-                                <Link to={getNosotrosLink(item)} onClick={() => setDesktopMenuOpen(null)}>{item}</Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                    )}
-                </li>--- */}
                 <li><Link to="/nosotros">Nosotros</Link></li>
                 <li><Link to="/blogs">Blogs</Link></li>
                 <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
@@ -230,13 +236,7 @@ const Header = () => {
                     </div>
                 </li>
 
-                {/* --- SOSTENIBILIDAD MÓVIL (AHORA ES UN LINK DIRECTO) --- */}
-                <li>
-                    <Link to="/sostenibilidad" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>
-                        Sostenibilidad
-                    </Link>
-                </li>
-
+                <li><Link to="/sostenibilidad" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Sostenibilidad</Link></li>
                 <li><Link to="/blogs" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link></li>
                 <li><Link to="/trabaja" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Trabaja con Nosotros</Link></li>
                 <li><Link to="/contacto" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Contáctanos</Link></li>
@@ -246,9 +246,6 @@ const Header = () => {
                 <li><Link to="/inversionistas" onClick={() => setIsMobileMenuOpen(false)}>Inversionistas</Link></li>
                 <li><Link to="/proveedores" onClick={() => setIsMobileMenuOpen(false)}>Proveedores</Link></li>
                 <li><Link to="/clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link></li>
-                {/*<a href="http://200.1.181.153:9090/DelyCorp/" className="btn-facturacion" target="_blank" rel="noopener noreferrer">
-                Facturación Electrónica
-                </a>*/}
             </ul>
             </div>
         </div>

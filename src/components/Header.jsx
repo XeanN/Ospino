@@ -34,25 +34,37 @@ const Header = () => {
         }
     };
 
+    const closeMobileMenu = () => {
+        setIsMobileMenuOpen(false);
+        setActiveSubmenu(null);
+        setActiveNestedSubmenu(null);
+    };
+
+    // FIX 1 ▸ cierra el dropdown de desktop al navegar a otro link
+    const handleDesktopNav = () => {
+        setDesktopMenuOpen(null);
+    };
+
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 10);
         const handleClickOutside = (event) => {
-        if (menuRef.current && !menuRef.current.contains(event.target)) {
-            setDesktopMenuOpen(null);
-        }
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setDesktopMenuOpen(null);
+            }
         };
         window.addEventListener('scroll', handleScroll);
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
-        window.removeEventListener('scroll', handleScroll);
-        document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
     const toggleSubmenu = (menuName) => {
         if (activeSubmenu === menuName) { setActiveSubmenu(null); setActiveNestedSubmenu(null); } 
-        else { setActiveSubmenu(menuName); }
+        else { setActiveSubmenu(menuName); setActiveNestedSubmenu(null); }
     };
+
     const toggleNestedSubmenu = (groupName) => setActiveNestedSubmenu(activeNestedSubmenu === groupName ? null : groupName);
 
     const toggleDesktopMenu = (e, menuName) => {
@@ -61,7 +73,6 @@ const Header = () => {
         else setDesktopMenuOpen(menuName);
     };
 
-    // ─── ACTUALIZADO CON NUEVAS CATEGORÍAS Y MARCAS ───────────────────────────
     const menuStructure = {
         productos: {
             groups: [
@@ -105,148 +116,191 @@ const Header = () => {
                 }
             ]
         },
+        // nosotros ya no se usa en móvil como submenú, pero lo mantenemos por si se necesita en desktop
         nosotros: { 
             items: ["Quiénes Somos", "Historia", "Nuestro equipo"] 
         }
-    };
-    // ─────────────────────────────────────────────────────────────────────────
-
-    const getNosotrosLink = (item) => {
-        const slug = createSlug(item);
-        return `/nosotros/${slug}`; 
     };
 
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`} ref={menuRef}>
         <div className="container header-grid">
             <div className="header-logo">
-            <Link to="/"><img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Ospino" /></Link>
+                <Link to="/"><img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Ospino" /></Link>
             </div>
 
             <div className="header-content">
-            {/* Top Bar Desktop */}
-            <div className="header-top-row desktop-only">
-                <form className="search-bar" onSubmit={handleSearch}>
-                <input type="text" placeholder="Buscar" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-                <button type="submit"><FaSearch/></button>
-                </form>
-                <div className="secondary-links">
-                <Link to="/proveedores">Proveedores</Link><Link to="/clientes">Clientes</Link>
-                </div>
-            </div>
-
-            <nav className="header-bottom-row desktop-only">
-                <ul className="main-menu">
-                <li>
-                    <Link to="/">Inicio</Link>
-                </li>
-                <li className="menu-item-has-children static-parent">
-                    <a href="#" onClick={(e) => toggleDesktopMenu(e, 'productos')} className={desktopMenuOpen === 'productos' ? 'active-link' : ''}>
-                    Productos {desktopMenuOpen === 'productos' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
-                    </a>
-                    
-                    {desktopMenuOpen === 'productos' && (
-                    <div className="desktop-dropdown mega-menu">
-                        <div className="container">
-                        <div className="mega-menu-grid">
-                            {menuStructure.productos.groups.map((group, i) => (
-                            <div key={i} className="mega-col">
-                                <h4 className="mega-title">{group.name}</h4>
-                                <ul>
-                                {group.items.map((item, j) => (
-                                    <li key={j}>
-                                    <Link 
-                                        to={`${group.basePath}/${createSlug(item)}`} 
-                                        onClick={() => setDesktopMenuOpen(null)}
-                                    >
-                                        {item}
-                                    </Link>
-                                    </li>
-                                ))}
-                                </ul>
-                            </div>  
-                            ))}
-                            <div className="mega-banners">
-                            <div className="menu-banner cyan"><span>Conoce todas las</span><h3>Promociones</h3> <button onClick={() => {navigate('/promociones');setDesktopMenuOpen(null);}}>Ver promociones</button></div>
-                            <div className="menu-banner yellow"><span>Conoce los Productos</span><h3>Ospino</h3><button onClick={() => {navigate('/marca/ospino');setDesktopMenuOpen(null);}}> Ver productos</button></div>
-                            </div>
-                        </div>
-                        </div>
+                {/* Top Bar Desktop */}
+                <div className="header-top-row desktop-only">
+                    <form className="search-bar" onSubmit={handleSearch}>
+                        <input type="text" placeholder="Buscar" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
+                        <button type="submit"><FaSearch/></button>
+                    </form>
+                    <div className="secondary-links">
+                        <Link to="/proveedores">Proveedores</Link>
+                        <Link to="/clientes">Clientes</Link>
                     </div>
-                    )}
-                </li>
+                </div>
 
-                <li><Link to="/nosotros">Nosotros</Link></li>
-                <li><Link to="/blogs">Blogs</Link></li>
-                <li><Link to="/trabaja">Trabaja con Nosotros</Link></li>
-                <li><Link to="/contacto" className="contact-link">Contáctanos</Link></li>
-                </ul>
-            </nav>
-            <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(true)}><FaBars /></div>
+                {/* Nav Desktop */}
+                <nav className="header-bottom-row desktop-only">
+                    <ul className="main-menu">
+                        {/* FIX 1 ▸ onClick={handleDesktopNav} en todos los links estáticos */}
+                        <li>
+                            <Link to="/" onClick={handleDesktopNav}>Inicio</Link>
+                        </li>
+                        <li className="menu-item-has-children static-parent">
+                            <a href="#" onClick={(e) => toggleDesktopMenu(e, 'productos')} className={desktopMenuOpen === 'productos' ? 'active-link' : ''}>
+                                Productos {desktopMenuOpen === 'productos' ? <FaChevronUp className="menu-arrow" /> : <FaChevronDown className="menu-arrow" />}
+                            </a>
+                            
+                            {desktopMenuOpen === 'productos' && (
+                                <div className="desktop-dropdown mega-menu">
+                                    <div className="container">
+                                        <div className="mega-menu-grid">
+                                            {menuStructure.productos.groups.map((group, i) => (
+                                                <div key={i} className="mega-col">
+                                                    <h4 className="mega-title">{group.name}</h4>
+                                                    <ul>
+                                                        {group.items.map((item, j) => (
+                                                            <li key={j}>
+                                                                <Link 
+                                                                    to={`${group.basePath}/${createSlug(item)}`} 
+                                                                    onClick={() => setDesktopMenuOpen(null)}
+                                                                >
+                                                                    {item}
+                                                                </Link>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>  
+                                            ))}
+                                            <div className="mega-banners">
+                                                <div className="menu-banner cyan">
+                                                    <span>Conoce todas las</span>
+                                                    <h3>Promociones</h3>
+                                                    <button onClick={() => { navigate('/promociones'); setDesktopMenuOpen(null); }}>Ver promociones</button>
+                                                </div>
+                                                <div className="menu-banner yellow">
+                                                    <span>Conoce los Productos</span>
+                                                    <h3>Ospino</h3>
+                                                    <button onClick={() => { navigate('/marca/ospino'); setDesktopMenuOpen(null); }}>Ver productos</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                        </li>
+
+                        <li><Link to="/nosotros" onClick={handleDesktopNav}>Nosotros</Link></li>
+                        <li><Link to="/blogs" onClick={handleDesktopNav}>Blogs</Link></li>
+                        <li><Link to="/trabaja" onClick={handleDesktopNav}>Trabaja con Nosotros</Link></li>
+                        <li><Link to="/contacto" className="contact-link" onClick={handleDesktopNav}>Contáctanos</Link></li>
+                    </ul>
+                </nav>
+
+                <div className="mobile-toggle" onClick={() => setIsMobileMenuOpen(true)}><FaBars /></div>
             </div>
         </div>
 
         {/* --- DRAWER MÓVIL --- */}
-        <div className={`mobile-drawer-overlay ${isMobileMenuOpen ? 'open' : ''}`} onClick={() => setIsMobileMenuOpen(false)}></div>
+        <div className={`mobile-drawer-overlay ${isMobileMenuOpen ? 'open' : ''}`} onClick={closeMobileMenu}></div>
         <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
             <div className="drawer-header">
-            <div className="close-btn" onClick={() => setIsMobileMenuOpen(false)}><FaTimes /></div>
-            <img src="/logo.png" alt="Ospino" className="drawer-logo" />
-            <div className="drawer-options-icon"><span>&#8942;</span></div>
+                <div className="close-btn" onClick={closeMobileMenu}><FaTimes /></div>
+                <img src={getAssetUrl('logo_sinfondo_ospino.png')} alt="Ospino" className="drawer-logo" />
+                <div className="drawer-options-icon"><span>&#8942;</span></div>
             </div>
-            <form className="drawer-search" onSubmit={handleSearch}>
-            <input type="text" placeholder="Buscar" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-            <FaSearch className="search-icon" onClick={handleSearch} />
-            </form>
-            <div className="drawer-content">
-            <ul className="drawer-menu">
-                
-                {/* --- PRODUCTOS MÓVIL --- */}
-                <li className={`has-submenu ${activeSubmenu === 'productos' ? 'active' : ''}`}>
-                <div className="menu-label bold-label" onClick={() => toggleSubmenu('productos')}><span>Productos</span>{activeSubmenu === 'productos' ? <FaChevronUp /> : <FaChevronDown />}</div>
-                <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'productos' ? '2000px' : '0' }}>
-                    {menuStructure.productos.groups.map((group, i) => (
-                    <div key={i} className="nested-group">
-                        <div className="nested-label" onClick={() => toggleNestedSubmenu(group.name)}><span>{group.name}</span>{activeNestedSubmenu === group.name ? <FaChevronUp className="icon-sm"/> : <FaChevronDown className="icon-sm"/>}</div>
-                        <div className="nested-list" style={{ maxHeight: activeNestedSubmenu === group.name ? '1000px' : '0' }}>
-                        <ul>{group.items.map((item, j) => (<li key={j}><Link 
-                            to={`${group.basePath}/${createSlug(item)}`} 
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {item}
-                        </Link></li>))}</ul>
-                        </div>
-                    </div>
-                    ))}
-                    <div className="nested-label single-link"><Link to="/promociones" onClick={() => setIsMobileMenuOpen(false)}>Promociones</Link></div>
-                </div>
-                </li>
-                
-                {/* --- NOSOTROS MÓVIL --- */}
-                <li className={`has-submenu ${activeSubmenu === 'nosotros' ? 'active' : ''}`}>
-                    <div className="menu-label bold-label" onClick={() => toggleSubmenu('nosotros')}><span>Nosotros</span>{activeSubmenu === 'nosotros' ? <FaChevronUp /> : <FaChevronDown />}</div>
-                    <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'nosotros' ? '500px' : '0' }}>
-                        <ul>
-                            {menuStructure.nosotros.items.map((item, i) => (
-                                <li key={i}>
-                                    <Link to={getNosotrosLink(item)} className="simple-link" onClick={() => setIsMobileMenuOpen(false)}>{item}</Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </li>
 
-                <li><Link to="/sostenibilidad" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Sostenibilidad</Link></li>
-                <li><Link to="/blogs" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Blogs</Link></li>
-                <li><Link to="/trabaja" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Trabaja con Nosotros</Link></li>
-                <li><Link to="/contacto" className="menu-link-normal" onClick={() => setIsMobileMenuOpen(false)}>Contáctanos</Link></li>
-            </ul>
-            <div className="drawer-divider"></div>
-            <ul className="drawer-secondary-menu">
-                <li><Link to="/inversionistas" onClick={() => setIsMobileMenuOpen(false)}>Inversionistas</Link></li>
-                <li><Link to="/proveedores" onClick={() => setIsMobileMenuOpen(false)}>Proveedores</Link></li>
-                <li><Link to="/clientes" onClick={() => setIsMobileMenuOpen(false)}>Clientes</Link></li>
-            </ul>
+            <form className="drawer-search" onSubmit={handleSearch}>
+                <input type="text" placeholder="Buscar" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                <FaSearch className="search-icon" onClick={handleSearch} />
+            </form>
+
+            <div className="drawer-content">
+                <ul className="drawer-menu">
+
+                    {/* --- INICIO MÓVIL --- */}
+                    <li className="drawer-menu-item">
+                        <Link to="/" className="menu-link-normal" onClick={closeMobileMenu}>Inicio</Link>
+                    </li>
+
+                    {/* FIX 3 ▸ separador */}
+                    <li className="drawer-separator" aria-hidden="true"></li>
+                    
+                    {/* --- PRODUCTOS MÓVIL --- */}
+                    <li className={`drawer-menu-item has-submenu ${activeSubmenu === 'productos' ? 'active' : ''}`}>
+                        <div className="menu-label bold-label" onClick={() => toggleSubmenu('productos')}>
+                            <span>Productos</span>
+                            {activeSubmenu === 'productos' ? <FaChevronUp /> : <FaChevronDown />}
+                        </div>
+                        <div className="submenu-container" style={{ maxHeight: activeSubmenu === 'productos' ? '2000px' : '0' }}>
+                            {menuStructure.productos.groups.map((group, i) => (
+                                <div key={i} className="nested-group">
+                                    <div className="nested-label" onClick={() => toggleNestedSubmenu(group.name)}>
+                                        <span>{group.name}</span>
+                                        {activeNestedSubmenu === group.name ? <FaChevronUp className="icon-sm"/> : <FaChevronDown className="icon-sm"/>}
+                                    </div>
+                                    <div className="nested-list" style={{ maxHeight: activeNestedSubmenu === group.name ? '1000px' : '0' }}>
+                                        <ul>
+                                            {group.items.map((item, j) => (
+                                                <li key={j}>
+                                                    <Link 
+                                                        to={`${group.basePath}/${createSlug(item)}`} 
+                                                        onClick={closeMobileMenu}
+                                                    >
+                                                        {item}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            ))}
+                            <div className="nested-label single-link">
+                                <Link to="/promociones" onClick={closeMobileMenu}>Promociones</Link>
+                            </div>
+                        </div>
+                    </li>
+
+                    {/* FIX 3 ▸ separador */}
+                    <li className="drawer-separator" aria-hidden="true"></li>
+                    
+                    {/* FIX 2 ▸ Nosotros como link simple, sin submenú */}
+                    <li className="drawer-menu-item">
+                        <Link to="/nosotros" className="menu-link-normal" onClick={closeMobileMenu}>Nosotros</Link>
+                    </li>
+
+                    {/* FIX 3 ▸ separador */}
+                    <li className="drawer-separator" aria-hidden="true"></li>
+
+                    <li className="drawer-menu-item">
+                        <Link to="/blogs" className="menu-link-normal" onClick={closeMobileMenu}>Blogs</Link>
+                    </li>
+
+                    {/* FIX 3 ▸ separador */}
+                    <li className="drawer-separator" aria-hidden="true"></li>
+
+                    <li className="drawer-menu-item">
+                        <Link to="/trabaja" className="menu-link-normal" onClick={closeMobileMenu}>Trabaja con Nosotros</Link>
+                    </li>
+
+                    {/* FIX 3 ▸ separador */}
+                    <li className="drawer-separator" aria-hidden="true"></li>
+
+                    <li className="drawer-menu-item">
+                        <Link to="/contacto" className="menu-link-normal" onClick={closeMobileMenu}>Contáctanos</Link>
+                    </li>
+                </ul>
+
+                <div className="drawer-divider"></div>
+
+                {/* Links secundarios (igual que el top bar del desktop) */}
+                <ul className="drawer-secondary-menu">
+                    <li><Link to="/proveedores" onClick={closeMobileMenu}>Proveedores</Link></li>
+                    <li><Link to="/clientes" onClick={closeMobileMenu}>Clientes</Link></li>
+                </ul>
             </div>
         </div>
         </header>

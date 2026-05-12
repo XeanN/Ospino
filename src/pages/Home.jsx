@@ -15,15 +15,15 @@ const Home = () => {
 
       <HeroSlider />
 
-      <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={fadeUp}
-      >
-        <BrandsGrid />
-      </motion.section>
+      {/* 
+        ✅ SOLUCIÓN:
+        Dejamos BrandsGrid suelto. Como ya lo animamos por dentro con "animate" 
+        en el paso anterior, ahora aparecerá de golpe apenas cargue la página 
+        junto con el HeroSlider.
+      */}
+      <BrandsGrid />
 
+      {/* Las demás secciones sí las dejamos con whileInView para que aparezcan al hacer scroll */}
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -32,8 +32,6 @@ const Home = () => {
       >
         <BrandsCarousel />
       </motion.section>
-
-      {/*<CorporateSection />*/}
 
       <motion.section
         initial="hidden"

@@ -227,6 +227,24 @@
             font-size: 0.8rem;
             margin-right: 15px;
         }
-
+    
+    /* ============================================
+   AGREGAR ESTO EN TU Header.css
+   (puedes pegarlo al final del archivo)
+   ============================================ */
+ 
+/* Separador entre ítems del drawer móvil */
+.drawer-separator {
+    list-style: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.08); /* línea sutil, ajusta el color a tu paleta */
+    margin: 0 16px;                          /* sangría para que no toque los bordes */
+}
+ 
+/* Asegura que cada ítem del drawer tenga altura mínima cómoda para tocar */
+.drawer-menu-item {
+    list-style: none;
+}
+     
 
     }

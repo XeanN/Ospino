@@ -1,7 +1,7 @@
 /* --- SECCIÓN PRINCIPAL --- */
 .brands-section {
     /* EL TRUCO: Margen negativo para que las tarjetas "floten" sobre el Hero borroso */
-    margin-top: -100px; 
+    margin-top: -50px; 
     position: relative;
     z-index: 10; /* Asegura que las tarjetas estén por encima de la foto del hero */
     padding-bottom: 80px;
@@ -14,6 +14,7 @@
     /* Las tarjetas se ajustan solas, un poco más anchas para parecerse a Molitalia */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
+    z-index: 0;
 }
 
 /* --- TARJETA ESTILO MOLITALIA --- */

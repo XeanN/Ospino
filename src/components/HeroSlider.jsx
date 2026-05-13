@@ -2,19 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './HeroSlider.css';
 import { getAssetUrl } from '../utils/assets'; 
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { Link } from 'react-router-dom'; // <--- 1. IMPORTANTE: Importamos Link
+import { Link } from 'react-router-dom';
 
 const HeroSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // 2. AGREGAMOS LA PROPIEDAD "link" A CADA SLIDE
     const slides = [
         {
             id: 1,
             image: getAssetUrl("s_AliadoGolosinas.png"),
             title: "Tu mejor aliado en Golosinas",
             subtitle: "Llevamos calidad a cada rincón del Perú.",
-            link: "/nosotros", // <--- Este botón llevará a "Nosotros"
+            link: "/nosotros",
             buttonText: "Conocer Más"
         },
         {
@@ -22,7 +21,7 @@ const HeroSlider = () => {
             image: getAssetUrl("s_Compromiso.png"),
             title: "Relaciones que generan crecimiento",
             subtitle: "Conectamos con clientes y proveedores para crecer juntos.",
-            link: "/productos", // <--- Este botón llevará a "Productos"
+            link: "/productos",
             buttonText: "Ver Catálogo"
         },
         {
@@ -30,12 +29,11 @@ const HeroSlider = () => {
             image: getAssetUrl("s_Confianza.png"),
             title: "Impulsamos tu negocio",
             subtitle: "Ofrecemos productos de calidad y un servicio confiable para tu éxito.",
-            link: "/trabaja", // <--- Este botón llevará a "Trabaja con Nosotros"
+            link: "/trabaja",
             buttonText: "Únete al Equipo"
         }
     ];
 
-    // Cambio automático cada 5 segundos
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -54,41 +52,38 @@ const HeroSlider = () => {
     return (
         <div className="hero-slider">
             {slides.map((slide, index) => (
-                <div 
-                    key={slide.id} 
+                <div
+                    key={slide.id}
                     className={`slide ${index === currentSlide ? 'active' : ''}`}
-                    style={{ 
-    backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 100%), url(${slide.image})` 
-}}
                 >
+                    {/* Imagen completa sin recortes */}
+                    <img src={slide.image} alt={slide.title} className="slide-img" />
+
+                    {/* Contenido de texto — solo UNA vez */}
                     <div className="container slide-content">
                         <h2>{slide.title}</h2>
                         <p>{slide.subtitle}</p>
-                        
-                        {/* 3. REEMPLAZAMOS EL BUTTON POR UN LINK */}
-                        {/* Mantenemos la clase "cta-button" para que se vea igual, pero ahora funciona como enlace */}
                         <Link to={slide.link} className="cta-button">
                             {slide.buttonText}
                         </Link>
-
                     </div>
                 </div>
             ))}
 
-            {/* Flechas de navegación 
+            {/* Flechas de navegación
             <button className="slider-arrow left" onClick={prevSlide}><FaChevronLeft /></button>
-            <button className="slider-arrow right" onClick={nextSlide}><FaChevronRight /></button>*/}
+            <button className="slider-arrow right" onClick={nextSlide}><FaChevronRight /></button> */}
 
-            {/* Puntos indicadores (Dots) 
+            {/* Puntos indicadores
             <div className="slider-dots">
                 {slides.map((_, index) => (
-                    <div 
-                        key={index} 
+                    <div
+                        key={index}
                         className={`dot ${index === currentSlide ? 'active' : ''}`}
                         onClick={() => setCurrentSlide(index)}
                     ></div>
                 ))}
-            </div>*/}
+            </div> */}
         </div>
     );
 };

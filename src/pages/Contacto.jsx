@@ -65,7 +65,7 @@
                             </a>*/}
                             <a href="https://www.tiktok.com/@0ospino" target="_blank" rel="noreferrer" className="btn-social btn-tiktok">
                                 <FaTiktok /> TikTok
-                            </a>
+                            </a>    
                             <a href="https://api.whatsapp.com/send?phone=51988477170&text=%C2%A1Hola!%F0%9F%98%8A%20Quiero%20hacer%20un(os)%20pedido(s)%0A" target="_blank" rel="noreferrer" className="btn-social btn-whatsapp">
                                 <FaWhatsapp /> WhatsApp
                             </a>

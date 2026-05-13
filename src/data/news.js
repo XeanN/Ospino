@@ -1186,7 +1186,7 @@ export const newsData = [
     date: "15 MAY, 2024",
     dateISO: "2024-05-15",
     category: "Marcas",
-    image: getAssetUrl('sayon-mini-wafer.jpeg'),
+    image: getAssetUrl('sayon-mini-wafer.png'),
     summary: "Sayón es una marca peruana con décadas de tradición. Ospino distribuye minicaramelos, Sayón Fiesta 1kg, Mini Wafer y más, ideales para bodegas y kioscos.",
     content: `
       <p>En el mercado de golosinas del Perú, conviven marcas internacionales con enormes presupuestos de publicidad y marcas peruanas que han ganado su lugar a fuerza de sabor, tradición y conexión genuina con el consumidor local. <strong>Sayón</strong> pertenece con orgullo a este segundo grupo.</p>
@@ -1328,7 +1328,7 @@ export const newsData = [
     date: "03 ABR, 2024",
     dateISO: "2024-04-03",
     category: "Marcas",
-    image: getAssetUrl('ospino-fondo.jpg'),
+    image: getAssetUrl('pepsico.png'),
     summary: "Ospino distribuye el catálogo WHS 2025 de Pepsico en Perú: Lays, Doritos, Cheetos, Dinamita, Karinto y toda la línea de snacks para bodegas y mayoristas.",
     content: `
       <p>En el mundo de los snacks salados, existe una empresa que domina el mercado global con una consistencia que pocas industrias pueden igualar: <strong>PepsiCo</strong>. A través de sus marcas Lays, Doritos, Cheetos y Karinto, PepsiCo ha construido un portafolio de snacks presentes en prácticamente cada rincón del planeta, y el Perú no es la excepción.</p>
@@ -1483,7 +1483,7 @@ export const newsData = [
     date: "20 MAR, 2024",
     dateISO: "2024-03-20",
     category: "Marcas",
-    image: getAssetUrl('benoti-cereales.jpeg'),
+    image: getAssetUrl('benoti-cereales.png'),
     summary: "Ospino distribuye cereales para bodegas en Perú: Benoti (hojuelas, bolitas, fibra), Alicorp con Cereal Ángel, Choco Bum y glacitas. Consulta disponibilidad.",
     content: `
       <p>El desayuno es la comida más importante del día, y en el hogar peruano, el cereal de caja ocupa un lugar cada vez más relevante en esa primera comida. Desde las hojuelas clásicas hasta los cereales de chocolate que los niños adoran, pasando por las opciones de fibra para adultos conscientes de su alimentación, los cereales son una categoría en crecimiento en el canal bodega peruano.</p>
@@ -1623,7 +1623,7 @@ export const newsData = [
     date: "10 FEB, 2024",
     dateISO: "2024-02-10",
     category: "Marcas",
-    image: getAssetUrl('ospino-fondo.jpg'),
+    image: getAssetUrl('yichang-ferrero.png'),
     summary: "Ospino distribuye el catálogo de confitería Yichang 2026 en Perú: Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream y Mentos para bodegas y mayoristas.",
     content: `
       <p>Existe un segmento del mercado de golosinas y confitería que se diferencia del resto por una sola palabra: <strong>premium</strong>. Son productos que el consumidor percibe como especiales, de mayor calidad, dignos de un regalo o de un momento especial. En este segmento, algunas marcas son absolutamente dominantes: Ferrero Rocher, Kinder Joy, Nutella, Haribo, Pirucream, Mentos. Y en el Perú, todas estas marcas llegan al mercado a través de un distribuidor de confianza: <strong>Yichang & Cía</strong>.</p>

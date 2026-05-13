@@ -8,7 +8,7 @@
 .clients-hero {
     height: 370px;
     /* Imagen de tienda/comercio o trato comercial */
-    background-image: url('clientes.jpg');
+    background-image: url('clientehome.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -355,7 +355,7 @@
 }
 
 /* =========================================
-   5. SECCIÓN CLIENTES FELICES (GALERÍA)
+   5. SECCIÓN CLIENTES FELICES (CARRUSEL)
    ========================================= */
 .happy-clients-section {
     padding: 80px 0 100px;
@@ -364,7 +364,7 @@
 }
 
 .section-header h2 {
-    color: var(--color-primary, #2b2f3a); /* Usa tu variable o el hex */
+    color: var(--color-primary, #2b2f3a);
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 10px;
@@ -376,28 +376,84 @@
     font-size: 1.1rem;
 }
 
-/* La Cuadrícula de Fotos */
-.gallery-grid {
-    display: grid;
-    /* Esto es magia: crea columnas automáticas de mínimo 250px */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px;
+/* Envoltura del carrusel para posicionar los botones */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Tarjeta individual de foto */
+/* El contenedor que hace el scroll */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    
+    /* Ocultar barra de scroll para que se vea limpio */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+    scroll-snap-type: x mandatory; /* Hace que las imágenes se ajusten al marco */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Opera */
+}
+
+/* Botones del carrusel (Laptop/PC) */
+.carousel-btn {
+    background-color: #6B35A8; /* Tu color morado */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+    background-color: #522785;
+    transform: scale(1.05);
+}
+
+.carousel-btn.left {
+    left: -20px; /* Lo saca un poquito a la izquierda */
+}
+
+.carousel-btn.right {
+    right: -20px; /* Lo saca un poquito a la derecha */
+}
+
+/* Tarjeta individual de foto (Ahora para el carrusel) */
 .gallery-item {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    /*height: 300px; /* Altura fija para uniformidad */
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     cursor: pointer;
+    
+    /* Comportamiento del elemento en el carrusel */
+    flex: 0 0 calc(33.333% - 14px); /* Muestra 3 imágenes en laptop */
+    scroll-snap-align: center; /* Centra la imagen al deslizar */
+    height: 300px; 
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la foto llene el espacio sin deformarse */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -415,8 +471,7 @@
     padding: 20px;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
-    transform: translateY(100%); /* Oculto inicialmente (opcional) o visible siempre */
-    transform: translateY(0); /* Lo dejamos visible para que se lea siempre */
+    transform: translateY(0); 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -430,7 +485,7 @@
 }
 
 .gallery-overlay .stars {
-    color: #ffd700; /* Color dorado */
+    color: #ffd700; 
     font-size: 0.9rem;
     margin-top: 5px;
     display: flex;
@@ -438,7 +493,7 @@
 }
 
 /* =========================================
-   RESPONSIVE PARA LA GALERÍA
+   RESPONSIVE PARA EL CARRUSEL
    ========================================= */
 
 /* Tablet */
@@ -448,7 +503,8 @@
     }
     
     .gallery-item {
-        height: 250px; /* Un poco más bajas en tablet */
+        flex: 0 0 calc(50% - 10px); /* Muestra 2 imágenes en tablet */
+        height: 250px; 
     }
 }
 
@@ -458,14 +514,17 @@
         font-size: 1.8rem;
     }
 
-    .gallery-grid {
-        /* En móvil forzamos 1 columna o dejamos el auto-fit que ya funciona bien, 
-           pero vamos a ajustar el padding */
-        padding: 0 20px;
-        gap: 15px;
+    .carousel-wrapper {
+        padding: 0 10px; /* Para que no pegue a los bordes en el celu */
+    }
+
+    .carousel-btn {
+        display: none; /* En celular no hacen falta botones, se usa el dedo (swipe) */
     }
 
     .gallery-item {
-        height: 220px; /* Altura ideal para celular */
+        flex: 0 0 90%; /* Muestra 1 imagen grande en celular (dejando asomar un poco la siguiente) */
+        height: 220px; 
+        scroll-snap-align: center;
     }
 }

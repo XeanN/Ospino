@@ -137,7 +137,7 @@ const Header = () => {
                         <button type="submit"><FaSearch/></button>
                     </form>
                     <div className="secondary-links">
-                        <Link to="/proveedores">Proveedores</Link>
+                        {/*<Link to="/proveedores">Proveedores</Link>*/}
                         <Link to="/clientes">Clientes</Link>
                     </div>
                 </div>
@@ -298,7 +298,7 @@ const Header = () => {
 
                 {/* Links secundarios (igual que el top bar del desktop) */}
                 <ul className="drawer-secondary-menu">
-                    <li><Link to="/proveedores" onClick={closeMobileMenu}>Proveedores</Link></li>
+                    {/*<li><Link to="/proveedores" onClick={closeMobileMenu}>Proveedores</Link></li>*/}
                     <li><Link to="/clientes" onClick={closeMobileMenu}>Clientes</Link></li>
                 </ul>
             </div>

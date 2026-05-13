@@ -2,7 +2,7 @@
 *, *::before, *::after {
   box-sizing: border-box; /* Esto evita que el padding rompa el ancho */
 }
-
+  
 :root {
   /* COLORES OFICIALES OSPINO */
   --color-primary: #6B35A8 !important;       /* Morado principal (para letras y fondos principales) */

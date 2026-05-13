@@ -27,8 +27,8 @@
                 </div>
             </div>
 
-            <Link to="/sostenibilidad" className="corporate-btn">
-                Conoce nuestro impacto
+            <Link to="/nosotros" className="corporate-btn">
+                Conocenos
             </Link>
             </div>
 

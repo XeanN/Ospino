@@ -1,21 +1,34 @@
-    import React from 'react';
-    import { Link } from 'react-router-dom';
-    import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar, FaStore, FaBoxes, FaMapMarkedAlt } from 'react-icons/fa';
-    import './Clientes.css';
-    {/*import RetailCarousel from '../components/RetailCarousel';*/}
-    import BrandsCarousel from '../components/BrandsCarousel';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { FaChevronRight, FaChevronLeft, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar, FaStore, FaBoxes, FaMapMarkedAlt } from 'react-icons/fa';
+import './Clientes.css';
+{/*import RetailCarousel from '../components/RetailCarousel';*/}
+import BrandsCarousel from '../components/BrandsCarousel';
 
-    const Clientes = () => {
+const Clientes = () => {
 
-        const clientesFelices = [
-        { id: 1,  img: "Cliente_1.jpg" },
-        { id: 2,  img: "Cliente_2.jpg" },
+    // Referencia para controlar el scroll del carrusel
+    const carouselRef = useRef(null);
 
+    // Función para mover el carrusel con los botones en PC
+    const scroll = (direction) => {
+        if (carouselRef.current) {
+            const { current } = carouselRef;
+            // Se desplaza el ancho de la caja visible
+            const scrollAmount = direction === 'left' ? -current.offsetWidth : current.offsetWidth;
+            current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    };
+
+    const clientesFelices = [
+        { id: 1,  img: "imagen1.jpeg", nombre: "" },
+        { id: 2,  img: "imagen2.jpg", nombre: "" },
+        { id: 3,  img: "imagen3.jpg", nombre: "" }, 
     ];
+
     return (
         <div className="clientes-page">
         
-
         {/* 1. HERO BANNER */}
         <section className="clients-hero">
             <div className="clients-hero-content">
@@ -140,19 +153,26 @@
 
                 </div>
             </div>
-        </section>
+        </section>  
 
         <BrandsCarousel />
 
-        {/* --- 5. GALERÍA DE CLIENTES FELICES --- */}
-            <section className="happy-clients-section">
-                <div className="container">
-                    <div className="section-header">
-                        <h2>Clientes felices</h2>
-                        <p>Negocios que crecen día a día junto a nosotros.</p>
-                    </div>
+        {/* --- 5. GALERÍA DE CLIENTES FELICES (NUEVO CARRUSEL) --- */}
+        <section className="happy-clients-section">
+            <div className="container">
+                <div className="section-header">
+                    <h2>Clientes felices</h2>
+                    <p>Negocios que crecen día a día junto a nosotros.</p>
+                </div>
 
-                    <div className="gallery-grid">
+                <div className="carousel-wrapper">
+                    {/* Botón Izquierda (se oculta en móvil) */}
+                    <button className="carousel-btn left" onClick={() => scroll('left')}>
+                        <FaChevronLeft />
+                    </button>
+
+                    {/* Contenedor scrolleable */}
+                    <div className="carousel-container" ref={carouselRef}>
                         {clientesFelices.map((cliente) => (
                             <div key={cliente.id} className="gallery-item">
                                 <img src={cliente.img} alt={`Cliente feliz ${cliente.nombre}`} />
@@ -165,11 +185,17 @@
                             </div>
                         ))}
                     </div>
+
+                    {/* Botón Derecha (se oculta en móvil) */}
+                    <button className="carousel-btn right" onClick={() => scroll('right')}>
+                        <FaChevronRight />
+                    </button>
                 </div>
-            </section>
+            </div>
+        </section>
 
         </div>
     );
-    };
+};
 
-    export default Clientes;
+export default Clientes;

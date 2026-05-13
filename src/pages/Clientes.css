@@ -8,7 +8,7 @@
 .clients-hero {
     height: 370px;
     /* Imagen de tienda/comercio o trato comercial */
-    background-image: url('clientehome.png');
+    background-image: url('public/clientehome.png');
     background-size: cover;
     background-position: center;
     position: relative;

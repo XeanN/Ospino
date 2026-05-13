@@ -2,7 +2,8 @@
     import { Link } from 'react-router-dom';
     import { FaChevronRight, FaChartLine, FaHandHoldingHeart, FaBoxOpen, FaStar, FaStore, FaBoxes, FaMapMarkedAlt } from 'react-icons/fa';
     import './Clientes.css';
-    import RetailCarousel from '../components/RetailCarousel';
+    {/*import RetailCarousel from '../components/RetailCarousel';*/}
+    import BrandsCarousel from '../components/BrandsCarousel';
 
     const Clientes = () => {
 
@@ -141,7 +142,7 @@
             </div>
         </section>
 
-        <RetailCarousel />
+        <BrandsCarousel />
 
         {/* --- 5. GALERÍA DE CLIENTES FELICES --- */}
             <section className="happy-clients-section">
